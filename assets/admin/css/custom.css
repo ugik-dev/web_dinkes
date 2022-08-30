@@ -1,0 +1,198 @@
+.dataTables_wrapper {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+
+.swal2-container {
+  z-index: 2300!important;
+}
+
+.tooltip{
+  z-index: 3000 !important;
+}
+
+.label{
+  font-size: 10px;
+}
+
+.notEditableHide{
+  display:none!important;
+}
+
+@media (min-width: 1200px){
+  .modal-xl {
+    width: 90%;
+    max-width: 1100px;
+  }
+}
+
+.text-success{
+  color: #28a745!important;
+}
+
+.ibox-content{
+  padding:15px;
+}
+
+.wrapper-content{
+  padding:20px 0px 40px;
+}
+
+.ssection-container{
+  margin:-15px -15px 15px -15px
+}
+
+tr.odd.selected{
+  background-color: #1a7bb944!important;
+}
+
+tr.odd.selected:hover{
+  background-color: #1a7bb966!important;
+}
+
+tr.even.selected{
+  background-color: #1c84c644!important;
+}
+
+tr.even.selected:hover{
+  background-color: #1c84c666!important;
+}
+
+.nav-tabs > li > a.show{
+  background-color:white;
+  color: #343a40
+}
+
+.panel-body {
+  background-color:white;
+}
+
+.rpjmd-text {
+  color: #01d28e;
+  font-weight: bold;
+}
+
+.indikator-rpjmd-text {
+  color: #01d28e;
+}
+
+.renstra-text {
+  color: #090088;
+  font-weight: bold;
+}
+
+.indikator-renstra-text {
+  color: #090088;
+}
+
+.program-text {
+  color: #930077;
+  font-weight: bold;
+}
+
+.indikator-program-text {
+  color: #930077;
+}
+
+.kegiatan-text {
+  color: #f77754;
+  font-weight: bold;
+}
+
+.indikator-kegiatan-text {
+  color: #f77754;
+}
+
+.no-cascade-text{
+  color: red;
+  font-weight: bold;
+}
+
+select[readonly]{
+  background: #eee;
+  cursor:no-drop;
+}
+
+select[readonly] option{
+  display:none;
+}
+
+.root-circle {
+  stroke: gray;
+  stroke-width: 3px;
+}
+
+.rpjmd-circle {
+  stroke: #01d28e;
+  stroke-width: 2px;
+}
+
+.indikator-rpjmd-circle {
+  stroke: #01d28e;
+}
+
+.renstra-circle {
+  stroke: #090088;
+  stroke-width: 2px;
+}
+
+.indikator-renstra-circle {
+  stroke: #090088;
+}
+
+.program-circle {
+  stroke: #930077;
+  stroke-width: 2px;
+}
+
+.indikator-program-circle {
+  stroke: #930077;
+}
+
+.kegiatan-circle {
+  stroke: #f77754;
+  stroke-width: 2px;
+}
+
+.indikator-kegiatan-circle {
+  stroke: #f77754;
+}
+
+tr th{
+  text-align:center!important;
+}
+
+table {
+  padding:0px!important; 
+  width:100%!important;
+}
+
+.c3 text, .c3-tooltip td.value, .c3-tooltip td.name{
+  font-size: 10px;
+}
+
+.c3-chart-arc text {
+  fill: white !important;
+}
+
+.btn-download { 
+  margin-top: -4px;
+  padding: 0.1rem 0.4rem!important;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.modal-header .close {
+  position: absolute!important;
+  top: 20px;
+  right: 20px;
+}
+
+.product-item {
+  width:100%;
+  padding-bottom:66%;
+  background-size:cover;
+  background-position:center;
+}

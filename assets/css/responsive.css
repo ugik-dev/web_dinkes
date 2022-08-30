@@ -1,0 +1,664 @@
+/* XL Device :1200px. */
+@media (min-width: 1200px) {
+.owl-carousel .owl-item img {
+    display: block;
+    width: 75%;
+}
+.client-info-review {
+    padding-right: 100px;
+}
+
+}
+
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+.get_ready_form form {
+    width: 70%;
+    margin: 0px auto;
+}
+.left-sidebar-blog .blog-sidebar {
+    margin-top: 0px;
+}
+.social-share-wrap ul a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+.grid-blog .post-metabox ul li a img {
+    margin-right: 5px;
+}
+.grid-blog .post-metabox ul li a {
+    font-size: 14px;
+}
+.grid-blog .post-metabox ul li {
+    margin-right: 10px;
+}
+.grid-blog .post-metabox ul li:last-child {
+    margin-right: 0px; 
+}
+
+.post-metabox ul li {
+  margin-right: 10px;
+}
+.post-metabox ul li:last-child {
+  margin: 0;
+}
+.post-metabox ul li a img {
+  margin-right: 5px;
+}
+
+
+}
+ 
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.top-header.theme_two_menu {
+    border-bottom: 0;
+}
+.page-banner-wrap, .breadcrumb-wrap {
+    height: 320px;
+}
+.saas-hero-content {
+    padding: 200px 0px;
+}
+.software-sreenshot {
+    width: 45%;
+}
+.saas-hero-content p {
+    padding-right: 50px;
+}
+
+.hero_one_wrapper, .hero_two_wrapper {
+    height: 470px;
+}
+.hero_featured_list li {
+    font-size: 14px;
+}
+.hero-content h1 {
+    font-size: 34px;
+    line-height: 1.5;
+}
+.btn_download {
+    padding: 12px 30px;
+}
+.single-countup span {
+    font-size: 40px;
+}
+.about-us-content h2 {
+    font-size: 40px;
+    line-height: 1.5;
+}
+.about-us-image img {
+    margin-left: 0;
+    width: 60%;
+}
+.about-us-image {
+    text-align: center;
+} 
+.about-us-wrap .top-icon {
+    margin-top: 30px;
+}
+.download-wrap-one::before {
+    display: none;
+}
+.testimonial-theme-one .nav-item a img {    
+    width: 100px;
+    height: 100px;
+}
+.footer-menu li a {
+    padding-left: 20px;
+}
+.contact-form-one form input {
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+}
+.about-us-content h2 {
+    font-size: 40px;
+    line-height: 1.5;
+}
+.single-widgets-two {
+    margin-bottom: 30px;
+}
+.video-section {
+    width: 30%;
+    background-position: center center;
+}
+.get-waterfall-text {width: 70%;}
+
+
+}
+
+/* SM Small Device :550px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+.hero_featured_list li {
+    font-size: 14px;
+}
+.hero-content h1 {
+    font-size: 34px;
+    line-height: 1.5;
+}
+.btn_download {
+    padding: 12px 30px;
+}
+.mobile-app-bg {
+  text-align: center;
+}
+.mobile-app-bg img {
+  width: 65%;
+}
+.single-countup span {
+  font-size: 36px;
+}
+.section-title-one h2 {
+    font-size: 36px;
+    line-height: 1.5;
+}
+.icon-review {
+    width: 80px;
+    height: 80px;
+    line-height: 90px;
+    margin-bottom: 20px;
+}
+.mobile-app-bg {
+    padding-top: 520px !important;
+}
+.about-us-content h2 {
+    font-size: 40px;
+    line-height: 1.5;
+}
+.single-widgets-two {
+    margin-bottom: 30px;
+}
+.video-section {
+    display: none;
+}
+.get-waterfall-text {width: 80%;}
+.saas-hero-content p {
+    padding-right: 40px;
+}
+
+
+}
+
+/* max width : 767px and down */
+@media only screen and (max-width: 767px) {
+.grid-blog .post-metabox ul li {
+    margin-right: 8px;
+}
+.client-info-review {
+    padding-right: 10px;
+}
+.saas-hero-content a {
+    display: inline-block;
+}
+.single-saas-testimonial {
+    margin-bottom: 0;
+    text-align: center;
+    display: inline-block !important;
+}
+.owl-carousel .owl-item img {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: 0px auto;
+}
+.client-image {
+    border-radius: 50%;
+    width: 100%;
+    margin: 0px auto;
+}
+.page-banner-wrap, .breadcrumb-wrap {
+    height: 300px;
+}
+.page-banner-title h1 {
+    font-size: 36px;
+    line-height: 1.5;
+}
+.tags-share-section .tags-wrap, .tags-share-section .social-share-wrap {
+    margin-bottom: 30px;
+}
+.post-contents h3 a {
+    color: #0a0c19;
+    font-size: 22px !important;
+}
+
+
+}
+
+/* Extra small devices (phones, 575px and down) */
+@media only screen and (max-width: 575px) {
+.hero-content {
+    margin-top: 100px;
+}
+.hero-content h1 {
+    font-size: 28px;
+}
+.post-contents h3 a {
+    font-size: 20px !important;
+}
+body p, a, span {
+    font-size: 14px !important;
+    line-height: 26px;
+}
+h3 {
+    font-size: 20px;
+}
+.saas-hero-content {
+    padding: 150px 0px;
+}
+.software-sreenshot,
+.video-section,
+.pricing-shape-one,
+.pricing-shape-two {
+    display: none;
+}
+.about-us-content .btn_theme_one + .btn_theme_one {
+    margin-left: 0;
+}
+.icon-review {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 54px;
+    margin-bottom: 20px;
+}
+.client_list ul.nav li {
+  position: relative;
+  top: 0;
+  z-index: 2;
+  left: 0;
+}
+.client_list ul.nav li:nth-child(2) {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.client_list ul.nav li:nth-child(3) {
+  bottom: 10%;
+  left: 3%;
+  top: auto;
+}
+.client_list ul.nav li:nth-child(4) {
+  right: 0;
+  left: auto;
+}
+.client_list ul.nav li:nth-child(5) {
+  left: auto;
+  right: 0;
+  top: 0;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.client_list ul.nav li:nth-child(6) {
+  top: auto;
+  right: 0;
+  left: auto;
+  bottom: 0;
+}
+.client_list .nav-tabs {
+    padding-left: 50px;
+}
+#scrollUp {
+    font-size: 18px;
+    height: 30px;
+    line-height: 32px;
+    right: 10px;
+    width: 30px;
+}
+.testimonial_items_wrap {
+    margin-top: 50px;
+    text-align: center;
+}
+.contact-form-one form button {
+    font-weight: 400;
+    padding: 8px 25px;
+    font-size: 14px;
+}
+.single-hero-wrap p {
+    font-size: 15px;
+}
+.hero-form form input,.get_ready_form form input {
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 15px;
+    font-size: 14px;
+}
+.hero-form form button {
+    height: 40px;
+    width: 110px;
+    font-weight: 400;
+    font-size: 14px;
+}
+.hero_two_wrapper {
+    height: 650px;
+}
+.single-saas-testimonial {
+    margin-bottom: 0;
+    text-align: center;
+    display: inline-block !important;
+}
+.owl-carousel .owl-item img {
+    display: block;
+    width: 35%;
+    text-align: center;
+    margin: 0px auto;
+}
+.client-image {
+    border-radius: 50%;
+    width: 100%;
+    margin: 0px auto;
+}
+.get_ready_form form button {
+    height: 50px;
+    right: 15px;
+    line-height: 50px;
+    padding: 0px 25px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.hero-shape, .mobile-app-screenshot {
+    display: none;
+}
+.section-title-one h2, .about-us-content h2, .features-top h2, .main-features-text h2,
+.theme_two h2, .get-download-content h2, .theme_three h2, .section-title-two h2, .about-right-content h2,
+.single-countup span
+{
+    font-size: 26px !important;
+    line-height: 1.5;
+}
+.about-app-wrap-two .container .row:nth-child(2n) {
+    margin-top: 30px;
+}
+.about-app-img {
+    width: 90%;
+}
+.btn_about {
+    padding: 10px 30px;
+}
+.why-we-best-tabs-nav .nav-pills .nav-link p {
+    font-size: 12px !important;
+    font-weight: 400;
+}
+.about-app-text {
+    margin-top: 30px;
+}
+.why-we-best-tabs-content {
+    margin-top: 30px;
+}
+.plan-buy-btn {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+}
+.contact-form-two .btn-send {
+    padding: 10px 20px;
+    font-weight: 400;
+    border: none;
+}
+.single-widgets-two {
+    margin-bottom: 30px;
+}
+.section-title-two span {
+    padding: 0px 20px;
+}
+.section-title-one span {   
+    font-size: 14px;
+}
+.single-counter-two span { font-size: 30px !important; line-height: 1.5 }
+.hero-content h1, .single-hero-wrap h1, .single-counter-two h1 {
+    font-size: 30px;
+    line-height: 1.5;
+}
+.hero_featured_list li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.btn_download {
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+.saas-hero-content h1 {
+    font-size: 32px;
+    line-height: 1.5;
+}
+.about-software h2 {
+    margin-top: 0;
+}
+.contact-shape-two {
+    display: none;
+}
+.single-features-item {
+    margin-top: 30px;
+    text-align: center;
+}
+.page-banner-wrap::after {
+    display: none;
+}
+.error-inner h1 {
+    font-size: 100px;
+}
+.hero-form form button {
+    height: 40px;
+    font-weight: 400;
+    font-size: 14px;
+}
+.hero-form form input {
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 20px;
+    font-size: 14px;
+}
+
+
+}
+
+/* max width 767px */ 
+@media only screen and (max-width: 767px) {
+.search-box-error-page {
+    width: 100%;
+    
+}
+.search-box-error-page form input {
+    height: 50px;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.search-box-error-page form button {
+    height: 40px;
+    padding: 0px 35px;
+    font-size: 18px;
+}
+.section-padding {
+    padding: 100px 0px;
+}
+
+.join-icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+.join-team a, .join-team span {
+    font-size: 12px;
+}
+.testimonial-theme-one .nav-item a img {
+    width: 70px;
+    height: 70px;
+}
+.contact-shape-one {
+    display: none;
+}
+.contact-form-one form input {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 15px;
+    font-size: 13px;
+}
+.footer-widgets-section.pt130 {
+    padding-top: 100px;
+}
+.footer-bottom-section {
+    text-align: center;
+}
+.footer-menu.text-right {
+    text-align: center !important;
+    margin-top: 20px;
+}
+.footer-menu li a {
+    padding: 0px 10px;
+}
+.social-link {
+    margin-top: 20px;
+}
+
+}
+
+/* max width 991px */
+@media only screen and (max-width: 991px) {
+.home-one-menu a.navbar-brand {
+    padding: 5px 0px;
+}
+body header #sticky-nav {
+    background: #ff5a27;
+}
+.theme_one #sticky-nav {
+    background: #ff5a27;
+}
+.theme_two #sticky-nav {
+    background: #504be5;
+}
+.theme_three #sticky-nav {
+    background: rgb(0, 215, 126);
+}
+/* 
+.theme_three #sticky-nav.mobile-menu {
+    background: rgb(0, 215, 126);
+}
+ */
+
+.hero-shape {
+    display: none;
+}
+.mobile-app-screenshot {
+    right: 0%;
+}
+.section-title-two span {
+    padding: 0px 5px;
+}
+.about-app-text {
+    margin-top: 30px;
+}
+.single-widgets-one {
+    margin-bottom: 30px;
+}
+.footer-widgets-section.pb100 {
+    padding-bottom: 70px;
+}
+.theme_one .is-sticky #sticky-nav {
+
+}
+.home-one-menu {
+    margin-top: -6px;
+}
+.navbar-brand img {
+    height: 60px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    padding-top: 5px;
+}
+.btn_subscribe {
+    padding: 6px 25px;
+    font-size: 12px;
+    margin: 15px 0px;
+}
+
+.user_user {
+    padding: 6px 25px;
+    font-size: 12px;
+    margin: 15px 0px;
+}
+.navbar {
+    padding: 10px 0px;
+}
+.about-us-image img {
+    margin-left: 0;
+    width: 60%;
+}
+.about-us-image {
+    text-align: center;
+} 
+.about-us-wrap .top-icon {
+    margin-top: 30px;
+}
+.download-wrap-one::before {
+    display: none;
+}
+.about-app-wrap-two .container .row:nth-child(2n) {
+    margin-top: 50px;
+}
+.btn_about {
+    margin-bottom: 20px;
+}
+.why-we-best-tabs-content {
+    margin-top: 30px;
+}
+.contact-form-image {
+    display: none;
+}
+.single-saas-featured, .single-widgets-three {
+  margin-bottom: 30px;
+}
+.saas-featured .row .col-xl-4:last-child .single-saas-featured {
+  margin-bottom: 0px;
+}
+.shipo-soft-screenshot {
+    position: static;
+    text-align: center;
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+    margin-bottom: 30px;
+    width: 100%;
+}
+.single-service-item {
+    padding: 0px 10px;
+}
+.client-info-review {
+    padding-right: 5px;
+}
+.single-saas-testimonial {
+    margin-bottom: 0px;
+}
+.blog-sidebar {
+    margin-top: 60px;
+}
+.single-sidebar-widget:last-child {
+    margin-bottom: 0;
+}
+.post-metabox ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.post-metabox ul li {margin-bottom: 15px;}
+.post-metabox ul li a img {margin-right: 5px;}
+.contact-form-one form button { padding: 15px 30px; font-weight: 500;}
+
+
+}
+
+
+/* max width 1190px */
+@media only screen and (max-width: 1190px) {
+.about-left-content {
+    margin-top: 30px;
+}
+
+}
