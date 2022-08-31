@@ -53,7 +53,7 @@
                         <ul>
                             <li><a href="https://www.facebook.com/sharer/sharer.php?u=#<?= base_url('berita/') . $berita['berita_slug'] ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                             <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
-                            <li><a href="whatsapp://send?text=<?= $berita['judul'] . ' ' . base_url('berita/') . $berita['berita_slug'] ?>" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i></a></li>
+                            <li><a href="whatsapp://send?text=<?= $berita['berita_judul'] . ' ' . base_url('berita/') . $berita['berita_slug'] ?>" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i></a></li>
                             <!-- <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li> -->
                         </ul>
                     </div>
