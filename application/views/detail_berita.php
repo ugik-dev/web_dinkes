@@ -40,15 +40,8 @@
 
                 <!-- post social share start -->
                 <div class="tags-share-section row  d-flex align-self-baseline align-items-center">
-                    <!-- <div class="tags-wrap d-flex col-12 col-xl-6 col-md-6 col-sm-12">
-                        <span>Tags:</span>
-                        <ul>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Consulting</a></li>
-                            <li><a href="#">Marketing</a></li>
-                        </ul>
-                    </div> -->
-                    <?php $uri = urlencode('https://dinkes.bangka.go.id/berita/rapat-koordinasi-lintas-program-penanggulangan-klb-dbd-di-kabupaten-bangka') ?>
+                    <div id="fb-root"></div>
+
                     <script>
                         (function(d, s, id) {
                             var js, fjs = d.getElementsByTagName(s)[0];
@@ -102,7 +95,7 @@
                     </div>
                 </div> -->
                 <div class="comment-form-wrap">
-                    <h4>Write Your Comment</h4>
+                    <h4>Tuliskan komentar anda :</h4>
                     <div class="contact-form-one comment-form">
                         <form action="#">
                             <div class="row">
@@ -117,7 +110,7 @@
                                 </div>
                             </div>
                             <div class="send-message">
-                                <button type="submit" class="btn-send text-uppercase">submit</button>
+                                <button type="submit" class="btn-send text-uppercase">kirim</button>
                             </div>
                         </form>
                     </div>
