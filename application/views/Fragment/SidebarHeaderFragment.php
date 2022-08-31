@@ -15,6 +15,7 @@
     </ul>
   </div>
   <div class="logo-element">
-    SS
+    <!-- SS -->
+    <img style="height:36px; width: 36px" src="<?= base_url('assets/images/') ?>kab-bangka.png">
   </div>
 </li>

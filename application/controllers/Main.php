@@ -108,11 +108,31 @@ class main extends CI_Controller
 
     function submit_survey()
     {
-
         $data = $this->input->post();
         $data['ip_address'] = $this->input->ip_address();
+        $data['tanggal'] = date("Y-m-d");
         // $this->load->model('Parameter');
         $this->ParameterModel->submit_survey($data);
+        echo json_encode(array('error' => false, 'data' => $data));
+    }
+
+    public function pengaduan()
+    {
+        $dataContent = array(
+            'page' => 'pengaduan',
+            'navbar' => ['title' => "Pengaduan", 'kategori' => "Pengaduan"]
+        );
+
+        $this->load->view('template', $dataContent);
+    }
+
+    function submit_pengaduan()
+    {
+        $data = $this->input->post();
+        $data['ip_address'] = $this->input->ip_address();
+        $data['tanggal'] = date("Y-m-d");
+        // $this->load->model('Parameter');
+        $this->ParameterModel->submit_pengaduan($data);
         echo json_encode(array('error' => false, 'data' => $data));
     }
     public function submit_tamu()

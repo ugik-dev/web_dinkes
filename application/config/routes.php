@@ -63,6 +63,7 @@ $route['daftar-tamu'] = 'main/daftar_tamu';
 $route['profil'] = 'main/profil';
 $route['login'] = 'main/login';
 $route['e-survey'] = 'main/survey';
+$route['pengaduan'] = 'main/pengaduan';
 $route['berita'] = 'admin/NewsController';
 // $route['admin/menu'] = 'admin/NewsController';
 

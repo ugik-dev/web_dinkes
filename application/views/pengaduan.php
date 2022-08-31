@@ -3,8 +3,8 @@
         <div class="row text-center">
             <div class="col-xl-8 col-12 offset-xl-2 offset-md-1 col-md-10">
                 <div class="section-title-two">
-                    <h2>Berikan Pendapat Anda</h2>
-                    <span>Mari berikan pendapat anda, agar Dinas Kesehatan Kabupaten Bangka menjadi lebih baik.</span>
+                    <h2>Layanan Pengaduan</h2>
+                    <span>Data diri atau identitas anda dijamin akan dirahasiakan.</span>
                 </div>
             </div>
         </div>
@@ -13,39 +13,6 @@
                 <div class="contact-form-two wow animated fadeInUp" data-wow-duration="2s">
                     <form class="contact-form" id="form_survey" method="POST" novalidate="novalidate">
                         <!-- <form action="mail.php" id="contact-form" method="POST"> -->
-                        <div class="featured-boxes featured-boxes-style-3">
-                            <div class="row">
-                                <div class="col-sm-4" id="sangat_puas">
-                                    <div class="text-center">
-                                        <div class="box-content">
-                                            <img class="icon-featured far fa-heart top-0" src="<?= base_url() ?>assets/images/sangat_puas.png">
-                                            <!-- <i class="icon-featured far fa-heart top-0"></i> -->
-                                            <h4 class="font-weight-normal text-5 mt-3"><strong class="font-weight-extra-bold">Sangat Puas</strong></h4>
-                                            <!-- <p class="mb-0">Donec id elit non mi porta gravida at eget metus. Fusce dapibus.</p> -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4" id="cukup_puas">
-                                    <div class="text-center">
-                                        <div class="box-content">
-                                            <img class="icon-featured far fa-heart top-0" src="<?= base_url() ?>assets/images/cukup_puas.png">
-                                            <!-- <i class="icon-featured far fa-file-alt top-0"></i> -->
-                                            <h4 class="font-weight-normal text-5 mt-3"> <strong class="font-weight-extra-bold">Cukup</strong></h4>
-                                            <!-- <p class="mb-0">Donec id elit non mi porta gravida at eget metus. Fusce dapibus.</p> -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4" id="tidak_puas">
-                                    <div class="text-center">
-                                        <div class="box-content">
-                                            <img class="icon-featured far fa-heart top-0" src="<?= base_url() ?>assets/images/tidak_puas.png">
-                                            <h4 class="font-weight-normal text-5 mt-3"><strong class="font-weight-extra-bold">Tidak Puas</strong> </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
                         <input type="hidden" id="respon" name="respon" id="respon">
                         <div class="row">
                             <div class="form-group col-12 col-md-6 col-sm-6 col-xl-6">
@@ -69,7 +36,7 @@
                                 <span class="form-icon"><i class="fas fa-map"></i></span>
                             </div>
                             <div class="form-group col-12 col-md-12 col-sm-12 col-xl-12 message-box">
-                                <textarea id="message" rows="6" name="alasan" placeholder="Pendapat Anda"></textarea>
+                                <textarea id="message" rows="6" name="alasan" placeholder="Detail Pengaduan"></textarea>
                                 <span class="form-icon"><i class="fas fa-edit"></i></span>
                             </div>
                         </div>
@@ -105,7 +72,7 @@
     sangat_puas.on('click', () => {
         reset_select();
         sangat_puas.addClass('alert-success');
-        respon.val(3)
+        respon.val(1)
     })
 
     cukup_puas.on('click', () => {
@@ -118,19 +85,11 @@
     tidak_puas.on('click', () => {
         reset_select();
         tidak_puas.addClass('alert-success');
-        respon.val(1)
+        respon.val(3)
 
     })
     sub_btn.on('click', () => {
-        if (respon.val() == '' ||
-            respon.val() == null) {
-            Swal.fire({
-                icon: 'warning',
-                html: '<h5>Silahkan klik gambar icon tingkat kepuasan anda ...</h5>',
-                // allowOutsideClick: false
-            });
-            return;
-        }
+
         Swal.fire({
             html: '<h5>Loading ...</h5>',
             allowOutsideClick: false
@@ -138,7 +97,7 @@
         Swal.showLoading()
         $.ajax({
             method: 'POST',
-            url: '<?= base_url('main/submit_survey') ?>',
+            url: '<?= base_url('main/submit_pengaduan') ?>',
             data: form_survey.serialize(),
             success: function(data) {
                 // alert(data);
@@ -153,7 +112,7 @@
                     let timerInterval
                     Swal.fire({
                         icon: 'success',
-                        html: 'Hasil survei berhasil disimpan',
+                        html: 'Pengaduan berhasil dikirim',
                         timer: 3200,
                         timerProgressBar: true,
                     }).then((result) => {

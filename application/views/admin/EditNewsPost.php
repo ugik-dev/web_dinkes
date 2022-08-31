@@ -2,12 +2,18 @@
   <div class="col-md-12 col-md-offset-2">
     <form id='editor_form' action="<?php echo base_url() . 'index.php/NewsController/simpan_post' ?>" method="post" enctype="multipart/form-data">
       <input type="text" id="judul" name="berita_judul" class="form-control" placeholder="Judul berita" value="<?= $dataContent['berita_judul'] ?>" required /><br />
-      <input type="hidden" id="" name="berita_id" class="form-control" value="<?= $dataContent['berita_id'] ?>" placeholder="" required /><br />
-      <select name="tipe">
-        <option <?= $dataContent['tipe'] == 'berita' ? 'selected' : '' ?> value="berita">Berita</option>
-        <option <?= $dataContent['tipe'] == 'pengumuman' ? 'selected' : '' ?> value="pengumuman">Pengumuman</option>
-        <option <?= $dataContent['tipe'] == 'pelayanan' ? 'selected' : '' ?> value="pelayanan">Pelayanan</option>
-      </select>
+      <div class="col-lg-12">
+        <div class="row">
+
+          <input type="date" id="berita_tanggal" name="berita_tanggal" class="form-control col-lg-6" placeholder="Judul berita" value="<?= $dataContent['berita_tanggal'] ?>" required /><br />
+          <input type="hidden" id="" name="berita_id" class="form-control" value="<?= $dataContent['berita_id'] ?>" placeholder="" required /><br />
+          <select class="form-control col-lg-6" name="tipe">
+            <option <?= $dataContent['tipe'] == 'berita' ? 'selected' : '' ?> value="berita">Berita</option>
+            <option <?= $dataContent['tipe'] == 'pengumuman' ? 'selected' : '' ?> value="pengumuman">Pengumuman</option>
+            <option <?= $dataContent['tipe'] == 'pelayanan' ? 'selected' : '' ?> value="pelayanan">Pelayanan</option>
+          </select>
+        </div>
+      </div>
       <textarea id="ckeditor" name="berita_isi" class="form-control" required><?= $dataContent['berita_isi'] ?></textarea><br />
       <!-- <input id="ckeditor" type="file" name="filefoto" required><br> -->
       <?php if (!empty($dataContent['berita_image'])) {
@@ -60,7 +66,7 @@
     editor_form.form.submit(function(event) {
       event.preventDefault();
       console.log('s')
-      swal(saveConfirmation("Konfirmasi tambah", "Yakin akan menambahakan dokumen ini?", "Ya, Tambah!")).then((result) => {
+      swal(saveConfirmation("Konfirmasi tambah", "Yakin akan menambahakan berita ini ini?", "Ya, Tambah!")).then((result) => {
         if (!result.value) {
           return;
         }
@@ -78,8 +84,9 @@
               swal("Simpan Gagal", json['message'], "error");
               return;
             }
-            location.reload();
+            // location.reload();
             swal("Simpan Berhasil", "", "success");
+            location.href = "<?= base_url('admin/berita') ?>";
           },
           error: function(e) {}
         });

@@ -93,6 +93,30 @@ class ParameterModel extends CI_Model
     return DataStructure::keyValue($res->result_array(), 'id_jenis_dokumen_perusahaan');
   }
 
+  public function getAllSurvey($filter = [])
+  {
+    $this->db->select('*');
+    $this->db->from('survey as pi');
+    // $this->db->join("jenis_perusahaan as jp", 'jp.id_jenis_perusahaan = pi.id_jenis_perusahaan', 'LEFT');
+    // if (!empty($filter['id_jenis_perusahaan'])) $this->db->where('pi.id_jenis_perusahaan', $filter['id_jenis_perusahaan']);
+    // if (!empty($filter['id_jenis_dokumen_perusahaan']))  $this->db->where('pi.id_jenis_dokumen_perusahaan', $filter['id_jenis_dokumen_perusahaan']);
+
+    $res = $this->db->get();
+    return DataStructure::keyValue($res->result_array(), 'id');
+  }
+
+  public function getAllPengaduan($filter = [])
+  {
+    $this->db->select('*');
+    $this->db->from('pengaduan as pi');
+    // $this->db->join("jenis_perusahaan as jp", 'jp.id_jenis_perusahaan = pi.id_jenis_perusahaan', 'LEFT');
+    // if (!empty($filter['id_jenis_perusahaan'])) $this->db->where('pi.id_jenis_perusahaan', $filter['id_jenis_perusahaan']);
+    // if (!empty($filter['id_jenis_dokumen_perusahaan']))  $this->db->where('pi.id_jenis_dokumen_perusahaan', $filter['id_jenis_dokumen_perusahaan']);
+
+    $res = $this->db->get();
+    return DataStructure::keyValue($res->result_array(), 'id');
+  }
+
   public function getAllJenisPerusahaan($filter = [])
   {
     $this->db->select('*');

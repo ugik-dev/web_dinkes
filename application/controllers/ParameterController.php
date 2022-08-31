@@ -45,6 +45,28 @@ class ParameterController extends CI_Controller
 		}
 	}
 
+	public function getAllSurvey()
+	{
+		try {
+			// $this->SecurityModel->userOnlyGuard(TRUE);
+			$data = $this->ParameterModel->getAllSurvey($this->input->get());
+			echo json_encode(array("data" => $data));
+		} catch (Exception $e) {
+			ExceptionHandler::handle($e);
+		}
+	}
+
+	public function getAllPengaduan()
+	{
+		try {
+			// $this->SecurityModel->userOnlyGuard(TRUE);
+			$data = $this->ParameterModel->getAllPengaduan($this->input->get());
+			echo json_encode(array("data" => $data));
+		} catch (Exception $e) {
+			ExceptionHandler::handle($e);
+		}
+	}
+
 	public function getAllNegara()
 	{
 		try {

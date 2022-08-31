@@ -47,6 +47,13 @@ class MainModel extends CI_Model
         $this->db->where('id', $data['id']);
         $this->db->update('daftar_tamu');
     }
+
+    public function edit_survey($id, $respon)
+    {
+        $this->db->set('show_survey', $respon);
+        $this->db->where('id', $id);
+        $this->db->update('survey');
+    }
     public function delete($data)
     {
         $this->db->where('id', $data['id']);

@@ -7,7 +7,7 @@ class Admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('NewsModel', 'ParameterModel', 'MenuModel'));
+        $this->load->model(array('NewsModel', 'ParameterModel', 'MenuModel', 'MainModel'));
         $this->load->helper(array('DataStructure', 'Validation'));
     }
 
@@ -46,6 +46,33 @@ class Admin extends CI_Controller
         $pageData = array(
             'title' => 'Bank Data',
             'content' => 'admin/BankData',
+            'breadcrumb' => array(
+                'Home' => base_url(),
+            ),
+        );
+        $this->load->view('Page', $pageData);
+    }
+
+    public function ikm()
+    {
+        $this->SecurityModel->rolesOnlyGuard(array('admin'));
+
+        $pageData = array(
+            'title' => 'e-Survey / Index Kepuasan Masyarakat',
+            'content' => 'admin/ikm',
+            'breadcrumb' => array(
+                'Home' => base_url(),
+            ),
+        );
+        $this->load->view('Page', $pageData);
+    }
+    public function pengaduan()
+    {
+        $this->SecurityModel->rolesOnlyGuard(array('admin'));
+
+        $pageData = array(
+            'title' => 'Pengaduan',
+            'content' => 'admin/pengaduan',
             'breadcrumb' => array(
                 'Home' => base_url(),
             ),
@@ -174,14 +201,14 @@ class Admin extends CI_Controller
         $this->load->view('Page', $pageData);
     }
 
-    public function acc_buyer()
+    public function edit_survey()
     {
         try {
-            $this->SecurityModel->rolesOnlyGuard(array('admin', 'kpb'));
+            $this->SecurityModel->rolesOnlyGuard(array('admin'));
             $data = $this->input->post();
-            $this->BuyerModel->acc_buyer($data);
-            $this->email_send($data);
-            echo json_encode(array("data" => $data));
+            $this->MainModel->edit_survey($data['id'], $data['sh']);
+            // $this->email_send($data);
+            echo json_encode(array('error' => false, "data" => $data));
         } catch (Exception $e) {
             ExceptionHandler::handle($e);
         }

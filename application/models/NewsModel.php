@@ -104,7 +104,7 @@ class NewsModel extends CI_Model
 
   public function add($data)
   {
-    $this->db->insert('postingan', DataStructure::slice($data, ['berita_judul', 'berita_isi', 'berita_image', 'berita_slug', 'berita_pdf', 'tipe']));
+    $this->db->insert('postingan', DataStructure::slice($data, ['berita_judul', 'berita_isi', 'berita_image', 'berita_slug', 'berita_tanggal', 'berita_pdf', 'tipe']));
     // echo $this->db->last_query();
     // ExceptionHandler::handleDBError($this->db->error(), "Tambah Product gagal", "product");
 
@@ -116,10 +116,10 @@ class NewsModel extends CI_Model
     // var_dump($data);
     // die();
     $this->db->where('berita_id', $data['berita_id']);
-    if (!empty($data['berita_judul'])) $this->db->set('berita_judul', $data['berita_judul']);
-    if (!empty($data['berita_isi'])) $this->db->set('berita_isi', $data['berita_isi']);
-    if (!empty($data['berita_image'])) $this->db->set('berita_image', $data['berita_image']);
-    $this->db->update('postingan', DataStructure::slice($data, ['berita_judul', 'berita_isi', 'berita_pdf', 'berita_image', 'berita_slug', 'tipe']));
+    // if (!empty($data['berita_judul'])) $this->db->set('berita_judul', $data['berita_judul']);
+    // if (!empty($data['berita_isi'])) $this->db->set('berita_isi', $data['berita_isi']);
+    // if (!empty($data['berita_image'])) $this->db->set('berita_image', $data['berita_image']);
+    $this->db->update('postingan', DataStructure::slice($data, ['berita_judul', 'berita_isi', 'berita_pdf', 'berita_image', 'berita_slug', 'berita_tanggal', 'tipe']));
     ExceptionHandler::handleDBError($this->db->error(), "Edit Berita Gagal", "berita");
 
     return $data['berita_id'];

@@ -20,7 +20,10 @@
           <a href="<?= site_url('admin/bank_data') ?>"><i class="fa fa-users-cog"></i> <span class="nav-label">Bank Data</span></a>
         </li>
         <li id="ikm">
-          <a href="<?= site_url('admin/ikm') ?>"><i class="fa fa-users-cog"></i> <span class="nav-label">Indeks Kepuasan Masyrakat</span></a>
+          <a href="<?= site_url('admin/ikm') ?>"><i class="fa fa-users-cog"></i> <span class="nav-label">e-Survey / Indeks Kepuasan Masyrakat</span></a>
+        </li>
+        <li id="pengaduan">
+          <a href="<?= site_url('admin/pengaduan') ?>"><i class="fa fa-users-cog"></i> <span class="nav-label">Pengaduan</span></a>
         </li>
         <li id="setting_parm">
           <a href="#"><i class="fa fa-tasks"></i> <span class="nav-label">Setting</span> <span class="fa arrow"></span></a>

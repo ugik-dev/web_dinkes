@@ -79,6 +79,7 @@ class NewsController extends CI_Controller
       }
       $data['berita_slug'] = $this->slugify($data['berita_judul']);
       $this->NewsModel->edit($data);
+      echo json_encode(array('error' => false));
     } catch (Exception $e) {
       ExceptionHandler::handle($e);
     }
@@ -140,7 +141,7 @@ class NewsController extends CI_Controller
 
       $data['berita_slug'] = $this->slugify($data['berita_judul']);
       $this->NewsModel->add($data);
-      echo json_encode(array("data" => $data));
+      echo json_encode(array('error' => false));
     } catch (Exception $e) {
       ExceptionHandler::handle($e);
     }
