@@ -51,13 +51,15 @@
                     <div class="social-share-wrap col-12 col-xl-6 col-md-6 col-sm-12 d-flex align-items-center">
                         <span>share:</span>
                         <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.facebook.com/sharer/sharer.php?u=#<?= base_url('berita/') . $berita['berita_slug'] ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
+                            <li><a href="whatsapp://send?text=<?= $berita['judul'] . ' ' . base_url('berita/') . $berita['berita_slug'] ?>" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i></a></li>
+                            <!-- <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li> -->
                         </ul>
                     </div>
                 </div>
+                <!-- <a href="https://web.whatsapp.com/send?text=www.google.com" data-action="share/whatsapp/share">Share via Whatsapp 1</a>
+                <a href="whatsapp://send?text=<<HERE GOES THE URL ENCODED TEXT YOU WANT TO SHARE>>" data-action="share/whatsapp/share">Share via Whatsapp</a> -->
                 <!-- post social share end -->
 
                 <!-- comments section wrap start -->
