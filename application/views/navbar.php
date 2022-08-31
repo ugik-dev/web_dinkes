@@ -52,13 +52,14 @@ $menu = Menu();
                                             <a class="dropdown-item" href="<?= base_url('#aplikasi') ?>">Aplikasi Kami</a>
                                             <a class="dropdown-item" href="<?= base_url('#pengumuman') ?>">Pengumuman</a>
                                             <a class="dropdown-item" href="<?= base_url('#review') ?>">Pendapat Publik</a>
-                                            <a class="dropdown-item" href="<?= base_url('bank-data') ?>">Bank Data</a>
+                                            <!-- <a class="dropdown-item" href="<?= base_url('bank-data') ?>">Bank Data</a> -->
 
                                         </div>
                                     </li>
                                     <!-- <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>profil">Informasi</a></li> -->
                                     <!-- <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>tentang">Tentang</a></li> -->
-                                    <li class="nav-item"><a style="width : 150px" class="nav-link" href="<?= base_url() ?>daftar-tamu">Daftar Tamu</a></li>
+                                    <!-- <li class="nav-item"><a style="width : 150px" class="nav-link" href="<?= base_url() ?>daftar-tamu">Daftar Tamu</a></li> -->
+                                    <li class="nav-item"><a style="width : 150px" class="nav-link" href="<?= base_url() ?>bank-data">Bank Data</a></li>
                                 </ul>
                                 <a href="<?= base_url('login') ?>" class="btn_subscribe">Login</a>
                             </div>

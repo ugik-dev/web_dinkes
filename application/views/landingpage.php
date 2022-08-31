@@ -480,7 +480,8 @@
     </div>
 </section>
 
-<section class="contact-form-wrap-two section-padding bg-light" id="contact">
+<?php $this->load->view('e_survey') ?>
+<!-- <section class="contact-form-wrap-two section-padding bg-light" id="contact">
     <div class="container">
         <div class="row text-center">
             <div class="col-xl-8 col-12 offset-xl-2 offset-md-1 col-md-10">
@@ -532,4 +533,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
