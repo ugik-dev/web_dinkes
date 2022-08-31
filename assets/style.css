@@ -2617,7 +2617,7 @@ a.play_video_btn i {
 	border-color: rgb(221, 221, 221);
 	border-radius: 3px;
 	background-color: rgba(0, 120, 255, 0);
-	height: 56px;
+	/* height: 56px; */
 	display: block;
 	text-align: left;
 	line-height: 56px;

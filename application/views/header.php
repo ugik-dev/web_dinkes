@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/owl.theme.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>assets/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/style.css?v=0.2">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/responsive.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
