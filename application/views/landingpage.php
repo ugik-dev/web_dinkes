@@ -88,7 +88,7 @@
                             <img src="assets/images/home-three/icon1.png" alt="modinatheme">
                         </div>
                         <h3>Mall Si Pandu</h3>
-                        <p>Tempat masyarakat mendapatkan seluruh informasi dan pelayanan di bidang kesehatan disuatu tempat.</p>
+                        <p>Informasi dan Pelayanan di bidang kesehatan.</p>
                     </div>
                 </a>
             </div>
@@ -140,8 +140,8 @@
                     <div class="s_icon_box">
                         <img src="assets/images/home-three/icon6.png" alt="modinatheme">
                     </div>
-                    <h3>Responsive Layout</h3>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Exce.</p>
+                    <h3>SI RESTRAD</h3>
+                    <p>Rekomendasi Surat Tanda Daftar Pengobatan Tradisional.</p>
                 </div>
             </div>
         </div>
