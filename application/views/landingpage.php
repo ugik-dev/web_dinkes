@@ -248,16 +248,15 @@
         <div class="row">
             <div class="col-xl-6 col-md-12 col-12 col-sm-12">
                 <div class="about-app-img wow animated fadeInLeft" data-wow-duration="2s">
-                    <img src="assets/images/home-two/about_app.png" alt="shipo">
+                    <img src="<?= base_url() ?>assets/images/lg-kadin.png" alt="shipo">
                 </div>
             </div>
 
             <div class="col-xl-6 col-md-12 col-12 col-sm-12">
                 <div class="about-app-text wow animated fadeInRight" data-wow-duration="2s">
                     <h2>Pelayanan Cepat <br> Ramah dan Berkalitas</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form Bender cobblers chap grub sloshed up the duff I fantastic owt to do with me at public school, James Bond chip shop chancer my lady gormless.</p>
-                    <span class="highlight_text">Solve your problem with us and We Provide Awesome
-                        Services.<br>So, Downlaod Our App.</span>
+                    <p>Website Dinas Kesehatan Kabupaten Bangka merupakan halaman untuk memudahkan akses masyarakat kepada informasi-informasi dari Dinas Kesehatan Kabupaten Bangka. Informasi yang disampaikan berasal dari kegiatan yang dilaksanakan oleh Dinas Kesehatan Kabupaten Bangka beserta jajarannya yaitu 12 Puskesmas, 3 Rumah Sakit yaitu Rumah Sakit Umum Daerah Depati Bahrin, Rumah Sakit Pratama Eko Maulana Ali dan Rumah Sakit Pratama Sjafrie Rahman, UPT PSC 119 Sepintu Sedulang dan UPT Laboratorium Kesehatan Daerah.</p>
+                    <span class="highlight_text">BANGKA SETARA <br>(BANGKA SEJAHTERA DAN MULIA).</span>
                 </div>
             </div>
         </div>
