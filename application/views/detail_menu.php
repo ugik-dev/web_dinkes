@@ -24,6 +24,14 @@
                     <!-- konten start -->
                     <?= $berita['menu_isi'] ?>
                     <!-- konten end -->
+                    <?php if (!empty($berita['menu_pdf'])) {
+                    ?>
+                        <object style="width : 100% ; height: 700px" data="<?= base_url('upload/menu_pdf/') . $berita['menu_pdf'] ?>" type="application/pdf">
+                            <iframe src="<?= base_url('upload/menu_pdf/') . $berita['menu_pdf'] ?>"></iframe>
+                            <div>No online PDF viewer installed</div>
+                        </object><br>
+                        <a href="<?= base_url('upload/menu_pdf/') . $berita['menu_pdf'] ?>">Download PDF</a>
+                    <?php } ?>
                 </div>
                 <!-- single blog details end -->
 
