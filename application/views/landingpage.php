@@ -34,7 +34,7 @@
                                         <ul>
                                             <li>
                                                 <a href="#">
-                                                    <img src="<?= base_url() ?>assets/images/blog/author.png" alt="author">
+                                                    <img src="<?= base_url('assets/images/avatar-9.png') ?>" alt="author">
                                                     Admin Dinkes
                                                 </a>
                                             </li>
