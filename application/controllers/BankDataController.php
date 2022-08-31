@@ -198,7 +198,7 @@ class BankDataController extends CI_Controller
         }
     }
 
-    public function deleteBankData()
+    public function delete()
     {
         try {
             $this->SecurityModel->userOnlyGuard('admin');
