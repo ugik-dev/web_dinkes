@@ -17,12 +17,15 @@ class ParameterModel extends CI_Model
     $this->db->insert('survey', $data);
   }
 
-  function getSurvey($data)
+  function getSurvey($filter)
   {
     $this->db->select('*');
     $this->db->from('survey');
-    $res = $this->input->get();
-    return $res->result_array();
+    if (!empty($filter['show_survey'])) $this->db->where('show_survey', $filter['show_survey']);
+    if (!empty($filter['limit'])) $this->db->limit($filter['limit']);
+
+    $res = $this->db->get();
+    return DataStructure::keyValue($res->result_array(), 'id');
   }
 
   function submit_pengaduan($data)
@@ -34,8 +37,8 @@ class ParameterModel extends CI_Model
   {
     $this->db->select('*');
     $this->db->from('pengaduan');
-    $res = $this->input->get();
-    return $res->result_array();
+    $res = $this->db->get();
+    return DataStructure::keyValue($res->result_array(), 'id');
   }
 
   public function getAllRefBankData($filter = [])

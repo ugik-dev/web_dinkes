@@ -92,7 +92,9 @@ class main extends CI_Controller
         // echo json_encode(Menu());
         // die();
         $dataContent = array(
-            'page' => 'landingpage', 'berita' => $this->MainModel->getBerita(array('tipe' => 'berita', 'limit' => 6))
+            'page' => 'landingpage',
+            'berita' => $this->MainModel->getBerita(array('tipe' => 'berita', 'limit' => 6)),
+            'surveys' => $this->ParameterModel->getSurvey(array('show_survey' => '1', 'limit' => 6))
         );
         $this->load->view('template', $dataContent);
     }

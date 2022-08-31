@@ -295,36 +295,18 @@
     <div class="testimonial_items_wrap theme-two-testimonial">
         <div class="client_list">
             <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#review-one">
-                        <img src="assets/images/home-one/testimonial/man1.png" alt="shipo">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#review-two">
-                        <img src="assets/images/home-one/testimonial/man2.png" alt="shipo">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#review-three">
-                        <img src="assets/images/home-one/testimonial/man3.png" alt="shipo">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#review-four">
-                        <img src="assets/images/home-one/testimonial/man4.png" alt="shipo">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#review-five">
-                        <img src="assets/images/home-one/testimonial/man5.png" alt="shipo">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#review-six">
-                        <img src="assets/images/home-one/testimonial/man6.png" alt="shipo">
-                    </a>
-                </li>
+                <?php
+                $i = 1;
+                foreach ($surveys as $sur) {
+                ?>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $i == 1 ? 'active' : '' ?>" data-toggle="tab" href="#review-<?= $sur['id'] ?>">
+                            <img src="<?= base_url('assets/images/avatar-' . $i . '.png') ?>" alt="shipo">
+                        </a>
+                    </li>
+                <?php
+                    $i++;
+                } ?>
             </ul>
         </div>
 
@@ -333,30 +315,28 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-md-10 col-12 col-sm-12">
                         <div class="tab-content text-center">
-                            <div class="tab-pane container active" id="review-one">
-                                <div class="single-testimonial">
-                                    <span class="icon-review">
-                                        <i class="fas fa-quote-right"></i>
-                                    </span>
-                                    <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="client_info">
-                                        <h5>Abdulrahman</h5>
-                                        <span>Alamat : Belinyu</span>
+
+                            <?php
+                            $i = 1;
+                            foreach ($surveys as $sur) {
+                            ?>
+                                <div class="tab-pane container <?= $i == 1 ? 'active' : 'fade' ?>" id="review-<?= $sur['id'] ?>">
+                                    <div class="single-testimonial">
+                                        <span class="icon-review">
+                                            <i class="fas fa-quote-right"></i>
+                                        </span>
+                                        <p><?= $sur['alasan'] ?></p>
+                                        <div class="client_info">
+                                            <h5><?= $sur['nama'] ?></h5>
+                                            <span><?= $sur['alamat'] ?></span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane container fade" id="review-two">
-                                <div class="single-testimonial">
-                                    <span class="icon-review">
-                                        <i class="fas fa-quote-right"></i>
-                                    </span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse is an ultrices gravida. Risus commodo. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="client_info">
-                                        <h5>Salman Ahmed</h5>
-                                        <span>CEO of ModinaTheme</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                                $i++;
+                            } ?>
+
+
                             <div class="tab-pane container fade" id="review-three">
                                 <div class="single-testimonial">
                                     <span class="icon-review">
