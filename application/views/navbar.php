@@ -36,6 +36,8 @@ $menu = Menu();
                                             Layanan
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="<?= base_url('pengaduan') ?>">Pengaduan</a>
+                                            <a class="dropdown-item" href="<?= base_url('e-survey') ?>">e-Survey</a>
                                             <?php foreach ($menu['Layanan'] as $layanan) {
                                                 echo '  <a class="dropdown-item" href="' . base_url('layanan/') . $layanan['menu_slug'] . '">' . $layanan['menu_judul'] . '</a>';
                                             } ?>
@@ -46,6 +48,7 @@ $menu = Menu();
                                             Informasi
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="https://puskesmas.bangka.go.id">Puskesmas</a>
                                             <a class="dropdown-item" href="<?= base_url('#aplikasi') ?>">Aplikasi Kami</a>
                                             <a class="dropdown-item" href="<?= base_url('#pengumuman') ?>">Pengumuman</a>
                                             <a class="dropdown-item" href="<?= base_url('#review') ?>">Pendapat Publik</a>
@@ -86,12 +89,12 @@ $menu = Menu();
     </section>
 <?php
 } else { ?>
-    <section class="hero_one_wrapper bg d-flex align-items-center overflow" style="height: 630px; padding-top: 110px;background-image:url('<?= base_url() ?>assets/images/hero_bg.jpg');">
+    <section class="hero_one_wrapper bg d-flex align-items-center overflow" style="height: 530px; padding-top: 210px;background-image:url('<?= base_url() ?>assets/images/hero_bg.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-12 col-md-5 col-sm-12 wow animated fadeInLeft" data-wow-duration="3s">
                     <div class="mobile-app-bg text-right">
-                        <img src="<?= base_url() ?>assets/images/kadin_bupati.png" alt="shipo">
+                        <img src="<?= base_url() ?>assets/images/bupati.png" alt="shipo">
                     </div>
 
                 </div>

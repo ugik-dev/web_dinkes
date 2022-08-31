@@ -5,7 +5,7 @@
       <ul class="nav metismenu" id="side-menu">
         <?= $this->load->view('Fragment/SidebarHeaderFragment', NULL, TRUE); ?>
         <li id="dashboard">
-          <a href="<?= site_url('AdminController/') ?>"><i class="fa fa-home"></i> <span class="nav-label">Beranda</span></a>
+          <a href="<?= base_url('') ?>"><i class="fa fa-home"></i> <span class="nav-label">HOME</span></a>
         </li>
         <li id="news_post">
           <a href="<?= site_url('admin/berita') ?>"><i class="fa fa-newspaper"></i> <span class="nav-label">News Post</span></a>
@@ -17,7 +17,10 @@
           <a href="<?= site_url('admin/kelola_user') ?>"><i class="fa fa-users-cog"></i> <span class="nav-label">Pengguna</span></a>
         </li>
         <li id="bank_data">
-          <a href="<?= site_url('admin/kelola_user') ?>"><i class="fa fa-users-cog"></i> <span class="nav-label">Bank Data</span></a>
+          <a href="<?= site_url('admin/bank_data') ?>"><i class="fa fa-users-cog"></i> <span class="nav-label">Bank Data</span></a>
+        </li>
+        <li id="ikm">
+          <a href="<?= site_url('admin/ikm') ?>"><i class="fa fa-users-cog"></i> <span class="nav-label">Indeks Kepuasan Masyrakat</span></a>
         </li>
         <li id="setting_parm">
           <a href="#"><i class="fa fa-tasks"></i> <span class="nav-label">Setting</span> <span class="fa arrow"></span></a>

@@ -5,15 +5,21 @@
                 <div class="blog-post-list">
                     <div class="row">
                         <?php foreach ($berita as $b) {
+                            if (!empty($b['berita_image'])) {
+                                $url = base_url('upload/berita_image/') . $b['berita_image'];
+                            } else {
+                                $url = base_url('assets/images/pengumuman.jpg');
+                            }
                         ?>
+
                             <div class="col-lg-4">
 
                                 <div class="single-post-item">
                                     <div class="post-thumbnail">
-                                        <img style=" max-height : 250px" src="<?= base_url('upload/berita_image/' . $b['berita_image']) ?>" alt="shipo">
+                                        <img style=" height : 250px" src="<?= $url ?>" alt="shipo">
                                     </div>
                                     <div class="post-contents">
-                                        <h3><a href="<?= base_url('berita/' . $b['berita_slug']) ?>"><?= $b['berita_judul'] ?></a></h3>
+                                        <h6 style="color:black;"><a style="color:black;" href="<?= base_url('berita/' . $b['berita_slug']) ?>"><?= $b['berita_judul'] ?></a></h6>
                                         <p style="  word-break: break-word;
    overflow: hidden;
    text-overflow: ellipsis;
@@ -423,50 +429,51 @@
 
         <div class="row">
             <div class="owl-carousel team-carousel owl-theme col-xl-12 col-md-12 col-12 wow animated zoomIn" data-wow-duration="2s">
+
                 <div class="single-member text-center">
                     <div class="member-img">
-                        <img src="assets/images/home-one/member1.png" alt="shipo" class="img-fluid">
+                        <img src="<?= base_url() ?>assets/images/140-sekdin.png" alt="shipo" class="img-fluid">
+                    </div>
+                    <div class="member-info">
+                        <h4>Nora Sukma Dewi, SKM, M.KM</h4>
+                        <span>Sekretaris Kepala Dinas</span>
+                    </div>
+                    <!-- <ul class="social-profile">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                    </ul> -->
+                </div>
+                <div class="single-member text-center">
+                    <div class="member-img">
+                        <img src="<?= base_url() ?>assets/images/140-kadin.png" alt="shipo" class="img-fluid">
                     </div>
                     <div class="member-info">
                         <h4>dr. Then Suyanti, MM</h4>
                         <span>Kepala Dinas</span>
                     </div>
-                    <ul class="social-profile">
+                    <!-- <ul class="social-profile">
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                         <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="single-member text-center">
                     <div class="member-img">
-                        <img src="assets/images/home-one/member2.png" alt="shipo" class="img-fluid">
+                        <img src="<?= base_url() ?>assets/images/140-kasubagpp.png" alt="shipo" class="img-fluid">
                     </div>
                     <div class="member-info">
-                        <h4>Nora Sukma Dewi, SKM, M.KM</h4>
-                        <span>Sekretaris Kepala Dinas</span>
+                        <h4>Shodiana, SKM, MKM, M.Med, Sc</h4>
+                        <span>Kasubag Perencaan & Pelaporan</span>
                     </div>
-                    <ul class="social-profile">
+                    <!-- <ul class="social-profile">
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                         <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                    </ul>
-                </div>
-                <div class="single-member text-center">
-                    <div class="member-img">
-                        <img src="assets/images/home-one/member2.png" alt="shipo" class="img-fluid">
-                    </div>
-                    <div class="member-info">
-                        <h4>Nora Sukma Dewi, SKM, M.KM</h4>
-                        <span>Sekretaris Kepala Dinas</span>
-                    </div>
-                    <ul class="social-profile">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>

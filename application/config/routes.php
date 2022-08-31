@@ -57,9 +57,12 @@ $route['pengumuman/(:any)'] = 'main/pengumuman/$1';
 // sampai sini postingan
 $route['layanan/(:any)'] = 'main/cari_menu/layanan/$1';
 $route['profil/(:any)'] = 'main/cari_menu/profil/$1';
+$route['bank-data/download/(:num)'] = 'BankDataController/download/$1';
+$route['bank-data'] = 'BankDataController';
 $route['daftar-tamu'] = 'main/daftar_tamu';
 $route['profil'] = 'main/profil';
 $route['login'] = 'main/login';
+$route['e-survey'] = 'main/survey';
 $route['berita'] = 'admin/NewsController';
 // $route['admin/menu'] = 'admin/NewsController';
 

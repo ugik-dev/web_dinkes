@@ -4,10 +4,12 @@
             <div class="col-xl-8 col-lg-8 col-md-12 col-12 col-sm-12">
                 <!-- single blog details start -->
                 <div class="single-blog-content">
-                    <div class="post-thumbnail">
-                        <img src="<?= base_url('upload/berita_image/' . $berita['berita_image']) ?>" alt="shipo">
-                    </div>
-                    <h3 class="post-title"><?= $berita['berita_judul'] ?></h3>
+                    <?php if (!empty($berita['berita_image'])) {
+                    ?>
+                        <div class="post-thumbnail">
+                            <img src="<?= base_url('upload/berita_image/' . $berita['berita_image']) ?>" alt="shipo">
+                        </div>
+                    <?php } ?> <h3 class="post-title"><?= $berita['berita_judul'] ?></h3>
                     <div class="post-meta-box">
                         <ul>
                             <li>
@@ -24,6 +26,14 @@
                     <!-- konten start -->
                     <!-- <div class="post-meta-box"> -->
                     <?= $berita['berita_isi'] ?>
+                    <?php if (!empty($berita['berita_pdf'])) {
+                    ?>
+                        <object style="width : 100% ; height: 700px" data="<?= base_url('upload/berita_pdf/') . $berita['berita_pdf'] ?>" type="application/pdf">
+                            <iframe src="<?= base_url('upload/berita_pdf/') . $berita['berita_pdf'] ?>"></iframe>
+                            <div>No online PDF viewer installed</div>
+                        </object><br>
+                        <a href="<?= base_url('upload/berita_pdf/') . $berita['berita_pdf'] ?>">Download PDF</a>
+                    <?php } ?>
                     <!-- </div> konten end -->
                 </div>
                 <!-- single blog details end -->

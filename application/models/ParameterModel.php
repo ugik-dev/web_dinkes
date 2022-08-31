@@ -12,7 +12,40 @@ class ParameterModel extends CI_Model
     return DataStructure::keyValue($res->result_array(), 'id_role');
   }
 
+  function submit_survey($data)
+  {
+    $this->db->insert('survey', $data);
+  }
 
+  function getSurvey($data)
+  {
+    $this->db->select('*');
+    $this->db->from('survey');
+    $res = $this->input->get();
+    return $res->result_array();
+  }
+
+  function submit_pengaduan($data)
+  {
+    $this->db->insert('pengaduan', $data);
+  }
+
+  function getPengaduan($data)
+  {
+    $this->db->select('*');
+    $this->db->from('pengaduan');
+    $res = $this->input->get();
+    return $res->result_array();
+  }
+
+  public function getAllRefBankData($filter = [])
+  {
+    $this->db->select('*');
+    $this->db->from('ref_bank_data');
+    // if (isset($filter['except_ids'])) $this->db->where_not_in('id_role', $filter['except_ids']);
+    $res = $this->db->get();
+    return DataStructure::keyValue($res->result_array(), 'id_ref_bank_data');
+  }
   public function getAllJenisMenu($filter = [])
   {
     $this->db->select('*');

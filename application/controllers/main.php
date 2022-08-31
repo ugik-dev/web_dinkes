@@ -7,7 +7,7 @@ class main extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('MainModel', 'MenuModel', 'SecurityModel'));
+        $this->load->model(array('MainModel', 'MenuModel', 'SecurityModel', 'ParameterModel'));
     }
 
 
@@ -96,7 +96,25 @@ class main extends CI_Controller
         );
         $this->load->view('template', $dataContent);
     }
+    public function survey()
+    {
+        $dataContent = array(
+            'page' => 'e_survey',
+            'navbar' => ['title' => "e-Survey", 'kategori' => "e-Survey"]
+        );
 
+        $this->load->view('template', $dataContent);
+    }
+
+    function submit_survey()
+    {
+
+        $data = $this->input->post();
+        $data['ip_address'] = $this->input->ip_address();
+        // $this->load->model('Parameter');
+        $this->ParameterModel->submit_survey($data);
+        echo json_encode(array('error' => false, 'data' => $data));
+    }
     public function submit_tamu()
     {
         $data = $this->input->post();

@@ -16,9 +16,14 @@
                     $berita_terkini = array();
                     $berita_terkini = BeritaTerikini();
                     foreach ($berita_terkini as $bt) {
+                        if (!empty($bt['berita_image'])) {
+                            $url = base_url('upload/berita_image/') . $bt['berita_image'];
+                        } else {
+                            $url = base_url('assets/images/pengumuman.png');
+                        }
                         echo '    <li>
                         <div class="media">
-                            <img class="mr-3 thumbnail-img" src="' . base_url('upload/berita_image/') . $bt['berita_image'] . '" alt="shipo">
+                            <img class="mr-3 thumbnail-img" src="' . $url . '" alt="shipo">
                             <div class="media-body">
                                 <h6 class="mt-0"><a href="' . base_url('berita/' . $bt['berita_slug']) . '">' . $bt['berita_judul'] . '</a></h6>
                                 <span>' . $bt['berita_tanggal'] . '</span>

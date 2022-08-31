@@ -10,16 +10,29 @@
       </select>
       <textarea id="ckeditor" name="berita_isi" class="form-control" required><?= $dataContent['berita_isi'] ?></textarea><br />
       <!-- <input id="ckeditor" type="file" name="filefoto" required><br> -->
-      <?php if (!empty($dataContent['menu_pdf'])) {
+      <?php if (!empty($dataContent['berita_image'])) {
       ?>
         <div class="form-group">
-          <img style="max-width: 300px" src='<?= base_url('upload/menu_pdf/') . $dataContent['menu_pdf'] ?>' />
+          <img style="max-width: 300px" src='<?= base_url('upload/berita_image/') . $dataContent['berita_image'] ?>' />
         </div>
       <?php
       } ?>
       <div class="form-group">
-        <label for="menu_pdf">Gambar Postingan <span>*jika tidak berubah tidak usah diisi</span></label>
-        <p class="no-margins"><span id="menu_pdf">-</span></p>
+        <label for="menu_pdf">Gambar thumbnail <span>*jika tidak berubah tidak usah diisi</span></label>
+        <p class="no-margins"><span id="filefoto">-</span></p>
+      </div>
+      <?php if (!empty($dataContent['berita_pdf'])) {
+      ?>
+        <object style="width : 100%s" data="<?= base_url('upload/berita_pdf/') . $dataContent['berita_pdf'] ?>" type="application/pdf">
+          <iframe src="<?= base_url('upload/menu_pdf/') . $dataContent['berita_pdf'] ?>"></iframe>
+          <div>No online PDF viewer installed</div>
+        </object>
+        <a href="<?= base_url('upload/berita_pdf/') . $dataContent['berita_pdf'] ?>">Download PDF</a>
+      <?php
+      } ?>
+      <div class="form-group">
+        <label for="menu_pdf">File PDF <span>*jika tidak berubah tidak usah diisi</span></label>
+        <p class="no-margins"><span id="filepdf">-</span></p>
       </div>
       <button class="btn btn-primary btn-lg" type="submit">Save</button>
     </form>
@@ -38,7 +51,8 @@
       'form': $('#editor_form'),
       'judul': $('#editor_form').find('#judul'),
       'ckeditor': $('#editor_form').find('#ckeditor'),
-      'menu_pdf': new FileUploader($('#editor_form').find('#menu_pdf'), "", "menu_pdf", ".png , .jpg , .jpeg", false, false),
+      'filepdf': new FileUploader($('#editor_form').find('#filepdf'), "", "filepdf", ".pdf", false, false),
+      'filefoto': new FileUploader($('#editor_form').find('#filefoto'), "", "filefoto", ".png , .jpg , .jpeg", false, false),
 
       'saveBtn': $('#save_btn'),
     }

@@ -38,6 +38,21 @@ class Admin extends CI_Controller
         $this->load->view('Page', $pageData);
     }
 
+
+    public function bank_data()
+    {
+        $this->SecurityModel->rolesOnlyGuard(array('admin'));
+
+        $pageData = array(
+            'title' => 'Bank Data',
+            'content' => 'admin/BankData',
+            'breadcrumb' => array(
+                'Home' => base_url(),
+            ),
+        );
+        $this->load->view('Page', $pageData);
+    }
+
     public function  berita()
     {
         $this->SecurityModel->rolesOnlyGuard(array('admin'));
@@ -64,89 +79,8 @@ class Admin extends CI_Controller
         $this->load->view('Page', $pageData);
     }
 
-    public function  DetailRequest()
-    {
-        $this->SecurityModel->rolesOnlyGuard(array('admin', 'kpb'));
-
-        $pageData = array(
-            'title' => 'Request Buyer',
-            'content' => 'admin/DetailBuyerPage',
-            'breadcrumb' => array(
-                'Home' => base_url(),
-            ),
-            "contentData" => ['id_buyer' => $this->input->get()['id_buyer']]
-        );
-        $this->load->view('Page', $pageData);
-    }
-
-    public function  request_seller()
-    {
-        $this->SecurityModel->rolesOnlyGuard(array('admin', 'kpb'));
-        $pageData = array(
-            'title' => 'Request Seller',
-            'content' => 'admin/RequestSellerPage',
-            'breadcrumb' => array(
-                'Home' => base_url(),
-            ),
-        );
-        $this->load->view('Page', $pageData);
-    }
-
-    public function  DetailRequestSeller()
-    {
-        $this->SecurityModel->rolesOnlyGuard(array('admin', 'kpb'));
-
-        $pageData = array(
-            'title' => 'Request Seller',
-            'content' => 'admin/DetailBuyerPage',
-            'breadcrumb' => array(
-                'Home' => base_url(),
-            ),
-            "contentData" => ['id_buyer' => $this->input->get()['id_buyer']]
-        );
-        $this->load->view('Page', $pageData);
-    }
 
 
-
-    public function kelola_harga_mwp()
-    {
-        $this->SecurityModel->roleOnlyGuard('admin');
-        $pageData = array(
-            'title' => 'Kelola Harga Muntok White Pepper',
-            'content' => 'admin/KelolaHargaMWP',
-            'breadcrumb' => array(
-                'Home' => base_url(),
-            ),
-        );
-        $this->load->view('Page', $pageData);
-    }
-
-    public function kelola_standar_mutu()
-    {
-        $this->SecurityModel->roleOnlyGuard('admin');
-        $pageData = array(
-            'title' => 'Kelola Standar Mutu',
-            'content' => 'admin/KelolaStandarMutu',
-            'breadcrumb' => array(
-                'Home' => base_url(),
-            ),
-        );
-        $this->load->view('Page', $pageData);
-    }
-
-    public function kelola_jenis_dokumen_perusahaan()
-    {
-        $this->SecurityModel->roleOnlyGuard('admin');
-        $pageData = array(
-            'title' => 'Kelola Dokumen Perusahaan',
-            'content' => 'admin/KelolaDokumenPerusahaan',
-            'breadcrumb' => array(
-                'Home' => base_url(),
-            ),
-        );
-        $this->load->view('Page', $pageData);
-    }
     public function kelola_email()
     {
         $this->SecurityModel->roleOnlyGuard('admin');

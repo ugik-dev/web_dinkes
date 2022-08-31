@@ -2,6 +2,7 @@
 
 application/cache/*
 !application/cache/index.html
+assets/admin/captcha*
 
 application/logs/*
 !application/logs/index.html

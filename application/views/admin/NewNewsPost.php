@@ -7,7 +7,18 @@
         <option value="pengumuman">Pengumuman</option>
         <option value="pelayanan">Pelayanan</option>
       </select> <textarea id="ckeditor" name="berita_isi" class="form-control" required></textarea><br />
-      <input type="file" name="filefoto"><br>
+      <div class="form-group">
+        <label for="menu_pdf">Gambar thumbnail <span></span></label>
+        <input type="file" name="filefoto"><br>
+        <!-- <p class="no-margins"><span id="filefoto">-</span></p> -->
+      </div>
+
+      <div class="form-group">
+        <label for="menu_pdf">File PDF <span></span></label>
+        <input type="file" name="filepdf"><br>
+        <!-- <p class="no-margins"><span id="filefoto">-</span></p> -->
+      </div>
+      <!-- <input type="file" name="filepdf"><br> -->
       <button class="btn btn-primary btn-lg" type="submit">Post Berita</button>
     </form>
   </div>

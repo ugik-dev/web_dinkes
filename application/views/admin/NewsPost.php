@@ -136,7 +136,7 @@
               <div class="col-sm-12 ibox-content">
                 
              ${btn_del}
-              <a type="button" class="btn btn-primary my-1 mr-sm-3" href="<?php echo base_url() . 'index.php/newsx?id_news='; ?>${news['berita_id']}"><i class="fal fa-eye"></i>  Lihat Post </a>
+              <a type="button" class="btn btn-primary my-1 mr-sm-3" href="<?= base_url() ?>${news['tipe']}/${news['berita_slug']}"><i class="fal fa-eye"></i>  Lihat Post </a>
               <a type="button" class="btn btn-primary my-1 mr-sm-3" href="<?php echo base_url() . 'index.php/NewsController/edit_post?berita_id='; ?>${news['berita_id']}"><i class="fal fa-pencil"></i>  Edit</a>
             
               Tanggal Post : ${news['berita_tanggal']}
