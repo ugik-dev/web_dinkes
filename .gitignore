@@ -4,6 +4,7 @@ assets/kcfinder/upload/*
 upload/berita_image/*
 upload/berita_pdf/*
 upload/menu_pdf/*
+upload/bank_data/*
 application/config/database.php
 
 application/cache/*
