@@ -48,16 +48,27 @@
                             <li><a href="#">Marketing</a></li>
                         </ul>
                     </div> -->
+                    <?php $uri = urlencode('https://dinkes.bangka.go.id/berita/rapat-koordinasi-lintas-program-penanggulangan-klb-dbd-di-kabupaten-bangka') ?>
+                    <script>
+                        (function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+
+
                     <div class="social-share-wrap col-12 col-xl-6 col-md-6 col-sm-12 d-flex align-items-center">
                         <span>share:</span>
                         <ul>
                             <div id="fb-root"></div>
-                            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v14.0" nonce="LM9FKUQB"></script>
 
                             <li>
-                                <div class="fb-share-button" data-href="https://dinkes.bangka.go.id/berita/rapat-koordinasi-lintas-program-penanggulangan-klb-dbd-di-kabupaten-bangka#" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"><i class="fab fa-facebook-f"></i></a></div>
-                                <!-- <a class="" data-href="<?= base_url('berita/') . $berita['berita_slug'] ?>" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fab fa-facebook-f"></i></a></a> -->
-                                <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=#<?= base_url('berita/') . $berita['berita_slug'] ?>" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
+                                <div class="fb-share-button" data-href="<?= base_url('berita/') . $berita['berita_slug'] ?>" data-layout="box_count">
+                                </div>
                             </li>
                             <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
                             <li><a href="whatsapp://send?text=<?= $berita['berita_judul'] . ' ' . base_url('berita/') . $berita['berita_slug'] ?>" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i></a></li>
