@@ -273,22 +273,4 @@ class DataStructure
     }
     return $ret;
   }
-
-  // arr: [{a: '###', b: 'wp'}, {a: 'gg', b: '###'}, {a: 'yy', b: '###'}]
-  // value: ###
-  // output: [{a: 'gg'}, {b: 'tt'}, {a: 'yy''}]
-  public static function deleteColumnWhere($arr = array(), $value)
-  {
-    $ret = array();
-    foreach ($arr as $a) {
-      $item = array();
-      foreach ($a as $cname => $cvalue) {
-        if ($cvalue != $value) {
-          $item[$cname] = $cvalue;
-        }
-      }
-      $ret[] = $item;
-    }
-    return $ret;
-  }
 }
