@@ -9,9 +9,10 @@ class BankDataController extends CI_Controller
     }
     public function index()
     {
+        $filter = $this->input->get();
         $dataContent = array(
             'page' => 'bank_data',
-            'navbar' => ['title' => "Bank Data", 'kategori' => "Informasi"]
+            'navbar' => ['title' => "Bank Data", 'kategori' => "Informasi"], 'filter' => $filter
         );
 
         $this->load->view('template', $dataContent);
