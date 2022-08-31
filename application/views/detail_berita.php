@@ -51,7 +51,13 @@
                     <div class="social-share-wrap col-12 col-xl-6 col-md-6 col-sm-12 d-flex align-items-center">
                         <span>share:</span>
                         <ul>
-                            <li><a href="https://www.facebook.com/sharer/sharer.php?u=#<?= base_url('berita/') . $berita['berita_slug'] ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <div id="fb-root"></div>
+                            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v14.0" nonce="LM9FKUQB"></script>
+
+                            <li>
+                                <a class="" data-href="https://www.facebook.com/sharer/sharer.php?u=#<?= base_url('berita/') . $berita['berita_slug'] ?>" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/sharer/sharer.php?u=#<?= base_url('berita/') . $berita['berita_slug'] ?>" class="fb-xfbml-parse-ignore"><i class="fab fa-facebook-f"></i></a></a>
+                                <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=#<?= base_url('berita/') . $berita['berita_slug'] ?>" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
+                            </li>
                             <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
                             <li><a href="whatsapp://send?text=<?= $berita['berita_judul'] . ' ' . base_url('berita/') . $berita['berita_slug'] ?>" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i></a></li>
                             <!-- <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li> -->
