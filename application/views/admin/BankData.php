@@ -8,6 +8,7 @@
                     <option value="">Semua Tahun</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
+                    <option value="2020">2020</option>
 
                 </select>
                 <button type="button" class="btn btn-success my-1 mr-sm-2" id="new_btn" disabled="disabled"><i class="fal fa-plus"></i> Tambah User Baru</button>
@@ -64,6 +65,7 @@
                         <option value="">Semua Tahun</option>
                         <option value="2022">2022</option>
                         <option value="2021">2021</option>
+                        <option value="2020">2020</option>
 
                     </select>
                     <div class="form-group">
