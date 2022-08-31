@@ -71,7 +71,7 @@ class Admin extends CI_Controller
         $this->SecurityModel->rolesOnlyGuard(array('admin'));
         $pageData = array(
             'title' => 'Berita',
-            'content' => 'admin/menu',
+            'content' => 'admin/Menu',
             'breadcrumb' => array(
                 'Home' => base_url(),
             ),
