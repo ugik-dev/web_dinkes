@@ -52,6 +52,33 @@
                     <img src="assets/images/home-two/contact_us.png" alt="shipo">
                 </div>
             </div>
+            <div class="col-xl-12 col-md-12 col-12 col-sm-12">
+                <div class="single-widgets-two">
+                    <h4 class="widgets-title">Sarana pengaduan</h4>
+                    <ul>
+                        <li><a href="#"><b>Telp:</b> 0717-92102</a></li>
+                        <li><a href="https://wa.me/6282311448289?text=Hallo!!"><b>WA:</b> 082311448289</a></li>
+                        <li><a href="#"><b>Email:</b> dinkesbangka@gmail.com / layanan@dinkes.bangka.go.id</a></li>
+                        <li><a href="https://lapor.go.id"><b>Sp4n Lapor!:</b> lapor.go.id</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100085086978044"><b>Facebook:</b> Mall Sipandu Bangka</a></li>
+                        <li><a href="https://dinkes.bangka.go.id/pengaduan"><b>e-Pengaduan</b></a></li>
+                    </ul>
+                    <div class="social-link-two">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Sarana pengaduan :
+            1. Telp 0717-92102/ wa 082311448289
+            2. Email dinkes: dinkesbangka@gmail.com
+            3. Website dinkes: dinkes.bangka.go.id
+            4. Sp4n Lapor! : Lapor.go.id
+            5. Facebook : www.facebook.com/ Mall Sipandu Bangka -->
         </div>
     </div>
 </section>
