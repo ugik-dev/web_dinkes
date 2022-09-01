@@ -63,14 +63,14 @@
                         <li><a href="https://www.facebook.com/profile.php?id=100085086978044"><b>Facebook:</b> Mall Sipandu Bangka</a></li>
                         <li><a href="https://dinkes.bangka.go.id/pengaduan"><b>e-Pengaduan</b></a></li>
                     </ul>
-                    <div class="social-link-two">
+                    <!-- <div class="social-link-two">
                         <ul>
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                             <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- Sarana pengaduan :
