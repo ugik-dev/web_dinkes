@@ -34,7 +34,7 @@ class BankDataController extends CI_Controller
     public function download($id)
     {
         try {
-            $this->SecurityModel->userOnlyGuard(TRUE);
+            // $this->SecurityModel->userOnlyGuard(TRUE);
             $filter = $this->input->get();
             $data = $this->BankDataModel->getAllBankData(['id_bank_data' => $id])[$id];
             $this->BankDataModel->edit(['id_bank_data' => $id, 'total_download' => $data['total_download'] + 1]);
