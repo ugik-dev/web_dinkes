@@ -259,7 +259,6 @@
                     <span class="highlight_text">Sejahterah <br>
                         Kondisi Masyarakat yang terpenuhi Ketahanan Materil dan Spiritual yang ditunjukkan oleh Pertumbuhan Ekonomi tinggi, Meratanya Tingkat Pendapatan Masyarakat, Keterbebasan dari Kemiskinan, SDM yang Berkualitas dan Berdaya Saing serta Terciptanya Pemerataan Pembangunan antar Wilayah
                     </span>
-
                 </div>
             </div>
         </div>

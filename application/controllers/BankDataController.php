@@ -21,7 +21,7 @@ class BankDataController extends CI_Controller
     public function getAllBankData()
     {
         try {
-            $this->SecurityModel->userOnlyGuard(TRUE);
+            // $this->SecurityModel->userOnlyGuard(TRUE);
             $filter = $this->input->get();
             $data = $this->BankDataModel->getAllBankData($this->input->get());
             echo json_encode(array("data" => $data));
