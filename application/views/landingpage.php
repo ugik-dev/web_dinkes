@@ -256,15 +256,24 @@
                 <div class="about-app-text wow animated fadeInRight" data-wow-duration="2s">
                     <h2>Pelayanan Cepat <br> Ramah dan Berkalitas</h2>
                     <p>Website Dinas Kesehatan Kabupaten Bangka merupakan halaman untuk memudahkan akses masyarakat kepada informasi-informasi dari Dinas Kesehatan Kabupaten Bangka. Informasi yang disampaikan berasal dari kegiatan yang dilaksanakan oleh Dinas Kesehatan Kabupaten Bangka beserta jajarannya yaitu 12 Puskesmas, 3 Rumah Sakit yaitu Rumah Sakit Umum Daerah Depati Bahrin, Rumah Sakit Pratama Eko Maulana Ali dan Rumah Sakit Pratama Sjafrie Rahman, UPT PSC 119 Sepintu Sedulang dan UPT Laboratorium Kesehatan Daerah.</p>
-                    <span class="highlight_text">BANGKA SETARA <br>(BANGKA SEJAHTERA DAN MULIA).</span>
+                    <span class="highlight_text">Sejahterah <br>
+                        Kondisi Masyarakat yang terpenuhi Ketahanan Materil dan Spiritual yang ditunjukkan oleh Pertumbuhan Ekonomi tinggi, Meratanya Tingkat Pendapatan Masyarakat, Keterbebasan dari Kemiskinan, SDM yang Berkualitas dan Berdaya Saing serta Terciptanya Pemerataan Pembangunan antar Wilayah
+                    </span>
+
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xl-6 col-md-12 col-12 col-sm-12">
                 <div class="about-app-text wow animated fadeInLeft" data-wow-duration="2s">
-                    <h2>Inspired design for the <br>digital app landing</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form Bender cobblers chap grub sloshed up the duff I fantastic owt to do with me at public school, James Bond chip shop chancer my lady gormless.</p>
+                    <span class="highlight_text mb-4">Mulia <br>
+                        Kondisi Masyarakat yang Memiliki Harkat dan Martabat serta Kedudukan yang Setara/Mulia/Tinggi karena Keberhasilan dalam Pencapaian Pembangunan dan Kesejahteraan Sosial yang Ideal. Masyarakat yang Mulia Memiliki Kemampuan dan Membentuk Karakter serta Peradaban yang Bermartabat dan Unggul dalam Menjadi Manusia yang Sehat, Berilmu Pengetahuan, Cakap, Kreatif dan Mandiri
+                    </span> <!-- <h2>Visi Misi <br>digital app landing</h2> -->
+                    <p>1. Mewujudkan Tata Kelola Pemerintahan yang Bersih dan Berbasis Teknologi Informasi<br>
+                        2. Mewujudkan Sumber Daya Manusia yang Berkualitas dan Berintegritas<br>
+                        3. Mewujudkan Pemeratan Pembangunan Infrastruktur antar Wilayah<br>
+                        4. Mewujudkan Gerbang Kota dan Pariwisata Berskala Internasional<br>
+                        5. Mewujudkan Perekonomian Daerah yang Berdaya Saing dan Berkelanjutan.</p>
                     <!-- <a href="#" class="btn_about">Download</a> -->
                 </div>
             </div>
