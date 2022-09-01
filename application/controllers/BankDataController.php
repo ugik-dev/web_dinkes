@@ -117,7 +117,7 @@ class BankDataController extends CI_Controller
                 $data_fx = [];
                 $this->upload->initialize($config);
                 if ($this->upload->do_upload('path_bank_data')) {
-                    echo 'uplds';
+                    // echo 'uplds';
                     $gbr = $this->upload->data();
                     $data['path_bank_data'] = $gbr['file_name'];
                 } else {
