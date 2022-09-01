@@ -68,16 +68,16 @@ class BankDataController extends CI_Controller
                 if ($this->upload->do_upload('bank_data')) {
                     $gbr = $this->upload->data();
                     //Compress Image
-                    $config['image_library'] = 'gd2';
-                    $config['source_image'] = './upload/bank_data/' . $gbr['file_name'];
-                    $config['create_thumb'] = FALSE;
-                    $config['maintain_ratio'] = FALSE;
-                    $config['quality'] = '60%';
-                    // $config['width']= 710;
-                    // $config['height']= 420;
-                    $config['new_image'] = './upload/bank_data/' . $gbr['file_name'];
-                    $this->load->library('image_lib', $config);
-                    $this->image_lib->resize();
+                    // $config['image_library'] = 'gd2';
+                    // $config['source_image'] = './upload/bank_data/' . $gbr['file_name'];
+                    // $config['create_thumb'] = FALSE;
+                    // $config['maintain_ratio'] = FALSE;
+                    // $config['quality'] = '60%';
+                    // // $config['width']= 710;
+                    // // $config['height']= 420;
+                    // $config['new_image'] = './upload/bank_data/' . $gbr['file_name'];
+                    // $this->load->library('image_lib', $config);
+                    // $this->image_lib->resize();
 
                     $data['path_bank_data'] = $gbr['file_name'];
                     // $jdl = $this->input->post('judul');
@@ -116,11 +116,11 @@ class BankDataController extends CI_Controller
                 $config['encrypt_name'] = TRUE; //nama yang terupload nantinya
                 $data_fx = [];
                 $this->upload->initialize($config);
-                 if ($this->upload->do_upload('path_bank_data')) {
+                if ($this->upload->do_upload('path_bank_data')) {
                     echo 'uplds';
                     $gbr = $this->upload->data();
                     $data['path_bank_data'] = $gbr['file_name'];
-                 } else {
+                } else {
                 }
             }
 
