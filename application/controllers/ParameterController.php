@@ -25,7 +25,7 @@ class ParameterController extends CI_Controller
 	public function getAllJenisMenu()
 	{
 		try {
-			$this->SecurityModel->userOnlyGuard(TRUE);
+			// $this->SecurityModel->userOnlyGuard(TRUE);
 			$data = $this->ParameterModel->getAllJenisMenu($this->input->get());
 			echo json_encode(array("data" => $data));
 		} catch (Exception $e) {
@@ -37,7 +37,7 @@ class ParameterController extends CI_Controller
 	public function getAllRefBankData()
 	{
 		try {
-			$this->SecurityModel->userOnlyGuard(TRUE);
+			// $this->SecurityModel->userOnlyGuard(TRUE);
 			$data = $this->ParameterModel->getAllRefBankData($this->input->get());
 			echo json_encode(array("data" => $data));
 		} catch (Exception $e) {
