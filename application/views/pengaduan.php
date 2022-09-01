@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="col-xl-12 col-md-12 col-12 col-sm-12">
-                <div class="single-widgets-two">
+                <div class="single-widgets-two wow animated fadeInUp">
                     <h4 class="widgets-title">Sarana pengaduan</h4>
                     <ul>
                         <li><a href="#"><b>Telp:</b> 0717-92102</a></li>
