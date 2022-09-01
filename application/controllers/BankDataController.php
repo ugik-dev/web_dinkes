@@ -62,10 +62,10 @@ class BankDataController extends CI_Controller
             $data = $this->input->post();
             $data_fx = [];
             $this->upload->initialize($config);
-            if (!empty($_FILES['bank_data'])) {
+            if (!empty($_FILES['path_bank_data'])) {
                 // var_dump($_FILES);
                 // die();
-                if ($this->upload->do_upload('bank_data')) {
+                if ($this->upload->do_upload('path_bank_data')) {
                     $gbr = $this->upload->data();
                     //Compress Image
                     // $config['image_library'] = 'gd2';
