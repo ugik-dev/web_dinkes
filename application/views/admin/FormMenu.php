@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <textarea id="ckeditor" name="menu_isi" class="form-control" required><?= !empty($dataContent['edit']['menu_isi']) ? $dataContent['edit']['menu_isi'] : '' ?></textarea><br />
+            <textarea id="ckeditor" name="menu_isi" rows="5"><?= !empty($dataContent['edit']['menu_isi']) ? $dataContent['edit']['menu_isi'] : '' ?></textarea><br />
             <!-- <input id="ckeditor" type="file" name="filefoto" required><br> -->
             <div class="row">
                 <div class="col-lg-6">
