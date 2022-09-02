@@ -40,7 +40,8 @@
     <script src="<?= base_url('assets/admin/') ?>js/plugins/c3/c3.min.js"></script>
     <script src="<?= base_url('assets/admin/') ?>js/custom.js?v=0.0.2"></script>
     <script src="<?= base_url('assets/admin/') ?>js/FileUploader.js"></script>
-
+    <script src="<?php echo base_url() . 'assets/ckeditor5/ckeditor.js' ?>"></script>
+    <script src="<?php echo base_url() . 'assets/ckfinder/ckfinder.js' ?>"></script>
     <!-- jQuery UI -->
     <script src="<?php echo base_url('assets/admin'); ?>/js/plugins/jquery-ui/jquery-ui.min.js"></script>
 
@@ -49,6 +50,7 @@
     <link href="<?php echo base_url('assets/admin'); ?>/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
 
     <link href="<?php echo base_url('assets/admin'); ?>/css/plugins/jquery-autocomplete.css" rel="stylesheet">
+
 </head>
 </head>
 

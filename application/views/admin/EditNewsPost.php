@@ -49,7 +49,7 @@
 <!-- <script src="<?php echo base_url() . 'assets/admin/jquery/jquery-2.2.3.min.js' ?>"></script> -->
 <script type="text/javascript" src="<?php echo base_url() . 'assets/admin/js/bootstrap.js' ?>"></script>
 <!-- <script src="<?php echo base_url() . 'assets/admin/ckeditor/ckeditor.js' ?>"></script> -->
-<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<!-- <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script> -->
 <script type="text/javascript">
   $(function() {
 
@@ -95,10 +95,37 @@
 
     // });
 
-    CKEDITOR.replace('ckeditor', {
-      filebrowserImageBrowseUrl: '<?php echo base_url('assets/kcfinder/browse.php'); ?>',
-      height: '400px'
-    });
-
+    // CKEDITOR.replace('ckeditor', {
+    //   filebrowserImageBrowseUrl: '<?php echo base_url('assets/kcfinder/browse.php'); ?>',
+    //   height: '400px'
+    // });
+    ClassicEditor
+      .create(document.querySelector('#ckeditor'), {
+        ckfinder: {
+          uploadUrl: '<?= base_url() ?>assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+        },
+        toolbar: {
+          items: ['ckfinder', 'imageUpload', 'toggleImageCaption', 'imageTextAlternative', '|',
+            'heading', '|',
+            'fontfamily', 'fontsize', '|',
+            'alignment', '|',
+            'fontColor', 'fontBackgroundColor', '|',
+            'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+            'link', '|',
+            'outdent', 'indent', '|',
+            'bulletedList', 'numberedList', 'todoList', '|',
+            'code', 'codeBlock', '|',
+            'insertTable', '|',
+            'uploadImage', 'blockQuote', '|',
+            'undo', 'redo'
+          ],
+          shouldNotGroupWhenFull: true
+        }
+        // toolbar: ['ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo', '-', 'numberedList', 'bulletedList'],
+        // shouldNotGroupWhenFull: true
+      })
+      .catch(error => {
+        console.error(error);
+      });
   });
 </script>

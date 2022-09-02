@@ -2,6 +2,7 @@
 
 assets/kcfinder/upload/.thumbs/files/*
 !assets/kcfinder/upload/.thumbs/files/.gitignore
+/assets/ckfinder/core/connector/php/assets/ckfinder/userfiles/*
 
 assets/kcfinder/upload/files/*
 !assets/kcfinder/upload/files/.gitignore
