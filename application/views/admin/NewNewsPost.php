@@ -50,7 +50,11 @@
         if (!result.value) {
           return;
         }
-        buttonLoading(editor_form.saveBtn);
+        swal({
+          title: 'Loading...',
+          allowOutsideClick: false
+        });
+        swal.showLoading();
         $.ajax({
           url: "<?= base_url('NewsController/simpan_new_post') ?>",
           'type': 'POST',

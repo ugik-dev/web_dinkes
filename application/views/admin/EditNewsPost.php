@@ -70,7 +70,11 @@
         if (!result.value) {
           return;
         }
-        buttonLoading(editor_form.saveBtn);
+        swal({
+          title: 'Loading...',
+          allowOutsideClick: false
+        });
+        swal.showLoading();
         $.ajax({
           url: "<?= site_url('NewsController/simpan_post') ?>",
           'type': 'POST',

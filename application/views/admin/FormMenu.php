@@ -79,12 +79,16 @@
 
         editor_form.form.submit(function(event) {
             event.preventDefault();
-            console.log('s')
-            swal(saveConfirmation("Konfirmasi tambah", "Yakin akan menambahakan dokumen ini?", "Ya, Tambah!")).then((result) => {
+            // console.log('s')
+            swal(saveConfirmation("Konfirmasi tambah", "Yakin akan menambahakan simpan data ini?", "Ya, Tambah!")).then((result) => {
                 if (!result.value) {
                     return;
                 }
-                buttonLoading(editor_form.saveBtn);
+                swal({
+                    title: 'Loading...',
+                    allowOutsideClick: false
+                });
+                swal.showLoading();
                 $.ajax({
                     url: "<?= $dataContent['form_url'] ?>",
                     'type': 'POST',
@@ -99,6 +103,7 @@
                             return;
                         }
                         // location.reload();
+                        location.href = "<?= base_url('admin/menu') ?>";
                         swal("Simpan Berhasil", "", "success");
                     },
                     error: function(e) {}
