@@ -1,6 +1,10 @@
 .DS_Store
 
-assets/kcfinder/upload/*
+assets/kcfinder/upload/.thumbs/files/*
+!assets/kcfinder/upload/.thumbs/files/.gitignore
+
+assets/kcfinder/upload/files/*
+!assets/kcfinder/upload/files/.gitignore
 upload/berita_image/*
 upload/berita_pdf/*
 upload/menu_pdf/*

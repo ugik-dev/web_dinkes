@@ -60,11 +60,11 @@
                             <div id="fb-root"></div>
 
                             <li>
-                                <div class="fb-share-button" data-href="<?= base_url('berita/') . $berita['berita_slug'] ?>" data-layout="box_count">
+                                <div class="fb-share-button" data-href="<?= base_url($berita['tipe'] . '/') . $berita['berita_slug'] ?>" data-layout="box_count">
                                 </div>
                             </li>
                             <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
-                            <li><a href="whatsapp://send?text=<?= $berita['berita_judul'] . ' ' . base_url('berita/') . $berita['berita_slug'] ?>" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i></a></li>
+                            <li><a href="whatsapp://send?text=<?= $berita['berita_judul'] . ' ' . base_url($berita['tipe'] . '/') . $berita['berita_slug'] ?>" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i></a></li>
                             <!-- <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li> -->
                         </ul>
                     </div>
