@@ -7,7 +7,7 @@
         <option value="berita">Berita</option>
         <option value="pengumuman">Pengumuman</option>
         <option value="pelayanan">Pelayanan</option>
-      </select> <textarea id="ckeditor" name="berita_isi" class="form-control" required></textarea><br />
+      </select> <textarea id="ckeditor" name="berita_isi" class="form-control"></textarea><br />
       <div class="form-group">
         <label for="menu_pdf">Gambar thumbnail <span></span></label>
         <input type="file" name="filefoto"><br>

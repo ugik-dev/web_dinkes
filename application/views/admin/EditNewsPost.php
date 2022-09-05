@@ -14,7 +14,7 @@
           </select>
         </div>
       </div>
-      <textarea id="ckeditor" name="berita_isi" class="form-control" required><?= $dataContent['berita_isi'] ?></textarea><br />
+      <textarea id="ckeditor" name="berita_isi" class="form-control"><?= $dataContent['berita_isi'] ?></textarea><br />
       <!-- <input id="ckeditor" type="file" name="filefoto" required><br> -->
       <?php if (!empty($dataContent['berita_image'])) {
       ?>
