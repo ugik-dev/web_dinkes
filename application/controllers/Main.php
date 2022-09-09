@@ -89,8 +89,6 @@ class main extends CI_Controller
 
     public function index()
     {
-        // echo json_encode(Menu());
-        // die();
         $dataContent = array(
             'page' => 'landingpage',
             'berita' => $this->MainModel->getBerita(array('tipe' => '', 'limit' => 6)),
@@ -98,6 +96,23 @@ class main extends CI_Controller
         );
         $this->load->view('template', $dataContent);
     }
+
+    public function pagger()
+    {
+        $filter = $this->input->get();
+        if (empty($filter['page'])) {
+            $filter['page'] = 1;
+        };
+        $berita =   $this->MainModel->getPagger(array('tipe' => '', 'limit' => 6));
+        echo json_encode($berita);
+        // $dataContent = array(
+        //     'page' => 'landingpage',
+        //     'berita' => $this->MainModel->getBerita(array('tipe' => '', 'limit' => 6)),
+        //     // 'surveys' => $this->ParameterModel->getSurvey(array('show_survey' => '1', 'limit' => 6))
+        // );
+        // $this->load->view('template', $dataContent);
+    }
+
     public function survey()
     {
         $dataContent = array(

@@ -51,6 +51,7 @@
                     <!-- single post item end -->
                     <!-- single post item start -->
                 </div>
+                <!-- <a href="<?= base_url('berita') ?>" class="btn_theme_one color_one">Lainnya ..</a> -->
                 <!-- <div class="blog-page-nav blog-pages-link">
                     <ul>
                         <li><a href="#">01</a></li>

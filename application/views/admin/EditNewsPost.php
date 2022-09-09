@@ -11,6 +11,7 @@
             <option <?= $dataContent['tipe'] == 'berita' ? 'selected' : '' ?> value="berita">Berita</option>
             <option <?= $dataContent['tipe'] == 'pengumuman' ? 'selected' : '' ?> value="pengumuman">Pengumuman</option>
             <option <?= $dataContent['tipe'] == 'pelayanan' ? 'selected' : '' ?> value="pelayanan">Pelayanan</option>
+            <option <?= $dataContent['tipe'] == 'pelayanan' ? 'selected' : '' ?> value="pelayanan">Pelayanan</option>
           </select>
         </div>
       </div>

@@ -14,11 +14,27 @@ class MainModel extends CI_Model
             $this->db->where('berita_slug', $filter['berita_slug']);
         if (!empty($filter['limit']))
             $this->db->limit($filter['limit'], 'DESC');
+        $this->db->order_by('berita_tanggal', 'DESC');
         $res = $this->db->get();
         $res = $res->result_array();
         return $res;
     }
-
+    public function getPagger($filter = [])
+    {
+        $this->db->select('berita_judul');
+        $this->db->from('postingan');
+        if (!empty($filter['berita_id']))
+            $this->db->where('berita_id', $filter['berita_id']);
+        if (!empty($filter['tipe']))
+            $this->db->where('tipe', $filter['tipe']);
+        if (!empty($filter['berita_slug']))
+            $this->db->where('berita_slug', $filter['berita_slug']);
+        if (!empty($filter['limit']))
+            $this->db->limit($filter['limit'], 'DESC');
+        $res = $this->db->get();
+        $res = $res->result_array();
+        return $res;
+    }
     public function getTamu($filter = [])
     {
         $this->db->select('*');

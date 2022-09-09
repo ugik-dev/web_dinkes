@@ -64,7 +64,7 @@ $route['profil'] = 'main/profil';
 $route['login'] = 'main/login';
 $route['e-survey'] = 'main/survey';
 $route['pengaduan'] = 'main/pengaduan';
-$route['berita'] = 'admin/NewsController';
+$route['berita'] = 'main/pagger';
 // $route['admin/menu'] = 'admin/NewsController';
 
 $route['404_override'] = '';
