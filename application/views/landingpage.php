@@ -1,7 +1,7 @@
 <section class="blog-page-wrap blog-one left-sidebar-blog section-padding">
     <div class="container">
         <div class="row">
-            <div class="col-xl-12 col-md-12 col-12 col-sm-12 col-lg-12  order-xl-2  order-lg-2 order-md-1 order-sm-1 order-1">
+            <div class="col-xl-8 col-md-12 col-12 col-sm-12 col-lg-8 ">
                 <div class="blog-post-list">
                     <div class="row">
                         <?php foreach ($berita as $b) {
@@ -11,8 +11,7 @@
                                 $url = base_url('assets/images/pengumuman.jpg');
                             }
                         ?>
-
-                            <div class="col-lg-4">
+                            <div class="col-lg-6">
 
                                 <div class="single-post-item">
                                     <div class="post-thumbnail">
@@ -20,7 +19,7 @@
                                     </div>
                                     <div class="post-contents">
                                         <h6 style="color:black;"><a style="color:black;" href="<?= base_url($b['tipe'] . '/' . $b['berita_slug']) ?>"><?= $b['berita_judul'] ?></a></h6>
-                                        <p style="  word-break: break-word;   overflow: hidden;   text-overflow: ellipsis;   display: -webkit-box;   -webkit-box-orient: vertical;"><?= substr(strip_tags($b['berita_isi']), 0, 225) ?></p>
+                                        <p style="  word-break: break-word;   overflow: hidden;   text-overflow: ellipsis;   display: -webkit-box;   -webkit-box-orient: vertical;"><?= substr(strip_tags($b['berita_isi']), 0, 50) ?></p>
                                         <a href="<?= base_url($b['tipe'] . '/' . $b['berita_slug']) ?>" class="permalink_btn">lanjutkan baca <i class="fas fa-angle-right"></i></a>
                                     </div>
                                     <div class="post-metabox">
@@ -51,7 +50,93 @@
             <?php
             // $this->load->view('sidemenu');
             ?>
-
+            <div class="col-xl-3 col-lg-4 col-md-12 col-12 col-sm-12 offset-xl-1">
+                <div class="blog-sidebar dynamic-right-sidebar">
+                    <!-- single sidebar item start -->
+                    <div class="single-sidebar-widget">
+                        <div class="search-box">
+                            <form action="<?= base_url('search') ?>" method="get">
+                                <input type="text" placeholder="Search here" name="s">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="single-sidebar-widget">
+                        <a target="_blank" href="https://covid19.bangka.go.id/">
+                            <img src="<?= base_url('assets/images/info-covid.png') ?>">
+                        </a>
+                    </div>
+                    <div class="single-sidebar-widget">
+                        <a target="_blank" href="http://latih-ekinerja.bangka.go.id/">
+                            <img src="<?= base_url('assets/images/e-kinerja.png') ?>">
+                        </a>
+                    </div>
+                    <div class="single-sidebar-widget">
+                        <a target="_blank" href="http://sidikjari.bangka.go.id/">
+                            <img src="<?= base_url('assets/images/fingerprint.png') ?>">
+                        </a>
+                    </div>
+                    <!-- single sidebar item start -->
+                    <!-- <div class="single-sidebar-widget">
+                        <h4 class="sidebar_title">Category</h4>
+                        <ul>
+                            <li class="cat-item"><a href="#">Graphic Design <i class="fas fa-angle-right"></i></a></li>
+                            <li class="cat-item"><a href="#">Web Development <i class="fas fa-angle-right"></i></a></li>
+                            <li class="cat-item"><a href="#">Digital Marketing <i class="fas fa-angle-right"></i></a></li>
+                            <li class="cat-item"><a href="#">App Development <i class="fas fa-angle-right"></i></a></li>
+                            <li class="cat-item"><a href="#">Facebook Marketing <i class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div> -->
+                    <!-- single sidebar item start -->
+                    <!-- <div class="single-sidebar-widget">
+                        <h4 class="sidebar_title">recent post</h4>
+                        <ul>
+                            <li>
+                                <div class="media">
+                                    <img class="mr-3" src="assets/images/blog/thumbnail1.jpg" alt="shipo">
+                                    <div class="media-body">
+                                        <h6 class="mt-0"><a href="#">English breakfast tea with tasty.</a></h6>
+                                        <span>22 March, 2019</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <img class="mr-3" src="assets/images/blog/thumbnail2.jpg" alt="shipo">
+                                    <div class="media-body">
+                                        <h6 class="mt-0"><a href="#">English breakfast tea with tasty.</a></h6>
+                                        <span>22 March, 2017</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <img class="mr-3" src="assets/images/blog/thumbnail1.jpg" alt="shipo">
+                                    <div class="media-body">
+                                        <h6 class="mt-0"><a href="#">English breakfast tea with tasty.</a></h6>
+                                        <span>22 March, 2018</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> -->
+                    <!-- single sidebar item start -->
+                    <!-- <div class="single-sidebar-widget">
+                        <h4 class="sidebar_title">Tags</h4>
+                        <div class="tagcloud">
+                            <ul>
+                                <li><a href="#">web</a></li>
+                                <li><a href="#">android</a></li>
+                                <li><a href="#">apps</a></li>
+                                <li><a href="#">development</a></li>
+                                <li><a href="#">download</a></li>
+                                <li><a href="#">software</a></li>
+                                <li><a href="#">shipo</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
         </div>
     </div>
 </section>
