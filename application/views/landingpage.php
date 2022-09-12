@@ -20,14 +20,7 @@
                                     </div>
                                     <div class="post-contents">
                                         <h6 style="color:black;"><a style="color:black;" href="<?= base_url($b['tipe'] . '/' . $b['berita_slug']) ?>"><?= $b['berita_judul'] ?></a></h6>
-                                        <p style="  word-break: break-word;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   line-height: 16px; /* fallback */
-   max-height: 32px; /* fallback */
-   -webkit-line-clamp: 2; /* number of lines to show */
-   -webkit-box-orient: vertical;"><?= substr(strip_tags($b['berita_isi']), 0, 225) ?></p>
+                                        <p style="  word-break: break-word;   overflow: hidden;   text-overflow: ellipsis;   display: -webkit-box;   -webkit-box-orient: vertical;"><?= substr(strip_tags($b['berita_isi']), 0, 225) ?></p>
                                         <a href="<?= base_url($b['tipe'] . '/' . $b['berita_slug']) ?>" class="permalink_btn">lanjutkan baca <i class="fas fa-angle-right"></i></a>
                                     </div>
                                     <div class="post-metabox">
@@ -51,16 +44,9 @@
                     <!-- single post item end -->
                     <!-- single post item start -->
                 </div>
-                <!-- <a href="<?= base_url('berita') ?>" class="btn_theme_one color_one">Lainnya ..</a> -->
-                <!-- <div class="blog-page-nav blog-pages-link">
-                    <ul>
-                        <li><a href="#">01</a></li>
-                        <li><a href="#">02</a></li>
-                        <li><a href="#">03</a></li>
-                        <li><a href="#">04</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
-                    </ul>
-                </div> -->
+                <div class="blog-page-nav blog-pages-link text-center">
+                    <a href="<?= base_url('berita') ?>" class="btn_theme_one color_one text-center">Lainnya ..</a>
+                </div>
             </div>
             <?php
             // $this->load->view('sidemenu');

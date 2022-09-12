@@ -103,14 +103,17 @@ class main extends CI_Controller
         if (empty($filter['page'])) {
             $filter['page'] = 1;
         };
-        $berita =   $this->MainModel->getPagger(array('tipe' => '', 'limit' => 6));
-        echo json_encode($berita);
-        // $dataContent = array(
-        //     'page' => 'landingpage',
-        //     'berita' => $this->MainModel->getBerita(array('tipe' => '', 'limit' => 6)),
-        //     // 'surveys' => $this->ParameterModel->getSurvey(array('show_survey' => '1', 'limit' => 6))
-        // );
-        // $this->load->view('template', $dataContent);
+        $filter['limit'] = 6;
+        $berita =   $this->MainModel->getPagger($filter);
+        $dataContent = array(
+            'page' => 'beritalainnya',
+            'berita' => $berita,
+            'pager' => ceil($this->MainModel->countPagger($filter)['cp'] / $filter['limit']),
+            'cur_page' => $filter['page']
+            // 'surveys' => $this->ParameterModel->getSurvey(array('show_survey' => '1', 'limit' => 6))
+        );
+        // echo json_encode($dataContent);
+        $this->load->view('template', $dataContent);
     }
 
     public function survey()

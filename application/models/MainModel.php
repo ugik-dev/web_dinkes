@@ -21,7 +21,7 @@ class MainModel extends CI_Model
     }
     public function getPagger($filter = [])
     {
-        $this->db->select('berita_judul');
+        // $this->db->select('berita_judul,berita_id');
         $this->db->from('postingan');
         if (!empty($filter['berita_id']))
             $this->db->where('berita_id', $filter['berita_id']);
@@ -30,11 +30,29 @@ class MainModel extends CI_Model
         if (!empty($filter['berita_slug']))
             $this->db->where('berita_slug', $filter['berita_slug']);
         if (!empty($filter['limit']))
-            $this->db->limit($filter['limit'], 'DESC');
+            $this->db->limit($filter['limit'], ($filter['page'] - 1) * $filter['limit']);
         $res = $this->db->get();
         $res = $res->result_array();
         return $res;
     }
+
+    public function countPagger($filter = [])
+    {
+        $this->db->select('count(*) as cp');
+        $this->db->from('postingan');
+        if (!empty($filter['berita_id']))
+            $this->db->where('berita_id', $filter['berita_id']);
+        if (!empty($filter['tipe']))
+            $this->db->where('tipe', $filter['tipe']);
+        if (!empty($filter['berita_slug']))
+            $this->db->where('berita_slug', $filter['berita_slug']);
+        // if (!empty($filter['limit']))
+        //     $this->db->limit($filter['limit'], ($filter['page'] - 1) * $filter['limit']);
+        $res = $this->db->get();
+        $res = $res->result_array();
+        return $res[0];
+    }
+
     public function getTamu($filter = [])
     {
         $this->db->select('*');
