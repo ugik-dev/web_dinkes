@@ -266,15 +266,16 @@
         <div class="row text-center">
             <div class="col-xl-8 col-12 offset-xl-2 offset-md-1 col-md-10">
                 <div class="section-title-two">
-                    <h2>Pengumuman</h2>
+                    <h2>Video</h2>
                     <span>Dapatkan informasi terbaru tentang kami.</span>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="why-we-best-tabs-nav col-12 col-xl-6 col-md-12 col-sm-12 align-items-end d-flex">
-                <ul class="nav nav-pills " id="pills-tab" role="tablist">
+            <div class="why-we-best-tabs-nav col-12 col-xl-6 col-md-6 col-sm-12">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YtfuGwTOxxE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <ul class="nav nav-pills " id="pills-tab" role="tablist">
                     <?php
                     $pengumuman = array();
                     $pengumuman = Pengumuman();
@@ -291,7 +292,6 @@
                                         </div>
                                         <div class="why-nav-text">
                                             <h4><?= $p['berita_judul'] ?></h4>
-                                            <!-- <p>Build integration aute irure design in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p> -->
                                         </div>
                                     </div>
                                 </a>
@@ -307,7 +307,6 @@
                                         </div>
                                         <div class="why-nav-text">
                                             <h4><?= $p['berita_judul'] ?></h4>
-                                            <!-- <p>Build integration aute irure design in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p> -->
                                         </div>
                                     </div>
                                 </a>
@@ -323,7 +322,6 @@
                                         </div>
                                         <div class="why-nav-text">
                                             <h4><?= $p['berita_judul'] ?></h4>
-                                            <!-- <p>Build integration aute irure design in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p> -->
                                         </div>
                                     </div>
                                 </a>
@@ -337,11 +335,13 @@
 
 
 
-                </ul>
+                </ul> -->
             </div>
 
-            <div class="why-we-best-tabs-content col-12 col-xl-6 col-md-6 col-sm-12">
-                <div class="tab-content" id="pills-tabContent">
+            <div class="why-we-best-tabs-nav col-12 col-xl-6 col-md-6 col-sm-12">
+                <!-- <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=https://www.youtube.com/watch?v=yr4XvTX8Ns4" frameborder="0"></iframe> -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ll_y_wUqmsg?autoplay=1&mute=0&enablejsapi=1&controls=0&amp;start=4" title="PSC 119 Bangka Let's go" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="why-tab-one" role="tabpanel">
                         <img src="assets/images/home-two/why_img_one.png" alt="shipo">
                     </div>
@@ -351,7 +351,7 @@
                     <div class="tab-pane fade show" id="why-tab-three" role="tabpanel">
                         <img src="assets/images/home-two/why_img_one.png" alt="shipo">
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -458,55 +458,6 @@
                                 $i++;
                             } ?>
 
-
-                            <div class="tab-pane container fade" id="review-three">
-                                <div class="single-testimonial">
-                                    <span class="icon-review">
-                                        <i class="fas fa-quote-right"></i>
-                                    </span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse is an ultrices gravida. Risus commodo. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="client_info">
-                                        <h5>Jone Devs</h5>
-                                        <span>WP Developer</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane container fade" id="review-four">
-                                <div class="single-testimonial">
-                                    <span class="icon-review">
-                                        <i class="fas fa-quote-right"></i>
-                                    </span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse is an ultrices gravida. Risus commodo. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="client_info">
-                                        <h5>Charls babyes</h5>
-                                        <span>CEO of P.C</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane container fade" id="review-five">
-                                <div class="single-testimonial">
-                                    <span class="icon-review">
-                                        <i class="fas fa-quote-right"></i>
-                                    </span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse is an ultrices gravida. Risus commodo. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="client_info">
-                                        <h5>Takmina Alom</h5>
-                                        <span>WordPress Pro</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane container fade" id="review-six">
-                                <div class="single-testimonial">
-                                    <span class="icon-review">
-                                        <i class="fas fa-quote-right"></i>
-                                    </span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse is an ultrices gravida. Risus commodo. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="client_info">
-                                        <h5>Rohit mehta</h5>
-                                        <span>UI Designer</span>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
                     </div>

@@ -31,7 +31,7 @@
                             <div class="social-link-two">
                                 <ul>
                                     <li><a href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620"><i class="fab fa-facebook-f"></i></a></li>
-                                    <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
+                                    <li><a href="https://www.youtube.com/channel/UCll_7pezl1GeIkgsXK4e-vA"><i class="fab fa-youtube"></i></a></li>
                                     <!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
                                 </ul>
                             </div>
