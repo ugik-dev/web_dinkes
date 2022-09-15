@@ -60,6 +60,7 @@
                         <li><a href="https://wa.me/6282311448289?text=Hallo!!"><b>WA:</b> 082311448289</a></li>
                         <li><a href="#"><b>Email:</b> dinkesbangka@gmail.com / layanan@dinkes.bangka.go.id</a></li>
                         <li><a href="https://lapor.go.id"><b>Sp4n Lapor!:</b> lapor.go.id</a></li>
+                        <li><a href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620"><b>Facebook:</b> Dinas Kesehatan Kabupaten Bangka</a></li>
                         <li><a href="https://www.facebook.com/profile.php?id=100085086978044"><b>Facebook:</b> Mall Sipandu Bangka</a></li>
                         <li><a href="https://dinkes.bangka.go.id/pengaduan"><b>e-Pengaduan</b></a></li>
                     </ul>

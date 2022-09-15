@@ -35,6 +35,23 @@ class MainModel extends CI_Model
         $res = $res->result_array();
         return $res;
     }
+    public function getPaggerGaleri($filter = [])
+    {
+        // $this->db->select('berita_judul,berita_id');
+        $this->db->from('galeri as g');
+        $this->db->join('album as a', 'g.album_id = a.album_id');
+        if (!empty($filter['galeri_id']))
+            $this->db->where('galeri_id', $filter['galeri_id']);
+        if (!empty($filter['s']))
+            $this->db->where('nama_galeri like "%' . $filter['s'] . '%" OR deskripsi_galeri like "%' . $filter['s'] . '%" ');
+        if (!empty($filter['limit']))
+            $this->db->limit($filter['limit'], ($filter['page'] - 1) * $filter['limit']);
+        $res = $this->db->get();
+        $res = $res->result_array();
+        return $res;
+    }
+
+
 
     public function countPagger($filter = [])
     {
@@ -52,7 +69,22 @@ class MainModel extends CI_Model
         $res = $res->result_array();
         return $res[0];
     }
-
+    public function countPaggerGaleri($filter = [])
+    {
+        $this->db->select('count(*) as cp');
+        $this->db->from('galeri');
+        if (!empty($filter['berita_id']))
+            $this->db->where('berita_id', $filter['berita_id']);
+        if (!empty($filter['tipe']))
+            $this->db->where('tipe', $filter['tipe']);
+        if (!empty($filter['s']))
+            $this->db->where('berita_isi like "%' . $filter['s'] . '%" OR berita_judul like "%' . $filter['s'] . '%" ');
+        // if (!empty($filter['limit']))
+        //     $this->db->limit($filter['limit'], ($filter['page'] - 1) * $filter['limit']);
+        $res = $this->db->get();
+        $res = $res->result_array();
+        return $res[0];
+    }
     public function getTamu($filter = [])
     {
         $this->db->select('*');

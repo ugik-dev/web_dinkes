@@ -38,6 +38,34 @@ class Admin extends CI_Controller
         $this->load->view('Page', $pageData);
     }
 
+    public function album()
+    {
+        $this->SecurityModel->rolesOnlyGuard(array('admin'));
+
+        $pageData = array(
+            'title' => 'Kelola Album',
+            'content' => 'admin/album',
+            'breadcrumb' => array(
+                'Home' => base_url(),
+            ),
+        );
+        $this->load->view('Page', $pageData);
+    }
+
+    public function galeri()
+    {
+        $this->SecurityModel->rolesOnlyGuard(array('admin'));
+
+        $pageData = array(
+            'title' => 'Kelola Galeri',
+            'content' => 'admin/galeri',
+            'breadcrumb' => array(
+                'Home' => base_url(),
+            ),
+        );
+        $this->load->view('Page', $pageData);
+    }
+
 
     public function bank_data()
     {

@@ -55,7 +55,7 @@ $menu = Menu();
 
                                         </div>
                                     </li>
-                                    <!-- <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>profil">Informasi</a></li> -->
+                                    <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>galeri">Galeri</a></li>
                                     <!-- <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>tentang">Tentang</a></li> -->
                                     <!-- <li class="nav-item"><a style="width : 150px" class="nav-link" href="<?= base_url() ?>daftar-tamu">Daftar Tamu</a></li> -->
                                     <li class="nav-item"><a style="width : 150px" class="nav-link" href="<?= base_url() ?>bank-data">Bank Data</a></li>

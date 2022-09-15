@@ -43,10 +43,35 @@ class main extends CI_Controller
             );
         } else
             $dataContent = array(
-                'page' => 'error',
+                'page' => 'error_page',
                 'message' => 'Halaman tidak ditemukan'
             );
         $this->load->view('template', $dataContent);
+    }
+
+    public function galeri()
+    {
+        $filter = $this->input->get();
+        if (empty($filter['page'])) {
+            $filter['page'] = 1;
+        };
+        $filter['limit'] = 12;
+        $berita =   $this->MainModel->getPaggerGaleri($filter);
+        $dataContent = array(
+            'page' => 'galeri',
+            'berita' => $berita,
+            'pager' => ceil($this->MainModel->countPaggerGaleri($filter)['cp'] / $filter['limit']),
+            'cur_page' => $filter['page']
+            // 'surveys' => $this->ParameterModel->getSurvey(array('show_survey' => '1', 'limit' => 6))
+        );
+        // echo json_encode($dataContent);
+        $this->load->view('template', $dataContent);
+
+        // $dataContent = array(
+        //     'page' => 'error_page',
+        //     'message' => 'Sedang di bangun'
+        // );
+        // $this->load->view('template', $dataContent);
     }
     public function pengumuman($id)
     {
@@ -117,6 +142,8 @@ class main extends CI_Controller
         // echo json_encode($dataContent);
         $this->load->view('template', $dataContent);
     }
+
+
 
     public function search()
     {

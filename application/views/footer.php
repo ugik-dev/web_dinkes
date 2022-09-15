@@ -26,12 +26,13 @@
                                 <li><a href="#"><b>Location:</b> Jl A Yani, Jalur Dua <br>Sungailiat, Bangka</a></li>
                                 <li><a href="#"><b>Email:</b> dinkesbangka@gmail.com</a></li>
                                 <li><a href="#"><b>Phone:</b> (0717) 92102</a></li>
+                                <li><a href="https://wa.me/6282311448289?text=Hallo!!"><b>Whatsapp:</b> 082311448289</a></li>
                             </ul>
                             <div class="social-link-two">
                                 <ul>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620"><i class="fab fa-facebook-f"></i></a></li>
+                                    <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
+                                    <!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
                                 </ul>
                             </div>
                         </div>

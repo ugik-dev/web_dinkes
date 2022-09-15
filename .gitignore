@@ -2,7 +2,7 @@
 
 assets/kcfinder/upload/.thumbs/files/*
 !assets/kcfinder/upload/.thumbs/files/.gitignore
-/assets/ckfinder/core/connector/php/assets/ckfinder/userfiles/*
+assets/ckfinder/core/connector/php/assets/ckfinder/userfiles/*
 
 assets/kcfinder/upload/files/*
 !assets/kcfinder/upload/files/.gitignore
@@ -10,6 +10,7 @@ upload/berita_image/*
 upload/berita_pdf/*
 upload/menu_pdf/*
 upload/bank_data/*
+upload/galeri/*
 application/config/database.php
 
 application/cache/*

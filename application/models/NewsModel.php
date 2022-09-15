@@ -50,7 +50,7 @@ class NewsModel extends CI_Model
       return $res->result_array();
     }
     if (!empty($filter['sort'])) {
-      $this->db->select('berita_id, berita_image,tipe , berita_slug, berita_judul,berita_tanggal, total_show,substr(berita_isi,1,400) as berita_isi');
+      $this->db->select('berita_id, berita_image,tipe , berita_slug, berita_judul,berita_tanggal, total_show');
       $this->db->from("postingan as b");
       // $this->db->join('ref_menu as rf','rf.id_ref_menu = b.')
       $this->db->order_by('berita_id', 'desc');

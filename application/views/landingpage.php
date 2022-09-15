@@ -74,6 +74,7 @@
                             ?>
                         </ul>
                     </div>
+
                     <!-- </div> -->
                 </div>
                 <div class="blog-page-nav blog-pages-link text-center">
@@ -83,7 +84,7 @@
             <?php
             // $this->load->view('sidemenu');
             ?>
-            <div class="col-xl-3 col-lg-4 col-md-12 col-12 col-sm-12 offset-xl-1">
+            <div class="col-xl-3 col-lg-4 col-md-12 col-12 col-sm-12">
                 <div class="blog-sidebar dynamic-right-sidebar">
                     <!-- single sidebar item start -->
                     <div class="single-sidebar-widget">
@@ -94,20 +95,25 @@
                             </form>
                         </div>
                     </div>
-                    <div class="single-sidebar-widget">
+                    <div class="single-sidebar-widget mb-0">
                         <a target="_blank" href="https://covid19.bangka.go.id/">
-                            <img src="<?= base_url('assets/images/info-covid.png') ?>">
+                            <img class="w-100" src="<?= base_url('assets/images/info-covid2.png') ?>">
                         </a>
                     </div>
-                    <div class="single-sidebar-widget">
+                    <div class="single-sidebar-widget mb-0 mt-0">
                         <a target="_blank" href="http://latih-ekinerja.bangka.go.id/">
-                            <img src="<?= base_url('assets/images/e-kinerja.png') ?>">
+                            <img class="w-100" src="<?= base_url('assets/images/e-kinerja.png') ?>">
                         </a>
                     </div>
-                    <div class="single-sidebar-widget">
+                    <div class="single-sidebar-widget mb-2 mt-0">
                         <a target="_blank" href="http://sidikjari.bangka.go.id/">
-                            <img src="<?= base_url('assets/images/fingerprint.png') ?>">
+                            <img class="w-100" src="<?= base_url('assets/images/fingerprint2.png') ?>">
                         </a>
+                    </div>
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v14.0" nonce="BLkDOsin"></script>
+                    <div class="fb-page" data-href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620" data-tabs="events" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620">Dinas Kesehatan Kabupaten Bangka</a></blockquote>
                     </div>
                     <!-- single sidebar item start -->
                     <!-- <div class="single-sidebar-widget">

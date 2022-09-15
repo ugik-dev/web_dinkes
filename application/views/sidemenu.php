@@ -3,8 +3,8 @@
             <!-- single sidebar item start -->
             <div class="single-sidebar-widget">
                 <div class="search-box">
-                    <form action="#">
-                        <input type="text" placeholder="Search here">
+                    <form action="<?= base_url('search') ?>" method="get">
+                        <input type="s" placeholder="Search">
                         <button type="submit"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
