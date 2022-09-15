@@ -9,6 +9,7 @@
           <input type="hidden" id="" name="berita_id" class="form-control" value="<?= $dataContent['berita_id'] ?>" placeholder="" required /><br />
           <select class="form-control col-lg-6" name="tipe">
             <option <?= $dataContent['tipe'] == 'berita' ? 'selected' : '' ?> value="berita">Berita</option>
+            <option <?= $dataContent['tipe'] == 'artikel' ? 'selected' : '' ?> value="artikel">Artikel</option>
             <option <?= $dataContent['tipe'] == 'pengumuman' ? 'selected' : '' ?> value="pengumuman">Pengumuman</option>
             <option <?= $dataContent['tipe'] == 'pelayanan' ? 'selected' : '' ?> value="pelayanan">Pelayanan</option>
             <option <?= $dataContent['tipe'] == 'pelayanan' ? 'selected' : '' ?> value="pelayanan">Pelayanan</option>

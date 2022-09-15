@@ -91,7 +91,9 @@ class main extends CI_Controller
     {
         $dataContent = array(
             'page' => 'landingpage',
-            'berita' => $this->MainModel->getBerita(array('tipe' => '', 'limit' => 6)),
+            'berita' => $this->MainModel->getBerita(array('x_tipe' => 'pengumuman', 'limit' => 6)),
+            'pengumuman' => $this->MainModel->getBerita(array('tipe' => 'pengumuman', 'limit' => 3)),
+            // 'artikel' => $this->MainModel->getBerita(array('tipe' => 'artikel', 'limit' => 3)),
             'surveys' => $this->ParameterModel->getSurvey(array('show_survey' => '1', 'limit' => 6))
         );
         $this->load->view('template', $dataContent);

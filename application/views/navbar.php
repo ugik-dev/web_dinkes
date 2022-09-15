@@ -8,12 +8,11 @@ $menu = Menu();
                 <div class="col-xl-12">
                     <div class="home-one-menu">
                         <div class="navbar navbar-expand-lg">
-                            <a class="navbar-brand justify-content-end" href="<?= base_url() ?>">
+                            <!-- <a class="navbar-brand justify-content-end" href="<?= base_url() ?>">
                                 <div class="row">
                                     <img style="width : 50%; height:auto" src="<?= base_url() ?>assets/images/c-logo.png" class="logo-display" alt="shipo">
-                                    <!-- <h2 style="color: #fff">DINKES KAB BANGKA</h2> -->
                                 </div>
-                            </a>
+                            </a> -->
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_mneu">
                                 <i class="fas fa-bars"></i>
                             </button>
@@ -90,7 +89,10 @@ $menu = Menu();
     </section>
 <?php
 } else { ?>
-    <section class="hero_one_wrapper bg d-flex align-items-center overflow" style="height: 530px; padding-top: 210px;background-image:url('<?= base_url() ?>assets/images/hero_bg.jpg');">
+    <section class="page-banner-wrap breadcrumb-wrap align-items-center d-flex" style="height: 80px; background-image: url('<?= base_url() ?>assets/images/hero_bg.jpg');">
+
+    </section>
+    <!-- <section class="hero_one_wrapper bg d-flex align-items-center overflow" style="height: 530px; padding-top: 210px;background-image:url('<?= base_url() ?>assets/images/hero_bg.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-12 col-md-5 col-sm-12 wow animated fadeInLeft" data-wow-duration="3s">
@@ -103,17 +105,10 @@ $menu = Menu();
                     <div class="single-hero-wrap wow animated fadeInUp" data-wow-duration="2s" style="visibility: visible;">
                         <h1>Dinas Kesehatan <br>Kabupaten Bangka</h1>
                         <p>Bersama membangun Bangka Sehat.</p>
-                        <!-- <div class="hero-form">
-                            <form action="#">
-                                <input type="text" placeholder="Enter Your Email">
-                                <button type="submit">Try It Free <i class="fas fa-arrow-right"></i></button>
-                            </form>
-                            <span>No Credit Card Required</span>
-                        </div> -->
                     </div>
                 </div>
 
             </div>
         </div>
-    </section>
+    </section> -->
 <?php }

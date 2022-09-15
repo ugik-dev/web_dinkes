@@ -5,6 +5,7 @@
       <input type="date" value="" name="berita_tanggal" id="berita_tanggal" class="form-control" placeholder="Judul Tanggal" required /><br />
       <select name="tipe" class="form-control">
         <option value="berita">Berita</option>
+        <option value="artikel">Artikel</option>
         <option value="pengumuman">Pengumuman</option>
         <option value="pelayanan">Pelayanan</option>
       </select> <textarea id="ckeditor" name="berita_isi" class="form-control"></textarea><br />
@@ -13,7 +14,6 @@
         <input type="file" name="filefoto"><br>
         <!-- <p class="no-margins"><span id="filefoto">-</span></p> -->
       </div>
-
       <div class="form-group">
         <label for="menu_pdf">File PDF <span></span></label>
         <input type="file" name="filepdf"><br>

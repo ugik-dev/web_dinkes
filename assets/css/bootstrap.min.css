@@ -5755,6 +5755,11 @@ a.close.disabled {
 	-webkit-transform: none;
 	transform: none;
 }
+
+.carousel-item .carousel-img {
+	height: 400px;
+}
+
 .carousel-fade .carousel-item-next.carousel-item-left,
 .carousel-fade .carousel-item-prev.carousel-item-right,
 .carousel-fade .carousel-item.active {
@@ -5867,14 +5872,16 @@ a.close.disabled {
 }
 .carousel-caption {
 	position: absolute;
-	right: 15%;
-	bottom: 20px;
-	left: 15%;
+	right: 0%;
+	bottom: 0px;
+	left: 0%;
 	z-index: 10;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	color: #fff;
 	text-align: center;
+	background-color:rgba(0,0,0,0.7) !important;
+	 /* height: 350px */
 }
 @-webkit-keyframes spinner-border {
 	to {

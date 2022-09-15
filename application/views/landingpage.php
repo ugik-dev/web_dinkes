@@ -3,45 +3,78 @@
         <div class="row">
             <div class="col-xl-8 col-md-12 col-12 col-sm-12 col-lg-8 ">
                 <div class="blog-post-list">
-                    <div class="row">
-                        <?php foreach ($berita as $b) {
-                            if (!empty($b['berita_image'])) {
-                                $url = base_url('upload/berita_image/') . $b['berita_image'];
-                            } else {
-                                $url = base_url('assets/images/pengumuman.jpg');
-                            }
-                        ?>
-                            <div class="col-lg-6">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <?php
+                            $i = 1;
+                            foreach ($berita as $b) {
+                                if (!empty($b['berita_image'])) {
+                                    $url = base_url('upload/berita_image/') . $b['berita_image'];
+                                } else {
+                                    $url = base_url('assets/images/pengumuman.jpg');
+                                }
+                            ?>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="<?= $i ?>" class="<?= $i == 0 ? 'active' : '' ?>"></li>
+                            <?php
+                                $i++;
+                            } ?>
 
-                                <div class="single-post-item">
-                                    <div class="post-thumbnail">
-                                        <img style=" height : 250px" src="<?= $url ?>" alt="shipo">
-                                    </div>
-                                    <div class="post-contents">
-                                        <h6 style="color:black;"><a style="color:black;" href="<?= base_url($b['tipe'] . '/' . $b['berita_slug']) ?>"><?= $b['berita_judul'] ?></a></h6>
-                                        <p style="  word-break: break-word;   overflow: hidden;   text-overflow: ellipsis;   display: -webkit-box;   -webkit-box-orient: vertical;"><?= substr(strip_tags($b['berita_isi']), 0, 50) ?></p>
-                                        <a href="<?= base_url($b['tipe'] . '/' . $b['berita_slug']) ?>" class="permalink_btn">lanjutkan baca <i class="fas fa-angle-right"></i></a>
-                                    </div>
-                                    <div class="post-metabox">
-                                        <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <img src="<?= base_url('assets/images/avatar-9.png') ?>" alt="author">
-                                                    Admin Dinkes
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="far fa-calendar-alt"></i><?= $b['berita_tanggal'] ?></a>
-                                            </li>
-                                        </ul>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner mb-3">
+
+                            <?php
+                            $i = 1;
+                            foreach ($berita as $b) {
+                                if (!empty($b['berita_image'])) {
+                                    $url = base_url('upload/berita_image/') . $b['berita_image'];
+                                } else {
+                                    $url = base_url('assets/images/pengumuman.jpg');
+                                }
+                            ?>
+                                <div class="carousel-item <?= $i == 1 ? 'active' : '' ?>">
+                                    <img class="carousel-img d-block w-100" src="<?= $url ?>" alt="First slide" style="">
+                                    <div style="background: rgba(0, 0, 0, 0.5);" class="carousel-caption  d-md-block">
+                                        <h5 style="color:white;"><a style="color:white;" href="<?= base_url($b['tipe'] . '/' . $b['berita_slug']) ?>"><?= $b['berita_judul'] ?></a></h5>
+                                        <!-- <h5></h5> -->
+                                        <p><?= substr(strip_tags($b['berita_isi']), 0, 50) ?></p>
                                     </div>
                                 </div>
-                            </div>
-
-                        <?php } ?>
+                            <?php
+                                $i++;
+                            } ?>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <!-- single post item end -->
-                    <!-- single post item start -->
+                    <!-- <div class="row"> -->
+                    <div class="single-sidebar-widget">
+                        <ul>
+                            <?php
+                            foreach ($pengumuman as $b) {
+                                if (!empty($b['berita_image'])) {
+                                    $url = base_url('upload/berita_image/') . $b['berita_image'];
+                                } else {
+                                    $url = base_url('assets/images/pengumuman.jpg');
+                                }
+                            ?>
+                                <li class="cat-item"><a href="<?= base_url($b['tipe'] . '/' . $b['berita_slug']) ?>"><?= $b['berita_judul'] ?><i class="fas fa-angle-right"></i></a></li>
+                                <!-- <li class="cat-item"><a href="https://dinkes.bangka.go.id/pengumuman/pengumuman-hasil-kelulusan-tes-administrasi-tahap-vi-dinas-kesehatan-kabupaten-bangka">Pengumuman Hasil Kelulusan Tes Administrasi Tahap VI DInas Kesehatan Kabupaten Bangka<i class="fas fa-angle-right"></i></a></li>
+                                    <li class="cat-item"><a href="https://dinkes.bangka.go.id/pengumuman/perpanjangan-penerimaan-calon-tenaga-kontrak-tahap-vi-dinas-kesehatan-kabupaten-bangka">Perpanjangan Penerimaan Calon Tenaga Kontrak Tahap VI Dinas Kesehatan Kabupaten Bangka<i class="fas fa-angle-right"></i></a></li> -->
+                            <?php
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                    <!-- </div> -->
                 </div>
                 <div class="blog-page-nav blog-pages-link text-center">
                     <a href="<?= base_url('berita') ?>" class="btn_theme_one color_one text-center">Lainnya ..</a>
