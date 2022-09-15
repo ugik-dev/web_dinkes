@@ -54,6 +54,7 @@ $route['default_controller'] = 'main';
 $route['berita/(:any)'] = 'main/berita/$1';
 $route['pelayanan/(:any)'] = 'main/pelayanan/$1';
 $route['pengumuman/(:any)'] = 'main/pengumuman/$1';
+$route['artikel/(:any)'] = 'main/artikel/$1';
 // sampai sini postingan
 $route['layanan/(:any)'] = 'main/cari_menu/layanan/$1';
 $route['profil/(:any)'] = 'main/cari_menu/profil/$1';

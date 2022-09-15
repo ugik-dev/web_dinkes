@@ -81,7 +81,14 @@ class main extends CI_Controller
         );
         $this->load->view('template', $dataContent);
     }
+    public function artikel($id)
+    {
 
+        $dataContent = array(
+            'page' => 'detail_berita', 'berita' => $this->MainModel->getBerita(array('berita_slug' => $id, 'tipe' => 'artikel'))[0]
+        );
+        $this->load->view('template', $dataContent);
+    }
     public function profil()
     {
 

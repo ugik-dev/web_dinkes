@@ -1,7 +1,7 @@
 <section class="blog-page-wrap blog-one left-sidebar-blog section-padding">
     <div class="container">
         <div class="row">
-            <div class="col-xl-8 col-md-12 col-12 col-sm-12 col-lg-8 ">
+            <div class="col-xl-8 col-lg-8 col-md-12 col-12 col-sm-12 ">
                 <div class="blog-post-list">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -84,7 +84,7 @@
             <?php
             // $this->load->view('sidemenu');
             ?>
-            <div class="col-xl-3 col-lg-4 col-md-12 col-12 col-sm-12">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12">
                 <div class="blog-sidebar dynamic-right-sidebar">
                     <!-- single sidebar item start -->
                     <div class="single-sidebar-widget">
@@ -110,11 +110,14 @@
                             <img class="w-100" src="<?= base_url('assets/images/fingerprint2.png') ?>">
                         </a>
                     </div>
-                    <div id="fb-root"></div>
-                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v14.0" nonce="BLkDOsin"></script>
-                    <div class="fb-page" data-href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620" data-tabs="events" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                        <blockquote cite="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620">Dinas Kesehatan Kabupaten Bangka</a></blockquote>
+                    <div style="width: 100%;" class="single-sidebar-widget mb-0">
+                        <div id="fb-root"></div>
+                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v14.0" nonce="BLkDOsin"></script>
+                        <div class="fb-page" style="width: 100%;" data-href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620">Dinas Kesehatan Kabupaten Bangka</a></blockquote>
+                        </div>
                     </div>
+
                     <!-- single sidebar item start -->
                     <!-- <div class="single-sidebar-widget">
                         <h4 class="sidebar_title">Category</h4>
