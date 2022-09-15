@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/magnific-popup.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/owl.theme.css">
-    <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css?v=0.01">
     <link rel="stylesheet" href="<?= base_url() ?>assets/style.css?v=0.2">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/responsive.css">
 
