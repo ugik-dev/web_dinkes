@@ -12,6 +12,7 @@ upload/menu_pdf/*
 upload/bank_data/*
 upload/galeri/*
 application/config/database.php
+application/config/config.php
 
 application/cache/*
 !application/cache/index.html
