@@ -131,7 +131,10 @@ class main extends CI_Controller
         );
         $this->load->view('template', $dataContent);
     }
-
+    public function cek_php()
+    {
+        echo PHP_VERSION;
+    }
     public function pagger()
     {
         $filter = $this->input->get();
