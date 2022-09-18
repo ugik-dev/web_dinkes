@@ -85,8 +85,8 @@
     ClassicEditor
       .create(document.querySelector('#ckeditor'), {
         ckfinder: {
-          // uploadUrl: '<?= base_url() ?>assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
-          uploadUrl: '<?= base_url() ?>NewsController/uploadImage'
+          uploadUrl: '<?= base_url() ?>assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+          // uploadUrl: '<?= base_url() ?>NewsController/uploadImage'
         },
         toolbar: {
           items: ['ckfinder', 'imageUpload', 'toggleImageCaption', 'imageTextAlternative', '|',
