@@ -42,7 +42,8 @@
     <script src="<?= base_url('assets/admin/') ?>js/FileUploader.js"></script>
     <!-- <script src="<?= base_url() ?>ckfinder/ckfinder.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script> -->
-    <script src="<?php echo base_url() . 'assets/ckeditor5/ckeditor.js' ?>"></script>
+    <!-- <script src="<?php echo base_url() . 'assets/ckeditor4/ckeditor.js' ?>"></script> -->
+    <script src="//cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script>
     <script src="<?php echo base_url() . 'assets/ckfinder/ckfinder.js' ?>"></script>
     <!-- jQuery UI -->
     <script src="<?php echo base_url('assets/admin'); ?>/js/plugins/jquery-ui/jquery-ui.min.js"></script>

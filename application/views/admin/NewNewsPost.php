@@ -82,17 +82,29 @@
     //   height: '400px'
     // });
 
-    ClassicEditor
-      .create(document.querySelector('#ckeditor'), {
-        ckfinder: {
-          uploadUrl: '<?= base_url() ?>assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
-        },
-        toolbar: ['ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo']
-      })
-      .catch(function(error) {
-        console.error(error);
-      });
-
+    // ClassicEditor
+    //   .create(document.querySelector('#ckeditor'), {
+    //     ckfinder: {
+    //       uploadUrl: '<?= base_url() ?>assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+    //     },
+    //     toolbar: ['ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo']
+    //   })
+    //   .catch(function(error) {
+    //     console.error(error);
+    //   });
+    var editor = CKEDITOR.replace('ckeditor');
+    CKFinder.setupCKEditor(editor);
+    // CKEDITOR.replace('editor1', {
+    //   // filebrowserBrowseUrl: 'assets/ckfinder/ckfinder.html',
+    //   // filebrowserUploadUrl: 'assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+    //   filebrowserBrowseUrl: '<?= base_url() ?>assets/ckfinder/ckfinder.html',
+    //   filebrowserImageBrowseUrl: '<?= base_url() ?>assets/ckfinder/ckfinder.html?type=Images',
+    //   filebrowserUploadUrl: '<?= base_url() ?>assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+    //   filebrowserImageUploadUrl: '<?= base_url() ?>assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+    //   height: 260,
+    //   width: 700,
+    //   removeButtons: 'PasteFromWord'
+    // });
     // ClassicEditor
     //   .create(document.querySelector('#ckeditor'), {
     //     ckfinder: {

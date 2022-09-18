@@ -88,7 +88,9 @@
 <script src="<?= base_url('assets/admin/') ?>js/bootstrap.js"></script>
 <script src="<?= base_url('assets/admin/') ?>js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="<?= base_url('assets/admin/') ?>js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
+<!-- <script src="<?php echo base_url() . 'assets/ckeditor4/ckeditor.js' ?>"></script> -->
+<script src="//cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script>
+<script src="<?php echo base_url() . 'assets/ckfinder/ckfinder.js' ?>"></script>
 <!-- Date Picker-->
 <script src="<?php echo base_url('assets/admin'); ?>/js/plugins/datapicker/bootstrap-datepicker.js"></script>
 
