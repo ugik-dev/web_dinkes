@@ -32,6 +32,43 @@ class NewsController extends CI_Controller
       ExceptionHandler::handle($e);
     }
   }
+
+  function uploadImage()
+  {
+    if (version_compare(PHP_VERSION, '5.6.0') >= 0) {
+      echo ' [OK] PHP version is newer than 5.6: ' . phpversion();
+    } else {
+      echo ' [ERROR] Your PHP version is too old for CKFinder 3.x.';
+    }
+
+    if (!function_exists('gd_info')) {
+      echo ' [ERROR] GD extension is NOT enabled.';
+    } else {
+      echo ' [OK] GD extension is enabled.';
+    }
+
+    if (!function_exists('finfo_file')) {
+      echo ' [ERROR] Fileinfo extension is NOT enabled.';
+    } else {
+      echo ' [OK] Fileinfo extension is enabled.';
+    }
+    // if (isset($_FILES['upload']['tmp_name'])) {
+    //   $file = $_FILES['upload']['tmp_name'];
+    //   $fileName = $_FILES['upload']['name'];
+    //   $fileNameArray = explode('.', $fileName);
+    //   $extension = end($fileNameArray);
+    //   $newImageName = rand() . '.' . $extension;
+    //   $allowedExtension = array('jpg', 'jpeg', 'png', 'JPG', 'JPEG', 'PNG');
+    //   if (in_array($extension, $allowedExtension)) {
+    //     move_uploaded_file($file, '.uploads/ckeditor/' . $newImageName);
+    //     $functionNumber = $_GET['CKEditorFuncNum'];
+    //     $url = base_url() . "uploads/ckeditor/" . $newImageName;
+    //     $message = "";
+    //     echo "<script type='text/javascript'> window.parent.CKEDITOR.tools.callFunction($functionNumber, '$url', $message) </script>";
+    //   }
+    // }
+  }
+
   function simpan_post()
   {
     try {
