@@ -135,6 +135,11 @@ class main extends CI_Controller
     {
         echo PHP_VERSION;
     }
+
+    public function cek_ses()
+    {
+        echo json_encode($this->session->userdata());
+    }
     public function pagger()
     {
         $filter = $this->input->get();
