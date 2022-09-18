@@ -134,6 +134,7 @@ class main extends CI_Controller
     public function cek_php()
     {
         echo PHP_VERSION;
+        echo sys_get_temp_dir();
     }
 
     public function cek_ses()
