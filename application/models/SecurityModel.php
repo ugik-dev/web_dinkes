@@ -48,9 +48,17 @@ class SecurityModel extends CI_Model
 
   public function roleOnlyGuard($role, $ajax = false)
   {
-    if (strtolower($this->session->userdata('nama_role')) != $role) {
+    if (!empty($this->session->userdata('nama_role'))) {
+
+      if (strtolower($this->session->userdata('nama_role')) != $role) {
+        if ($ajax) throw new UserException('Kamu tidak berhak mengakses resource ini', UNAUTHORIZED_CODE);
+        redirect($this->session->userdata('nama_controller'));
+      }
+    } else {
       if ($ajax) throw new UserException('Kamu tidak berhak mengakses resource ini', UNAUTHORIZED_CODE);
-      redirect($this->session->userdata('nama_controller'));
+      redirect(base_url());
+
+      // redirect($this->session->userdata('nama_controller'));
     }
   }
 
