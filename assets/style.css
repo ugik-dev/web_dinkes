@@ -1652,7 +1652,7 @@ form .form-group {
 /* -------------------------------------------------------
    ------------ 21.Contact form two  ---------------
    ------------------------------------------------------ */
-.contact-form-two input,
+.contact-form-two .form-control,
 .contact-form-two textarea {
 	border-style: solid;
 	border-width: 1px;
@@ -1663,7 +1663,56 @@ form .form-group {
 	font-size: 15px;
 	width: 100%;
 }
-.contact-form-two input {
+
+.contact-form-two select {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(221, 221, 221);
+	border-radius: 3px;
+	background-color: rgb(242, 245, 248);
+	padding-left: 15px;
+	font-size: 15px;
+	width: 100%;
+	height: 57px;
+}
+/* .contact-form-two .select2, */
+/* .contact-form-two .selection, */
+.contact-form-two .select2-selection  {
+	border-style: solid !important;
+	border-width: 1px !important;
+	border-color: rgb(221, 221, 221) !important;
+	border-radius: 3px !important;
+	background-color: rgb(242, 245, 248) !important;
+	padding-left: 15px !important;
+	font-size: 15px !important;
+	  margin: auto;
+	/* text-align: center; */
+	/* text- */
+	/* font: optional;: 15px !important; */
+	width: 100% !important;
+	height: 57px !important;
+}
+.contact-form-two .select2-selection__rendered  {
+	height: 57px !important;
+	/* text-align: center; */
+	font-size: 15px !important;
+	margin: auto;
+ 	padding: 10px;
+}
+
+.contact-form-two .form-check-input {
+	/* border-style: solid;
+	border-width: 1px;
+	border-color: rgb(221, 221, 221);
+	border-radius: 3px;
+	background-color: rgb(242, 245, 248);
+	padding-left: 15px;
+	font-size: 15px;
+	width: 100%; */
+	height: 20px;
+}
+
+.contact-form-two .form-control {
 	height: 57px;
 }
 .contact-form-two textarea {
