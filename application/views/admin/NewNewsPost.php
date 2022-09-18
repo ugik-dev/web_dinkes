@@ -86,31 +86,42 @@
       .create(document.querySelector('#ckeditor'), {
         ckfinder: {
           uploadUrl: '<?= base_url() ?>assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
-          // uploadUrl: '<?= base_url() ?>NewsController/uploadImage'
         },
-        toolbar: {
-          items: ['ckfinder', 'imageUpload', 'toggleImageCaption', 'imageTextAlternative', '|',
-            'heading', '|',
-            'fontfamily', 'fontsize', '|',
-            'alignment', '|',
-            'fontColor', 'fontBackgroundColor', '|',
-            'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
-            'link', '|',
-            'outdent', 'indent', '|',
-            'bulletedList', 'numberedList', 'todoList', '|',
-            'code', 'codeBlock', '|',
-            'insertTable', '|',
-            'uploadImage', 'blockQuote', '|',
-            'undo', 'redo'
-          ],
-          shouldNotGroupWhenFull: true
-        }
-        // toolbar: ['ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo', '-', 'numberedList', 'bulletedList'],
-        // shouldNotGroupWhenFull: true
+        toolbar: ['ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo']
       })
-      .catch(error => {
+      .catch(function(error) {
         console.error(error);
       });
+
+    // ClassicEditor
+    //   .create(document.querySelector('#ckeditor'), {
+    //     ckfinder: {
+    //       uploadUrl: '<?= base_url() ?>assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+    //       // uploadUrl: '<?= base_url() ?>NewsController/uploadImage'
+    //     },
+    //     toolbar: {
+    //       items: ['ckfinder', 'imageUpload', 'toggleImageCaption', 'imageTextAlternative', '|',
+    //         'heading', '|',
+    //         'fontfamily', 'fontsize', '|',
+    //         'alignment', '|',
+    //         'fontColor', 'fontBackgroundColor', '|',
+    //         'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+    //         'link', '|',
+    //         'outdent', 'indent', '|',
+    //         'bulletedList', 'numberedList', 'todoList', '|',
+    //         'code', 'codeBlock', '|',
+    //         'insertTable', '|',
+    //         'uploadImage', 'blockQuote', '|',
+    //         'undo', 'redo'
+    //       ],
+    //       shouldNotGroupWhenFull: true
+    //     }
+    //     // toolbar: ['ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo', '-', 'numberedList', 'bulletedList'],
+    //     // shouldNotGroupWhenFull: true
+    //   })
+    //   .catch(error => {
+    //     console.error(error);
+    //   });
 
   });
 </script>
