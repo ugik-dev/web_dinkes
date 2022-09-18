@@ -26,9 +26,11 @@
                                 <tr>
                                     <th style="width: 2%; text-align:center!important">ID</th>
                                     <th style="width: 2%; text-align:center!important">Tanggal</th>
-                                    <th style="width: 3%; text-align:center!important">Respon</th>
-                                    <th style="width: 26%; text-align:center!important">Pesan</th>
+                                    <th style="width: 3%; text-align:center!important">SKM</th>
+                                    <th style="width: 15%; text-align:center!important">Survey</th>
+                                    <th style="width: 15%; text-align:center!important">Pesan</th>
                                     <th style="width: 5%; text-align:center!important">Nama</th>
+                                    <th style="width: 5%; text-align:center!important">Layanan</th>
                                     <th style="width: 5%; text-align:center!important">Identitas</th>
                                     <th style="width: 5%; text-align:center!important">Action</th>
                                 </tr>
@@ -131,8 +133,17 @@
                 var hide = `
         <a class="hide_survey dropdown-item" data-id='${bank_data['id']}'><i class='fa fa-eye-slash'></i> Sembunyikan</a>
       `;
-
-                renderData.push([bank_data['id'], bank_data['tanggal'], statusRespon(bank_data['respon']), bank_data['alasan'], bank_data['nama'], 'Email : ' + bank_data['email'] + '<br>Telp : ' + bank_data['no_hp'] +
+                infolain = `
+                    Kesesuaian : ${statusRespon(bank_data['kesesuaian'])} <br>
+                    Kemudahan : ${statusRespon(bank_data['kemudahan'])}<br>
+                    Kecepatan : ${statusRespon(bank_data['kecepatan'])}<br>
+                    Tarif : ${statusRespon(bank_data['tarif'])}<br>
+                    SOP : ${statusRespon(bank_data['sop'])}<br>
+                    Kompetensi : ${statusRespon(bank_data['kompetensi'])}<br>
+                    Prilaku : ${statusRespon(bank_data['prilaku'])}<br>
+                    Sarpras : ${statusRespon(bank_data['sarpras'])}<br>
+                    Pengaduan : ${statusRespon(bank_data['pengaduan'])}`
+                renderData.push([bank_data['id'], bank_data['tanggal'], statusRespon(bank_data['respon']), infolain, bank_data['alasan'], bank_data['nama'], bank_data['layanan'], 'Email : ' + bank_data['email'] + '<br>Telp : ' + bank_data['no_hp'] +
                     '<br>Alamat : ' + bank_data['alamat'], bank_data['show_survey'] == 1 ? hide : show
                 ]);
             });
@@ -142,12 +153,14 @@
         function statusRespon(realisasi) {
             var realisasi = parseFloat(realisasi);
             if (realisasi == 1)
-                return `<span class="label label-danger">Tidak Puas</span>`;
+                return `<span class="label label-danger">Tidak Baik</span>`;
             else if (realisasi == 2)
-                // return `<span class="label label-warning">Cukup</span>`;
-                return `<span class="label label-info">Cukup</span>`;
+                return `<span class="label label-warning">Kurang Baik</span>`;
             else if (realisasi == 3)
-                return `<span class="label label-success">Sangat Puas</span>`;
+                return `<span class="label label-info">Cukup Baik</span>`;
+            else if (realisasi == 4)
+                return `<span class="label label-success">Sangat Baik</span>`;
+            else return `-`;
         }
 
         FDataTable.on('click', '.show_survey', function() {
