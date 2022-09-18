@@ -4,7 +4,7 @@ This website contains documentation about the PHP connector for CKFinder 3 and i
 
  * Enabling the PHP connector.
  * Configuring the PHP connector.
- * Tutorials about creating PHP plugins.
+ * Creating PHP plugins.
 
 Use the navigation menu on the left side to browse the documentation.
 
@@ -40,9 +40,10 @@ If you are looking for information about the JavaScript part of CKFinder and thi
 
 see the [CKFinder 3 Documentation](https://ckeditor.com/docs/ckfinder/ckfinder3/).
 
-If you want to learn more about the ASP.NET server-side connector, refer to the [CKFinder 3 – ASP.NET Connector Documentation](https://ckeditor.com/docs/ckfinder/ckfinder3-net/).
+If you want to learn more about the ASP.NET server-side connector, refer to the [CKFinder 3 – ASP.NET Connector Documentation](https://ckeditor.com/docs/ckfinder/ckfinder3-net/), 
+for the Java server-side connector, refer to the [CKFinder 3 – Java Connector Documentation](https://ckeditor.com/docs/ckfinder/ckfinder3-java/).
 
 ## License
 
-CKFinder is distributed under the [CKFinder License Agreement](https://ckeditor.com/sales/license/ckfinder). 
-In order to purchase a license visit the [CKSource website](https://ckeditor.com/ckeditor-4/pricing/#ckfinder-pricing).
+CKFinder is distributed under the [CKFinder License Agreement](https://sales.ckeditor.com/license/ckfinder). 
+You can purchase a license [here](https://ckeditor.com/pricing/) together with your CKEditor license.

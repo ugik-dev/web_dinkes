@@ -4,7 +4,7 @@
 
 @section configuration_file Configuration Files
 
-CKFinder comes with two configuration files:
+CKFinder 3 comes with two configuration files:
  - `config.php` &ndash; A server-side configuration file, explained in this article.
  - `config.js` &ndash; An optional client-side configuration file, explained in the API documentation article about [setting JavaScript configuration](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/api/CKFinder.Config).
 
@@ -35,7 +35,7 @@ Option Name          | Type | Description
 @ref configuration_options_plugins | Array | The list of plugins to enable.
 @ref configuration_options_pluginsDirectory | String | The path to the connector plugins directory.
 @ref configuration_options_privateDir | Array | The private directory location and settings.
-@ref configuration_options_resourceTypes | Array | The resource types handled in CKFinder. Each resource type is represented as a "root" folder in CKFinder (e.g. **Files** and **Images**) and points to a specific folder of a configured backend.
+@ref configuration_options_resourceTypes | Array | The resource types handled in CKFinder. Each resource type is represented as a "root" folder in CKFinder (e.g. **Files** and **Images**) and points to a specific folder of the configured backend.
 @ref configuration_options_roleSessionVar | String | The session variable name that CKFinder must use to retrieve the "role" of the current user.
 @ref configuration_options_secureImageUploads | Boolean | Whether to perform additional checks when uploading image files.
 @ref configuration_options_sessionWriteClose @labelSince{3.1.0} | Boolean | Whether the connector should close write access to the session to avoid performance issues.
@@ -81,7 +81,7 @@ Access Control List entries are defined using the following values:
 
 Option Name          | Type | Description
 -------------------- | ---- | ---------
-`role` | String | The role (see @ref configuration_options_roleSessionVar "roleSessionVar") of the user for which the ACL setting is provided. By default it is set to `*` (asterisk) which means "everybody".
+`role` | String | The role (see @ref configuration_options_roleSessionVar "roleSessionVar") of the user for whom the ACL setting is provided. By default it is set to `*` (asterisk) which means "everybody".
 `resourceType` | String | The name of the resource type (see @ref configuration_options_resourceTypes). By default it is set to `*` (asterisk) which means "all resource types".
 `folder` | String | The folder where the restrictions will be used. By default it is set to `/` (slash) which means "the root folder of a resource type".
 `FOLDER_VIEW` | Boolean | Whether the user can view the list of files.
@@ -92,8 +92,8 @@ Option Name          | Type | Description
 `FILE_CREATE` | Boolean | Whether the user can create (e.g. upload) files.
 `FILE_RENAME` | Boolean | Whether the user can rename files.
 `FILE_DELETE` | Boolean | Whether the user can delete files.
-`IMAGE_RESIZE` | Boolean | Whether - when choosing the image - the user can resize it to dimensions predefined in the configuration file.
-`IMAGE_RESIZE_CUSTOM` | Boolean | Whether - when choosing the image - the user can resize it to any dimensions.
+`IMAGE_RESIZE` | Boolean | Whether, when choosing the image, the user can resize it to dimensions predefined in the configuration file.
+`IMAGE_RESIZE_CUSTOM` | Boolean | Whether, when choosing the image, the user can resize it to any dimensions.
 
 **Note:** The `IMAGE_RESIZE` and `IMAGE_RESIZE_CUSTOM` options correspond to the **Choose Resized** feature which automatically creates a resized version of the chosen image. They do not affect resizing of the image modified in the CKFinder's image editor (**Edit** feature).
 
@@ -292,8 +292,7 @@ $config['authentication'] = array($user, 'isLoggedIn');
 
 @subsection configuration_options_backends backends
 
-Backends are used in @ref configuration_options_resourceTypes "resource type definitions" as a definition of
-the storage where files should be located. Although backends and resource types are strictly related, they are defined separately to simplify the configuration in a situation where e.g. the same FTP account is used to define four different resource types, where the only difference is the name of a subfolder on the FTP server.
+Backends are used in @ref configuration_options_resourceTypes "resource type definitions" as a definition of the storage where files should be located. Although backends and resource types are strictly related, they are defined separately to simplify the configuration in a situation where e.g. the same FTP account is used to define four different resource types, where the only difference is the name of a subfolder on the FTP server.
 
 <h4>Example</h4>
 
@@ -336,7 +335,7 @@ Option Name                 | Type    | Description
 --------------------------- | ------- | -----------
 `name`                      | String  | The unique name of the backend.
 `adapter`                   | String  | The type of adapter used by this backend &mdash; `local` for a local file system.
-`baseUrl` @optional         | String  | The base URL used for direct access to CKFinder files &mdash; this URL must correspond to the directory where CKFinder users' files are stored.
+`baseUrl` @optional         | String  | The base URL used for direct access to CKFinder files. This URL must correspond to the directory where CKFinder users' files are stored.
 `useProxyCommand` @optional @labelSince{3.1.0} | Boolean | Whether the links to files stored on this backend should be pointing to the @ref command_proxy command.
 
 \anchor backend_option_useProxyCommand
@@ -375,6 +374,7 @@ Option Name          | Type    | Description
 `filesystemEncoding` | String  | The encoding of the file and folder names in the local file system.
 `useProxyCommand` @optional @labelSince{3.1.0} | Boolean | Whether the links to files stored on this backend should be pointing to the @ref command_proxy command.
 `followSymlinks` @optional @labelSince{3.4.3} | Boolean | Enables support for UNIX symbolic links. If this option is enabled, the symbolic links on the backend will be treated like regular files or folders. \n **Important:** If you enable this option, please make sure a correct file system permission is set for the file or directory the symlink is pointing to. The default configuration of multiple web servers does not allow for access to files outside the defined _document root_.
+
 <h4>Example</h4>
 ~~~~~~~~~~~~~~~~
 $config['backends'][] = array(
@@ -742,7 +742,7 @@ Option name | Type | Description
 `maxWidth` | Integer | The maximum width of uploaded images. If the image size is bigger than the one specified, the image will be resized to the defined dimensions.
 `maxHeight` | Integer | The maximum height of uploaded images. If the image size is bigger than the one specified, the image will be resized to the defined dimensions.
 `quality` | Integer | The quality of created images in a range from 1 to 100. The smaller the quality value, the smaller the size of resized images. Notice that an acceptable quality value is about 80-90.
-`sizes` @optional | Array | Predefined sizes of images that can be easily selected from CKFinder and passed to an external application (e.g. CKEditor) without having to resize the image manually. The keys of the associative array are translated and used as entries in the "Select Thumbnail" context menu. The translated label for a particular entry is taken from language files, for example `small` will be translated as <code>lang.image['small']</code>. If a translation key is not set for the current language, an English version is used. If an English version was not found, an untranslated string is used (with the first letter set to uppercase).
+`sizes` @optional | Array | Predefined sizes of images that can be easily selected from CKFinder and passed to an external application (e.g. CKEditor) without having to resize the image manually. The keys of the associative array are translated and used as entries in the "Select Thumbnail" context menu. The translated label for a particular entry is taken from the language files, for example `small` will be translated as <code>lang.image['small']</code>. If a translation key is not set for the current language, an English version is used. If an English version was not found, an untranslated string is used (with the first letter set to uppercase).
 `threshold` @optional | Array | A low-level internal configuration option used by CKFinder when showing image previews in various parts of the application. If CKFinder has in its cache an already resized version of an image and the size of the image is almost the same as requested (within the defined threshold), CKFinder will use that image. This option increases performance by (i) avoiding having too many copies of images with almost the same size (ii) avoiding scaling images on every preview.
 
 <h4>Example</h4>
@@ -783,7 +783,7 @@ $config['licenseName'] = 'example.com';
 
 @subsection configuration_options_overwriteOnUpload overwriteOnUpload
 
-This option changes the default behavior of CKFinder when uploading a file with a name that already exists in a folder.
+Changes the default behavior of CKFinder when uploading a file with a name that already exists in a folder.
 If enabled, then instead of auto renaming files, the existing files will be overwritten.
 
 ~~~
@@ -848,7 +848,7 @@ Option Name | Type | Description
 
 <h4>Example 1</h4>
 
-Setting the private folders location to the `.ckfinder` folder inside the `default` backend.
+Setting the private directories location to the `.ckfinder` folder inside the `default` backend.
 
 ~~~
 $config['privateDir'] = array(
@@ -863,7 +863,7 @@ $config['privateDir'] = array(
 
 <h4>Example 2</h4>
 
-Setting the private folders location to the `.ckfinder` folder inside the `default` backend. The `logs` location is configured to use a different backend (`logs_backend`) and folder for logs.
+Setting the private directories location to the `.ckfinder` folder inside the `default` backend. The `logs` location is configured to use a different backend (`logs_backend`) and folder for logs.
 
 ~~~
 $config['privateDir'] = array(
@@ -891,8 +891,8 @@ Option Name | Type | Description
 `backend` | String | The name of the @ref configuration_options_backends "backend" where this resource type should point to.
 `directory` @optional | String | The path to the backend subfolder where the resource type should point exactly.
 `maxSize` @optional | String | The maximum size of the uploaded image defined in bytes. A shorthand notation is also supported: G, M, K (case insensitive). `1M` equals 1048576 bytes (one Megabyte), `1K` equals 1024 bytes (one Kilobyte), `1G` equals 1 Gigabyte.
-`allowedExtensions` | String | The file extensions you wish to be allowed for upload with CKFinder. `NO_EXT` value can be used for files without extension.
-`deniedExtensions` @optional | String | The file extensions you do not wish to be uploaded with CKFinder. Shall only be set if `allowedExtensions` is left empty. `NO_EXT` value can be used for files without extension.
+`allowedExtensions` | String | The file extensions you wish to be allowed for upload with CKFinder. The `NO_EXT` value can be used for files without an extension.
+`deniedExtensions` @optional | String | The file extensions you do not wish to be uploaded with CKFinder. It should only be set if `allowedExtensions` is left empty. The `NO_EXT` value can be used for files without an extension.
 `lazyLoad` @optional | Boolean | If set to `true`, the `Init` command will not check if the resource type contains child folders. This option is especially useful for remote backends, as the `Init` command will be executed faster, and therefore CKFinder will start faster, too. It is recommended to set it to `true` for remote backends.
 
 **Important**: It is recommended to always use the `allowedExtensions` setting, in favor of `deniedExtensions`. If you leave `allowedExtensions` empty and add an extension to the `deniedExtensions` list, for example `pdf`, the settings will allow the upload of all other files except the files with the `pdf` extension (e.g. `.php` or `.exe` files).

@@ -5,8 +5,7 @@
 ## Web Server
 
 CKFinder requirements for PHP:
- - <strong>PHP 5.6+</strong>
-    - Note: PHP 7.0+ is required for the Dropbox backend.
+ - <strong>PHP 7.3+</strong>
  - <strong>GD extension</strong> enabled (default on most installations) for thumbnail support and any image operations.
  - <strong>FileInfo extension</strong> enabled. Note: By default disabled on XAMPP, read @ref quickstart_troubleshooting_fileinfo "Quick Start" for more information.
  - <strong>JSON MIME type</strong> supported. Note: By default disabled on IIS Express, read @ref quickstart_troubleshooting_json "Quick Start" for more information.
@@ -39,7 +38,7 @@ CKFinder is also compatible with mobile browsers. The application is tested on:
  - Google Chrome on Android
  - Safari on iOS
 
-As CKFinder is using jQuery Mobile as a dependency, the set of currently supported mobile browses is wider (see [jQuery Mobile GBS](https://jquerymobile.com/browser-support/1.4/) for the list of browsers supported by jQuery Mobile), however, please note that the application is only tested in the environments listed above.
+As CKFinder is using jQuery Mobile as a dependency, the set of currently supported mobile browses is wider (see [jQuery Mobile GBS](https://jquerymobile.com/browser-support/1.4/) for the list of browsers supported by jQuery Mobile). However, please note that the application is only tested in the environments listed above.
 
 ### Important Note
 

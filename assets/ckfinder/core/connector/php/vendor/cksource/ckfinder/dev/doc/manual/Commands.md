@@ -183,11 +183,11 @@ The request should contain an array parameter named `files` with elements defini
      - `name` &ndash; The file name.
      - `type` &ndash; The file resource type.
      - `folder` &ndash; The file folder.
-     - `options` &ndash; A parameter that defines the way the file should be copied in case a file with the same name already exists in the target folder.
+     - `options` &ndash; A parameter that defines the way the file should be copied if a file with the same name already exists in the target folder.
                    The `option` parameter can contain the following values:
-                   - By default it is an empty string and in this case an appropriate error will be added to the response in case the file already exists.
+                   - By default it is an empty string and in this case an appropriate error will be added to the response if the file already exists.
                    - `overwrite` &ndash; The target file is overwritten.
-                   - `autorename` &ndash; In this case the name of the copied file is altered by adding a number to the file name, for example `file.txt` after autorename is `file(1).txt`.
+                   - `autorename` &ndash; In this case the name of the copied file is altered by adding a number to the file name, for example `file.txt` after automatic renaming is `file(1).txt`.
         </td>
     </tr>
 </table>
@@ -431,7 +431,7 @@ Upload a file to the root (`/`) directory of the `Files` resource type:
         <td>Notes</td>
         <td>
 - File data should be encoded as `multipart/form-data`.
-- The `POST` parameter containing uploaded file should be named `upload`.
+- The `POST` parameter containing the uploaded file should be named `upload`.
 - Uploaded file names may contain non-ASCII characters.
         </td>
     </tr>
@@ -498,7 +498,7 @@ Get the list of files inside the `/Docs/` folder of the `Images` resource type:
          - `YYYY` &ndash; The year (4 digits).
          - `MM` &ndash; The month (2 digits with padding zero).
          - `DD` &ndash; The day (2 digits with padding zero).
-         - `HH` &ndash; The hour (24 hours format, 2 digits with padding zero).
+         - `HH` &ndash; The hour (24-hour format, 2 digits with padding zero).
          - `mm` &ndash; The minute (2 digits with padding zero).
 
         The `size` attribute contains the file size in kilobytes.
@@ -561,7 +561,7 @@ Get a direct URL to a file named `longcat.jpg` stored in the `/kittens/` folder 
     <tr>
         <td>Description</td>
         <td>
-            Returns the list of the child folders for a given folder.
+            Returns the list of child folders for a given folder.
         </td>
     </tr>
     <tr>
@@ -664,7 +664,7 @@ Get resized versions of the `longcat.jpg` image that is stored in the `/kittens/
         <td>Notes</td>
         <td>
         The resized versions of images always preserve the aspect ratio of the original.
-        When the resized version of the image matches any size defined in the `images.sizes` configuration option, it is
+        When a resized version of the image matches any size defined in the `images.sizes` configuration option, it is
         appended under an appropriate key in the response (like `small`, `medium`, `large` in the example above). All other existing
         resized versions are stored under the key named `__custom`.
         </td>
@@ -1014,7 +1014,7 @@ The request should contain an array parameter named `files` with elements defini
                The `option` parameter can contain the following values:
                - By default it is an empty string and in this case an appropriate error will be added to the response when the file already exists.
                - `overwrite` &ndash; The target file is overwritten.
-               - `autorename` &ndash; In this case the name of the moved file is altered by adding a number to the file name, for example `file.txt` after autorename is `file(1).txt`.
+               - `autorename` &ndash; In this case the name of the moved file is altered by adding a number to the file name, for example `file.txt` after automatic renaming is `file(1).txt`.
         </td>
     </tr>
 </table>
@@ -1067,7 +1067,7 @@ The status of the operation can be then periodically checked with a request to t
     <tr>
         <td>Notes</td>
         <td>
-        Not all commands support operation tracking and this feature may depend on storage type defined for a backend.
+        Not all commands support operation tracking and this feature may depend on the storage type defined for a backend.
 
 This command may use the following optional parameters:
 - `abort` &ndash; If this Boolean parameter is present, the time-consuming operation will be immediately aborted.
@@ -1084,9 +1084,9 @@ This command may use the following optional parameters:
     <tr>
         <td>Description</td>
         <td>
-Serves a file to the browser without forcing the download. This command is useful in cases where you want to use files without direct access on a web page. These may be files stored on a backend that does not have a `baseUrl` defined (like a private FTP server), or files that are not in the web server root folder. If the [useProxyCommand](@ref backend_option_useProxyCommand) flag is set in backend configuration, all links generated by CKFinder will be pointing to the `Proxy` command.
+Serves a file to the browser without forcing the download. This command is useful in cases where you want to use files without direct access on a web page. These may be files stored on a backend that does not have a `baseUrl` defined (like a private FTP server), or files that are not in the web server root folder. If the [useProxyCommand](@ref backend_option_useProxyCommand) flag is set in the backend configuration, all links generated by CKFinder will be pointing to the `Proxy` command.
 
-**Note**: If you decide to use this option, all links generated by CKFinder will be pointing to the `Proxy` command, and will be dependent on CKFinder connector to work properly.
+**Note**: If you decide to use this option, all links generated by CKFinder will be pointing to the `Proxy` command, and will be dependent on the CKFinder connector to work properly.
         </td>
     </tr>
     <tr>
@@ -1114,7 +1114,7 @@ This command does not expect the connector to return a text response. Instead, i
         <td>
 This command may use the following optional parameters:
 - `cache` &ndash; An integer value defining the cache lifetime in seconds (this corresponds to `Expires` and `Cache-Control` response headers). See the @ref configuration_options_cache configuration option.
-- `thumbnail` &ndash; The name of the public thumbnail file, if resized version of the image should be served.
+- `thumbnail` &ndash; The name of the public thumbnail file, if a resized version of the image should be served.
         </td>
     </tr>
 </table>
@@ -1125,7 +1125,7 @@ This command may use the following optional parameters:
     <tr>
         <td>Description</td>
         <td>
-Uploads a file to the given folder. This command is very similar to [FileUpload](#command_fileupload) and it is used to handle uploads from the CKEditor Image or Link dialog window.
+Uploads a file to the given folder. This command is very similar to [FileUpload](#command_fileupload) and it is used to handle uploads from the CKEditor Image or Link dialog.
         </td>
     </tr>
     <tr>
@@ -1284,7 +1284,7 @@ Saves a Base64-encoded PNG image to a file.
     <tr>
         <td>Sample request</td>
         <td>
-Save the Base64-encoded image sent in `content` param as `Test.jpg` file in the root (`/`) directory of the `Files` resource type:
+Save the Base64-encoded image sent in the `content` parameter as the `Test.jpg` file in the root (`/`) directory of the `Files` resource type:
 
 ~~~~~~~~~~~~~
 /ckfinder/core/connector/php/connector.php?command=SaveImage&type=Files&currentFolder=/&fileName=Test.jpg
@@ -1347,7 +1347,7 @@ Download the thumbnail of the file named `Test.jpg` from the root (`/`) director
         <td>Notes</td>
         <td>
             The `size` parameter can be used to control the size of the returned thumbnail image.
-            By default the CKFinder connector supports the following thumbnail sizes:
+            By default the CKFinder 3 for PHP connector supports the following thumbnail sizes:
             - 150x150
             - 300x300
             - 500x500

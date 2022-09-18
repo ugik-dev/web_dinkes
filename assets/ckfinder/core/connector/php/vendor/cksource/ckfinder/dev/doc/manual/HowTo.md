@@ -48,7 +48,12 @@ function getRootByInstance($instanceId)
 @section howto_private_folders Private Folders per User
 
 To create separate directories for users, you need to create a simple mechanism to map the current user to an appropriate directory path.
-When building the directory path you should remember not to reveal any sensitive information, and do not use any insecure data that may lead to path traversal attacks. In this example a `sha1` hash of the current user name is used.
+
+When building the directory path, you should remember about the following that may lead to path traversal attacks:
+* Do not reveal any sensitive information.
+* Do not use any insecure data.
+
+In this example a `sha1` hash of the current user name is used.
 
 ~~~
 $userDirectory = sha1($user->getUsername());
@@ -460,7 +465,9 @@ When integrating CKFinder, you will often want to give users access to uploaded 
 
 If you rely on your web server to serve the files uploaded with CKFinder, you should take additional steps to make sure the files are served in a secure way.
 
-Let us assume that you have configured your CKFinder to allow uploading of `avi` files. Even if the `avi` file is then served with a valid `Content-Type: video/x-msvideo` header, some browsers may ignore this information and perform additional checks on the raw file contents. If any HTML-like data is detected in the file content, the browser may decide to ignore information about the content type and handle the served content as if it was a regular web page. This behavior is called <i>[content sniffing](https://en.wikipedia.org/wiki/Content_sniffing)</i> (also known as _media type sniffing_ or _MIME sniffing_), and in some circumstances it may lead to security issues (for example, it may open door for [XSS attacks](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS))). 
+Let us assume that you have configured your CKFinder to allow uploading of `.avi` files.
+
+Even if the `.avi` file is then served with a valid `Content-Type: video/x-msvideo` header, some browsers may ignore this information and perform additional checks on the raw file contents. If any HTML-like data is detected in the file content, the browser may decide to ignore information about the content type and handle the served content as if it was a regular web page. This behavior is called ["content sniffing"](https://en.wikipedia.org/wiki/Content_sniffing) (also known as "media type sniffing" or "MIME sniffing"), and in some circumstances it may lead to security issues (for example, it may open door for [XSS attacks](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS))).
 
 To avoid content sniffing, you should make sure that your server adds the `X-Content-Type-Options: nosniff` header to all HTTP responses when serving files from the publicly available folder. The `X-Content-Type-Options` response HTTP header is a marker used by the server to indicate that the MIME type set by the `Content-Type` header should not be changed and should be followed. As a result, the browser does not perform any content sniffing on the received content.
 

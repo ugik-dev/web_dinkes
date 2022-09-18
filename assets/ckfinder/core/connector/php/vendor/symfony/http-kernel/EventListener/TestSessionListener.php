@@ -11,72 +11,39 @@
 
 namespace Symfony\Component\HttpKernel\EventListener;
 
-use Symfony\Component\HttpFoundation\Cookie;
+use Psr\Container\ContainerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Component\HttpKernel\KernelEvents;
-use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
-use Symfony\Component\HttpKernel\Event\GetResponseEvent;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * TestSessionListener.
+ * Sets the session in the request.
  *
- * Saves session in test environment.
- *
- * @author Bulat Shakirzyanov <mallluhuct@gmail.com>
  * @author Fabien Potencier <fabien@symfony.com>
+ *
+ * @final
+ *
+ * @deprecated the TestSessionListener use the default SessionListener instead
  */
-abstract class TestSessionListener implements EventSubscriberInterface
+class TestSessionListener extends AbstractTestSessionListener
 {
-    public function onKernelRequest(GetResponseEvent $event)
+    private $container;
+
+    public function __construct(ContainerInterface $container, array $sessionOptions = [])
     {
-        if (!$event->isMasterRequest()) {
-            return;
-        }
-
-        // bootstrap the session
-        $session = $this->getSession();
-        if (!$session) {
-            return;
-        }
-
-        $cookies = $event->getRequest()->cookies;
-
-        if ($cookies->has($session->getName())) {
-            $session->setId($cookies->get($session->getName()));
-        }
+        $this->container = $container;
+        parent::__construct($sessionOptions);
     }
 
     /**
-     * Checks if session was initialized and saves if current request is master
-     * Runs on 'kernel.response' in test environment.
+     * @deprecated since Symfony 5.4, will be removed in 6.0.
      */
-    public function onKernelResponse(FilterResponseEvent $event)
+    protected function getSession(): ?SessionInterface
     {
-        if (!$event->isMasterRequest()) {
-            return;
+        trigger_deprecation('symfony/http-kernel', '5.4', '"%s" is deprecated and will be removed in 6.0, inject a session in the request instead.', __METHOD__);
+
+        if ($this->container->has('session')) {
+            return $this->container->get('session');
         }
 
-        $session = $event->getRequest()->getSession();
-        if ($session && $session->isStarted()) {
-            $session->save();
-            $params = session_get_cookie_params();
-            $event->getResponse()->headers->setCookie(new Cookie($session->getName(), $session->getId(), 0 === $params['lifetime'] ? 0 : time() + $params['lifetime'], $params['path'], $params['domain'], $params['secure'], $params['httponly']));
-        }
+        return null;
     }
-
-    public static function getSubscribedEvents()
-    {
-        return array(
-            KernelEvents::REQUEST => array('onKernelRequest', 192),
-            KernelEvents::RESPONSE => array('onKernelResponse', -128),
-        );
-    }
-
-    /**
-     * Gets the session object.
-     *
-     * @return SessionInterface|null A SessionInterface instance or null if no session is available
-     */
-    abstract protected function getSession();
 }

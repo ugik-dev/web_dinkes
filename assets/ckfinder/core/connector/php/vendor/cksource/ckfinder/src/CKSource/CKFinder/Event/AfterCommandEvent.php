@@ -3,8 +3,8 @@
 /*
  * CKFinder
  * ========
- * https://ckeditor.com/ckeditor-4/ckfinder/
- * Copyright (c) 2007-2019, CKSource - Frederico Knabben. All rights reserved.
+ * https://ckeditor.com/ckfinder/
+ * Copyright (c) 2007-2021, CKSource - Frederico Knabben. All rights reserved.
  *
  * The software, this file and its contents are subject to the CKFinder
  * License. Please read the license.txt file before using, installing, copying,
@@ -25,23 +25,21 @@ class AfterCommandEvent extends CKFinderEvent
     /**
      * The command name.
      *
-     * @var string $commandObject
+     * @var string
      */
     protected $commandName;
 
     /**
      * The response object received from the command.
      *
-     * @var Response $response
+     * @var Response
      */
     protected $response;
 
     /**
      * Constructor.
      *
-     * @param CKFinder $app
-     * @param string   $commandName
-     * @param Response $response
+     * @param string $commandName
      */
     public function __construct(CKFinder $app, $commandName, Response $response)
     {
@@ -63,8 +61,6 @@ class AfterCommandEvent extends CKFinderEvent
 
     /**
      * Sets the response to be returned.
-     *
-     * @param Response $response
      */
     public function setResponse(Response $response)
     {

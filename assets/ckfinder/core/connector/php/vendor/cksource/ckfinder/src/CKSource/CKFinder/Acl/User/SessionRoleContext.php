@@ -3,8 +3,8 @@
 /*
  * CKFinder
  * ========
- * https://ckeditor.com/ckeditor-4/ckfinder/
- * Copyright (c) 2007-2019, CKSource - Frederico Knabben. All rights reserved.
+ * https://ckeditor.com/ckfinder/
+ * Copyright (c) 2007-2021, CKSource - Frederico Knabben. All rights reserved.
  *
  * The software, this file and its contents are subject to the CKFinder
  * License. Please read the license.txt file before using, installing, copying,
@@ -24,7 +24,7 @@ class SessionRoleContext implements RoleContextInterface
     /**
      * The $_SESSION field name to use.
      *
-     * @var string $sessionRoleField
+     * @var string
      */
     protected $sessionRoleField;
 
@@ -45,7 +45,7 @@ class SessionRoleContext implements RoleContextInterface
      */
     public function getRole()
     {
-        if (strlen($this->sessionRoleField) && isset($_SESSION[$this->sessionRoleField])) {
+        if (\strlen($this->sessionRoleField) && isset($_SESSION[$this->sessionRoleField])) {
             return (string) $_SESSION[$this->sessionRoleField];
         }
 

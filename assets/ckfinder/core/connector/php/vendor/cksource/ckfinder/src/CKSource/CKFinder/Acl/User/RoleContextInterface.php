@@ -3,8 +3,8 @@
 /*
  * CKFinder
  * ========
- * https://ckeditor.com/ckeditor-4/ckfinder/
- * Copyright (c) 2007-2019, CKSource - Frederico Knabben. All rights reserved.
+ * https://ckeditor.com/ckfinder/
+ * Copyright (c) 2007-2021, CKSource - Frederico Knabben. All rights reserved.
  *
  * The software, this file and its contents are subject to the CKFinder
  * License. Please read the license.txt file before using, installing, copying,
@@ -26,7 +26,7 @@ interface RoleContextInterface
     /**
      * Returns the name of the current user role.
      *
-     * @return string|null the current user role name or `null`
+     * @return null|string the current user role name or `null`
      */
     public function getRole();
 }

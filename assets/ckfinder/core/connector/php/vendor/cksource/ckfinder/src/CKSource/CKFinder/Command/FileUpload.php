@@ -3,8 +3,8 @@
 /*
  * CKFinder
  * ========
- * https://ckeditor.com/ckeditor-4/ckfinder/
- * Copyright (c) 2007-2019, CKSource - Frederico Knabben. All rights reserved.
+ * https://ckeditor.com/ckfinder/
+ * Copyright (c) 2007-2021, CKSource - Frederico Knabben. All rights reserved.
  *
  * The software, this file and its contents are subject to the CKFinder
  * License. Please read the license.txt file before using, installing, copying,
@@ -16,18 +16,19 @@ namespace CKSource\CKFinder\Command;
 
 use CKSource\CKFinder\Acl\Permission;
 use CKSource\CKFinder\Cache\CacheManager;
-use CKSource\CKFinder\Event\AfterCommandEvent;
-use CKSource\CKFinder\Event\CKFinderEvent;
 use CKSource\CKFinder\Config;
 use CKSource\CKFinder\Error;
+use CKSource\CKFinder\Event\AfterCommandEvent;
+use CKSource\CKFinder\Event\CKFinderEvent;
+use CKSource\CKFinder\Event\FileUploadEvent;
 use CKSource\CKFinder\Exception\InvalidExtensionException;
 use CKSource\CKFinder\Exception\InvalidNameException;
 use CKSource\CKFinder\Exception\InvalidUploadException;
 use CKSource\CKFinder\Filesystem\File\UploadedFile;
-use CKSource\CKFinder\Event\FileUploadEvent;
+use Symfony\Component\HttpFoundation\File\UploadedFile as UploadedFileBase;
+use CKSource\CKFinder\Filesystem\Folder\WorkingFolder;
 use CKSource\CKFinder\Filesystem\Path;
 use CKSource\CKFinder\Image;
-use CKSource\CKFinder\Filesystem\Folder\WorkingFolder;
 use CKSource\CKFinder\Thumbnail\ThumbnailRepository;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpFoundation\Request;
@@ -36,16 +37,16 @@ class FileUpload extends CommandAbstract
 {
     protected $requestMethod = Request::METHOD_POST;
 
-    protected $requires = array(Permission::FILE_CREATE);
+    protected $requires = [Permission::FILE_CREATE];
 
     public function execute(Request $request, WorkingFolder $workingFolder, EventDispatcher $dispatcher, Config $config, CacheManager $cache, ThumbnailRepository $thumbsRepository)
     {
         // #111 IE9 download JSON issue workaround
         if ($request->get('asPlainText')) {
-            $uploadEvents = array(
+            $uploadEvents = [
                 CKFinderEvent::AFTER_COMMAND_FILE_UPLOAD,
-                CKFinderEvent::AFTER_COMMAND_QUICK_UPLOAD
-            );
+                CKFinderEvent::AFTER_COMMAND_QUICK_UPLOAD,
+            ];
 
             foreach ($uploadEvents as $eventName) {
                 $dispatcher->addListener($eventName, function (AfterCommandEvent $event) {
@@ -62,6 +63,11 @@ class FileUpload extends CommandAbstract
 
         if (null === $upload) {
             throw new InvalidUploadException();
+        }
+
+        // Extra check to handle older Symfony components on PHP 8.1+.
+        if (is_array($upload)) {
+            $upload = new UploadedFileBase($upload['tmp_name'], $upload['name'], $upload['type'], $upload['error'], false);
         }
 
         $uploadedFile = new UploadedFile($upload, $this->app);
@@ -121,12 +127,12 @@ class FileUpload extends CommandAbstract
                 Path::combine(
                     $workingFolder->getResourceType()->getName(),
                     $workingFolder->getClientCurrentFolder(),
-                    $fileName),
+                    $fileName
+                ),
                 $image->getInfo()
             );
 
-            unset($imageData);
-            unset($image);
+            unset($imageData, $image);
         }
 
         if ($maxFileSize && $uploadedFile->getSize() > $maxFileSize) {
@@ -134,13 +140,13 @@ class FileUpload extends CommandAbstract
         }
 
         $event = new FileUploadEvent($this->app, $uploadedFile);
-        $dispatcher->dispatch(CKFinderEvent::FILE_UPLOAD, $event);
+        $dispatcher->dispatch($event, CKFinderEvent::FILE_UPLOAD);
 
         if (!$event->isPropagationStopped()) {
             $uploadedFileStream = $uploadedFile->getContentsStream();
             $uploaded = (int) $workingFolder->putStream($fileName, $uploadedFileStream, $uploadedFile->getMimeType());
 
-            if (is_resource($uploadedFileStream)) {
+            if (\is_resource($uploadedFileStream)) {
                 fclose($uploadedFileStream);
             }
 
@@ -157,17 +163,17 @@ class FileUpload extends CommandAbstract
             }
         }
 
-        $responseData = array(
+        $responseData = [
             'fileName' => $fileName,
-            'uploaded' => $uploaded
-        );
+            'uploaded' => $uploaded,
+        ];
 
         if ($warningErrorCode) {
-            $errorMessage = $this->app['translator']->translateErrorMessage($warningErrorCode, array('name' => $fileName));
-            $responseData['error'] = array(
-                'number'  => $warningErrorCode,
-                'message' => $errorMessage
-            );
+            $errorMessage = $this->app['translator']->translateErrorMessage($warningErrorCode, ['name' => $fileName]);
+            $responseData['error'] = [
+                'number' => $warningErrorCode,
+                'message' => $errorMessage,
+            ];
         }
 
         return $responseData;

@@ -3,8 +3,8 @@
 /*
  * CKFinder
  * ========
- * https://ckeditor.com/ckeditor-4/ckfinder/
- * Copyright (c) 2007-2019, CKSource - Frederico Knabben. All rights reserved.
+ * https://ckeditor.com/ckfinder/
+ * Copyright (c) 2007-2021, CKSource - Frederico Knabben. All rights reserved.
  *
  * The software, this file and its contents are subject to the CKFinder
  * License. Please read the license.txt file before using, installing, copying,
@@ -42,21 +42,19 @@ class ThumbnailRepository
     /**
      * The Backend where thumbnails are stored.
      *
-     * @var Backend $thumbsBackend
+     * @var Backend
      */
     protected $thumbsBackend;
 
     /**
      * Event dispatcher.
      *
-     * @var $dispatcher
+     * @var
      */
     protected $dispatcher;
 
     /**
      * Constructor.
-     *
-     * @param CKFinder $app
      */
     public function __construct(CKFinder $app)
     {
@@ -109,7 +107,7 @@ class ThumbnailRepository
      * Returns information about bitmap support for thumbnails. If bitmap
      * support is disabled, thumbnails for bitmaps will not be generated.
      *
-     * @return bool `true` if bitmap support is enabled.
+     * @return bool `true` if bitmap support is enabled
      */
     public function isBitmapSupportEnabled()
     {
@@ -128,9 +126,9 @@ class ThumbnailRepository
      * @param int          $requestedWidth  requested thumbnail height
      * @param int          $requestedHeight requested thumbnail height
      *
-     * @return Thumbnail
-     *
      * @throws \Exception
+     *
+     * @return Thumbnail
      */
     public function getThumbnail(ResourceType $resourceType, $path, $fileName, $requestedWidth, $requestedHeight)
     {
@@ -140,7 +138,7 @@ class ThumbnailRepository
             $thumbnail->create();
 
             $createThumbnailEvent = new ResizeImageEvent($this->app, $thumbnail);
-            $this->dispatcher->dispatch(CKFinderEvent::CREATE_THUMBNAIL, $createThumbnailEvent);
+            $this->dispatcher->dispatch($createThumbnailEvent, CKFinderEvent::CREATE_THUMBNAIL);
 
             if (!$createThumbnailEvent->isPropagationStopped()) {
                 $thumbnail = $createThumbnailEvent->getResizedImage();
@@ -157,9 +155,8 @@ class ThumbnailRepository
      * Deletes all thumbnails under the given path defined by the resource type,
      * path and file name.
      *
-     * @param ResourceType $resourceType
-     * @param string       $path
-     * @param string       $fileName
+     * @param string $path
+     * @param string $fileName
      *
      * @return bool `true` if deleted successfully
      */

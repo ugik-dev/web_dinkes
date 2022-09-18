@@ -3,8 +3,8 @@
 /*
  * CKFinder
  * ========
- * https://ckeditor.com/ckeditor-4/ckfinder/
- * Copyright (c) 2007-2019, CKSource - Frederico Knabben. All rights reserved.
+ * https://ckeditor.com/ckfinder/
+ * Copyright (c) 2007-2021, CKSource - Frederico Knabben. All rights reserved.
  *
  * The software, this file and its contents are subject to the CKFinder
  * License. Please read the license.txt file before using, installing, copying,
@@ -102,8 +102,8 @@ class ResourceType
         $allowed = $this->configNode['allowedExtensions'];
         $denied = $this->configNode['deniedExtensions'];
 
-        if (!empty($allowed) && !in_array($extension, $allowed) ||
-            !empty($denied) && in_array($extension, $denied)) {
+        if (!empty($allowed) && !\in_array($extension, $allowed, true) ||
+            !empty($denied) && \in_array($extension, $denied, true)) {
             return false;
         }
 
@@ -117,6 +117,6 @@ class ResourceType
      */
     public function getHash()
     {
-        return substr(md5($this->configNode['name'] . $this->configNode['backend'] . $this->configNode['directory'] . $this->backend->getBaseUrl() . $this->backend->getRootDirectory()), 0, 16);
+        return substr(md5($this->configNode['name'].$this->configNode['backend'].$this->configNode['directory'].$this->backend->getBaseUrl().$this->backend->getRootDirectory()), 0, 16);
     }
 }

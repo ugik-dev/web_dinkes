@@ -23,7 +23,7 @@ use CKSource\CKFinder\Thumbnail\ThumbnailRepository;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+use Symfony\Component\HttpKernel\Event\ResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 class QuickUpload extends FileUpload
@@ -50,7 +50,7 @@ class QuickUpload extends FileUpload
         return $responseData;
     }
 
-    public function onQuickUploadResponse(FilterResponseEvent $event)
+    public function onQuickUploadResponse(ResponseEvent $event)
     {
         $request = $event->getRequest();
 
@@ -61,7 +61,7 @@ class QuickUpload extends FileUpload
         $response = $event->getResponse();
 
         $funcNum = (string) $request->get('CKEditorFuncNum');
-        $funcNum = preg_replace('/[^0-9]/', '', $funcNum);
+        $funcNum = \preg_replace('/[^0-9]/', '', $funcNum);
 
         if ($response instanceof JsonResponse) {
             $responseData = $response->getData();
@@ -69,14 +69,14 @@ class QuickUpload extends FileUpload
             $fileUrl = isset($responseData['url']) ? $responseData['url'] : '';
             $errorMessage = isset($responseData['error']['message']) ? $responseData['error']['message'] : '';
 
-            ob_start();
+            \ob_start();
             ?>
 <script type="text/javascript">
-    window.parent.CKEDITOR.tools.callFunction(<?php echo json_encode($funcNum); ?>, <?php echo json_encode($fileUrl); ?>, <?php echo json_encode($errorMessage); ?>);
+    window.parent.CKEDITOR.tools.callFunction(<?php echo \json_encode($funcNum); ?>, <?php echo \json_encode($fileUrl); ?>, <?php echo \json_encode($errorMessage); ?>);
 </script>
             <?php
 
-            $event->setResponse(Response::create(ob_get_clean()));
+            $event->setResponse(new Response(ob_get_clean()));
         }
     }
 }

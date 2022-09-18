@@ -3,8 +3,8 @@
 /*
  * CKFinder
  * ========
- * https://ckeditor.com/ckeditor-4/ckfinder/
- * Copyright (c) 2007-2019, CKSource - Frederico Knabben. All rights reserved.
+ * https://ckeditor.com/ckfinder/
+ * Copyright (c) 2007-2021, CKSource - Frederico Knabben. All rights reserved.
  *
  * The software, this file and its contents are subject to the CKFinder
  * License. Please read the license.txt file before using, installing, copying,
@@ -35,27 +35,26 @@ abstract class File
     /**
      * File name.
      *
-     * @var string $fileName
+     * @var string
      */
     protected $fileName;
 
     /**
      * CKFinder configuration.
      *
-     * @var Config $config
+     * @var Config
      */
     protected $config;
 
     /**
-     * @var CKFinder $app
+     * @var CKFinder
      */
     protected $app;
 
     /**
      * Constructor.
      *
-     * @param string   $fileName
-     * @param CKFinder $app
+     * @param string $fileName
      */
     public function __construct($fileName, CKFinder $app)
     {
@@ -67,7 +66,7 @@ abstract class File
     /**
      * Validates current file name.
      *
-     * @return bool `true` if the file name is valid.
+     * @return bool `true` if the file name is valid
      */
     public function hasValidFilename()
     {
@@ -101,7 +100,7 @@ abstract class File
      * `['foo', 'bar', 'baz']`.
      *
      * @param null $newFileName the file name to check if it is different than the current file name (for example for validation of
-     *                          a new file name in edited files).
+     *                          a new file name in edited files)
      *
      * @return array
      */
@@ -109,7 +108,7 @@ abstract class File
     {
         $fileName = $newFileName ?: $this->fileName;
 
-        if (strpos($fileName, '.') === false) {
+        if (false === strpos($fileName, '.')) {
             return null;
         }
 
@@ -132,7 +131,7 @@ abstract class File
      * @param Backend $backend target backend
      * @param string  $path    target backend-relative path
      *
-     * @return bool `true` if file was renamed.
+     * @return bool `true` if file was renamed
      */
     public function autorename(Backend $backend = null, $path = '')
     {
@@ -148,8 +147,8 @@ abstract class File
 
         $i = 0;
         while (true) {
-            $i++;
-            $this->fileName = "{$basename}({$i})" . (!empty($extension) ? ".{$extension}" : '');
+            ++$i;
+            $this->fileName = "{$basename}({$i})".(!empty($extension) ? ".{$extension}" : '');
 
             $filePath = Path::combine($path, $this->fileName);
 
@@ -167,11 +166,11 @@ abstract class File
      * @param string $fileName
      * @param bool   $disallowUnsafeCharacters
      *
-     * @return boolean `true` if `$fileName` is a valid file name.
+     * @return bool `true` if `$fileName` is a valid file name
      */
     public static function isValidName($fileName, $disallowUnsafeCharacters = true)
     {
-        if (null === $fileName || !strlen(trim($fileName)) || substr($fileName, -1, 1) == "." || false !== strpos($fileName, "..")) {
+        if (null === $fileName || !\strlen(trim($fileName)) || '.' === substr($fileName, -1, 1) || false !== strpos($fileName, '..')) {
             return false;
         }
 
@@ -180,7 +179,7 @@ abstract class File
         }
 
         if ($disallowUnsafeCharacters) {
-            if (strpos($fileName, ";") !== false) {
+            if (false !== strpos($fileName, ';')) {
                 return false;
             }
         }
@@ -191,14 +190,14 @@ abstract class File
     /**
      * Checks if the current file has an image extension.
      *
-     * @return bool `true` if the file name has an image extension.
+     * @return bool `true` if the file name has an image extension
      */
     public function isImage()
     {
-        $imagesExtensions = array('gif', 'jpeg', 'jpg', 'png', 'psd', 'bmp', 'tiff', 'tif',
-            'swc', 'iff', 'jpc', 'jp2', 'jpx', 'jb2', 'xbm', 'wbmp');
+        $imagesExtensions = ['gif', 'jpeg', 'jpg', 'png', 'psd', 'bmp', 'tiff', 'tif',
+            'swc', 'iff', 'jpc', 'jp2', 'jpx', 'jb2', 'xbm', 'wbmp', ];
 
-        return in_array($this->getExtension(), $imagesExtensions);
+        return \in_array($this->getExtension(), $imagesExtensions, true);
     }
 
     /**
@@ -206,15 +205,16 @@ abstract class File
      *
      * @param string $fileName
      * @param bool   $disallowUnsafeCharacters
+     * @param mixed  $forceAscii
      *
      * @return string
      */
     public static function secureName($fileName, $disallowUnsafeCharacters = true, $forceAscii = false)
     {
-        $fileName = str_replace(array(":", "*", "?", "|", "/"), "_", $fileName);
+        $fileName = str_replace([':', '*', '?', '|', '/'], '_', $fileName);
 
         if ($disallowUnsafeCharacters) {
-            $fileName = str_replace(";", "_", $fileName);
+            $fileName = str_replace(';', '_', $fileName);
         }
 
         if ($forceAscii) {
@@ -239,7 +239,9 @@ abstract class File
      * @param string $str
      *
      * @return string Accented chars replaced with ASCII equivalents
+     *
      * @author Andreas Gohr <andi@splitbrain.org>
+     *
      * @see http://sourceforge.net/projects/phputf8/
      */
     public static function convertToAscii($str)
@@ -247,8 +249,8 @@ abstract class File
         static $utf8LowerAccents = null;
         static $utf8UpperAccents = null;
 
-        if (is_null($utf8LowerAccents)) {
-            $utf8LowerAccents = array(
+        if (null === $utf8LowerAccents) {
+            $utf8LowerAccents = [
                 'à' => 'a', 'ô' => 'o', 'ď' => 'd', 'ḟ' => 'f', 'ë' => 'e', 'š' => 's', 'ơ' => 'o',
                 'ß' => 'ss', 'ă' => 'a', 'ř' => 'r', 'ț' => 't', 'ň' => 'n', 'ā' => 'a', 'ķ' => 'k',
                 'ŝ' => 's', 'ỳ' => 'y', 'ņ' => 'n', 'ĺ' => 'l', 'ħ' => 'h', 'ṗ' => 'p', 'ó' => 'o',
@@ -264,11 +266,11 @@ abstract class File
                 'â' => 'a', 'ľ' => 'l', 'ẅ' => 'w', 'ż' => 'z', 'ī' => 'i', 'ã' => 'a', 'ġ' => 'g',
                 'ṁ' => 'm', 'ō' => 'o', 'ĩ' => 'i', 'ù' => 'u', 'į' => 'i', 'ź' => 'z', 'á' => 'a',
                 'û' => 'u', 'þ' => 'th', 'ð' => 'dh', 'æ' => 'ae', 'µ' => 'u', 'ĕ' => 'e',
-            );
+            ];
         }
 
-        if (is_null($utf8UpperAccents)) {
-            $utf8UpperAccents = array(
+        if (null === $utf8UpperAccents) {
+            $utf8UpperAccents = [
                 'À' => 'A', 'Ô' => 'O', 'Ď' => 'D', 'Ḟ' => 'F', 'Ë' => 'E', 'Š' => 'S', 'Ơ' => 'O',
                 'Ă' => 'A', 'Ř' => 'R', 'Ț' => 'T', 'Ň' => 'N', 'Ā' => 'A', 'Ķ' => 'K',
                 'Ŝ' => 'S', 'Ỳ' => 'Y', 'Ņ' => 'N', 'Ĺ' => 'L', 'Ħ' => 'H', 'Ṗ' => 'P', 'Ó' => 'O',
@@ -284,9 +286,8 @@ abstract class File
                 'Â' => 'A', 'Ľ' => 'L', 'Ẅ' => 'W', 'Ż' => 'Z', 'Ī' => 'I', 'Ã' => 'A', 'Ġ' => 'G',
                 'Ṁ' => 'M', 'Ō' => 'O', 'Ĩ' => 'I', 'Ù' => 'U', 'Į' => 'I', 'Ź' => 'Z', 'Á' => 'A',
                 'Û' => 'U', 'Þ' => 'Th', 'Ð' => 'Dh', 'Æ' => 'Ae', 'Ĕ' => 'E',
-            );
+            ];
         }
-
 
         $str = str_replace(array_keys($utf8LowerAccents), array_values($utf8LowerAccents), $str);
 

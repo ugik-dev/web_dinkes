@@ -2,13 +2,11 @@
 
 \tableofcontents
 
-CKFinder is an Ajax application whose front end is written entirely in JavaScript. It communicates
-with the server through JSON messages. On the server side, there is a "connector" written in a specific server
-language, which handles the front end requests. The following diagram illustrates it:
+CKFinder is an Ajax application with a frontend written entirely in JavaScript. It communicates with the server through JSON messages. On the server side, there is a "connector" written in a specific server language, which handles the frontend requests. The following diagram illustrates it:
 
 ![Application structure overview](/manual/images/ckfinder_overview.png)
 
-The CKFinder 3 PHP connector is built on top of the following Symfony 2 components:
+The CKFinder 3 for PHP connector is built on top of the following Symfony 2 components:
  - [HttpKernel](https://symfony.com/doc/current/components/http_kernel/introduction.html)
  - [HttpFoundation](https://symfony.com/doc/current/components/http_foundation/introduction.html)
  - [EventDispatcher](https://symfony.com/doc/current/components/event_dispatcher/introduction.html)
@@ -41,7 +39,7 @@ Key                   | Object Type                                             
 `kernel`              | [HttpKernel](https://api.symfony.com/2.8/Symfony/Component/HttpKernel/HttpKernel.html)                         | A Symfony `HttpKernel`.
 `logger`              | `Monolog\Logger`                                                                                              | A `Psr\Log\LoggerInterface` instance (by default `Monolog\Logger` using `FirePHPHandler`).
 `request_stack`       | [RequestStack](https://api.symfony.com/2.8/Symfony/Component/HttpFoundation/RequestStack.html)                 | A Symfony `RequestStack`.
-`resolver`            | [CommandResolver](@ref CKSource::CKFinder::CommandResolver)                                                   | The CKFinder command resolver.
+`command_resolver`    | [CommandResolver](@ref CKSource::CKFinder::CommandResolver)                                                   | The CKFinder command resolver.
 `request_transformer` @labelSince{3.1.1} | [JsonTransformer](@ref CKSource::CKFinder::Request::Transformer::JsonTransformer)          | A request transformer instance used for transforming requests to format understandable by connector.
 `working_folder`      | [WorkingFolder](@ref CKSource::CKFinder::Filesystem::Folder::WorkingFolder)                                   | The CKFinder `WorkingFolder` object that represents the current working directory defined by resource type and its backend, backend's root folder, and relative path passed in the `currentFolder` URL parameter.
 

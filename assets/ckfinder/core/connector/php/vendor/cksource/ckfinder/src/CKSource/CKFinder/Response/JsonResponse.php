@@ -3,8 +3,8 @@
 /*
  * CKFinder
  * ========
- * https://ckeditor.com/ckeditor-4/ckfinder/
- * Copyright (c) 2007-2019, CKSource - Frederico Knabben. All rights reserved.
+ * https://ckeditor.com/ckfinder/
+ * Copyright (c) 2007-2021, CKSource - Frederico Knabben. All rights reserved.
  *
  * The software, this file and its contents are subject to the CKFinder
  * License. Please read the license.txt file before using, installing, copying,
@@ -23,7 +23,7 @@ class JsonResponse extends HttpFoundation\JsonResponse
 {
     protected $rawData;
 
-    public function __construct($data = null, $status = 200, $headers = array())
+    public function __construct($data = null, $status = 200, $headers = [])
     {
         if (null === $data) {
             $data = new \stdClass();
@@ -39,7 +39,7 @@ class JsonResponse extends HttpFoundation\JsonResponse
         return $this->rawData;
     }
 
-    public function setData($data = array())
+    public function setData($data = [])
     {
         $this->rawData = $data;
 
@@ -48,7 +48,7 @@ class JsonResponse extends HttpFoundation\JsonResponse
 
     public function withError($errorNumber, $errorMessage = null)
     {
-        $errorData = array('number' => $errorNumber);
+        $errorData = ['number' => $errorNumber];
 
         if ($errorMessage) {
             $errorData['message'] = $errorMessage;
@@ -56,7 +56,7 @@ class JsonResponse extends HttpFoundation\JsonResponse
 
         $data = (array) $this->rawData;
 
-        $data = array('error' => $errorData) + $data;
+        $data = ['error' => $errorData] + $data;
 
         $this->setData($data);
 
