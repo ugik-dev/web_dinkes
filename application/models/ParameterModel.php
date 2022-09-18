@@ -23,6 +23,7 @@ class ParameterModel extends CI_Model
     $this->db->from('survey');
     if (!empty($filter['show_survey'])) $this->db->where('show_survey', $filter['show_survey']);
     if (!empty($filter['limit'])) $this->db->limit($filter['limit']);
+    $this->db->order_by('id', 'ASC');
 
     $res = $this->db->get();
     return DataStructure::keyValue($res->result_array(), 'id');
