@@ -95,17 +95,22 @@
                             </form>
                         </div>
                     </div>
-                    <div class="single-sidebar-widget mb-0">
+                    <div class="single-sidebar-widget mb-1">
                         <a target="_blank" href="https://covid19.bangka.go.id/">
                             <img class="w-100" src="<?= base_url('assets/images/info-covid2.png') ?>">
                         </a>
                     </div>
-                    <div class="single-sidebar-widget mb-0 mt-0">
+                    <div class="single-sidebar-widget mb-1 mt-0">
+                        <a target="_blank" href="https://puskesmas.bangka.go.id/">
+                            <img class="w-100" src="<?= base_url('assets/images/portal-puskes.png') ?>">
+                        </a>
+                    </div>
+                    <!-- <div class="single-sidebar-widget mb-0 mt-0">
                         <a target="_blank" href="http://latih-ekinerja.bangka.go.id/">
                             <img class="w-100" src="<?= base_url('assets/images/e-kinerja.png') ?>">
                         </a>
-                    </div>
-                    <div class="single-sidebar-widget mb-2 mt-0">
+                    </div> -->
+                    <div class="single-sidebar-widget mb-1 mt-0">
                         <a target="_blank" href="http://sidikjari.bangka.go.id/">
                             <img class="w-100" src="<?= base_url('assets/images/fingerprint2.png') ?>">
                         </a>
