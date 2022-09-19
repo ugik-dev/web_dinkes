@@ -214,7 +214,8 @@ class main extends CI_Controller
     function submit_survey()
     {
         $data = $this->input->post();
-        $data['ip_address'] = $this->input->ip_address();
+        // $data['ip_address'] = $this->input->ip_address();
+        $data['ip_address'] = file_get_contents('https://api.ipify.org');
         $data['tanggal'] = date("Y-m-d");
         // $this->load->model('Parameter');
         $this->ParameterModel->submit_survey($data);
