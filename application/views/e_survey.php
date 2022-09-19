@@ -158,9 +158,9 @@
                                 </select>
                             </div> -->
                         </div>
-                        <label>Pesan</label>
+                        <label>Pesan / Kesan / Saran / Masukan</label>
                         <div class="form-group col-12 col-md-12 col-sm-12 col-xl-12 message-box">
-                            <textarea id="message" rows="6" name="alasan" placeholder="Pesan"></textarea>
+                            <textarea id="message" rows="6" name="alasan" placeholder="Pesan / Kesan / Saran / Masukan"></textarea>
                             <span class="form-icon"><i class="fas fa-edit"></i></span>
                         </div>
                         <hr>
