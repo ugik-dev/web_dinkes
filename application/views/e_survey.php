@@ -559,9 +559,9 @@
                         timer: 9200,
                         timerProgressBar: true,
                     }).then((result) => {
-                        location.reload();
+                        location.href = "<?= base_url() ?>#review";
+                        // location.reload();
                     })
-
                 }
             }
         });

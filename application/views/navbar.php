@@ -28,6 +28,7 @@ $menu = Menu();
                                             <?php foreach ($menu['Profil'] as $profil) {
                                                 echo '  <a class="dropdown-item" href="' . base_url('profil/') . $profil['menu_slug'] . '">' . $profil['menu_judul'] . '</a>';
                                             } ?>
+                                            <!-- <a class="dropdown-item" href="<?= base_url('#review') ?>">Tanggapan Publik</a> -->
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
