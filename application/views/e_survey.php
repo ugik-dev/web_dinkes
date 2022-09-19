@@ -109,26 +109,27 @@
                             </div>
 
                             <div class="form-group col-12 col-md-12 col-sm-12 col-xl-12">
-                                <label>Faskes</label>
+                                <label>Faskes / Layanan yang diterima</label>
                                 <select class='form-control select2' name="layanan">
                                     <option value=""></option>
                                     <optgroup label="Rumah Sakit">
+                                        <option>RSUD Eko Maulana Ali</option>
                                         <option>RSUD Depati Bahrin</option>
                                         <option>RSUD Sjafrie Rachman</option>
                                     </optgroup>
-                                    <optgroup label="Puskesmas / Pustu">
-                                        <option>Puskesmas / Pustu Bakam</option>
-                                        <option>Puskesmas / Pustu Baturusa</option>
-                                        <option>Puskesmas / Pustu Belinyu</option>
-                                        <option>Puskesmas / Pustu Gunung Muda</option>
-                                        <option>Puskesmas / Pustu Kenanga</option>
-                                        <option>Puskesmas / Pustu Pemali</option>
-                                        <option>Puskesmas / Pustu Penagan</option>
-                                        <option>Puskesmas / Pustu Petaling</option>
-                                        <option>Puskesmas / Pustu Puding Besar</option>
-                                        <option>Puskesmas / Pustu Riau Silip</option>
-                                        <option>Puskesmas / Pustu Sinar Baru</option>
-                                        <option>Puskesmas / Pustu Sungailiat</option>
+                                    <optgroup label="Puskesmas dan jaringan (Pustu & Poskesdes)">
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Bakam">Bakam</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Baturusa">Baturusa</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Belinyu">Belinyu</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Gunung Muda">Gunung Muda</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Kenanga">Kenanga</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Pemali">Pemali</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Penagan">Penagan</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Petaling">Petaling</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Puding Besar">Puding Besar</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Riau Silip">Riau Silip</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Sinar Baru">Sinar Baru</option>
+                                        <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Sungailiat">Sungailiat</option>
                                     </optgroup>
                                     <optgroup label="Mall Sipandu">
                                         <option>Rekomandasi Perizinan Praktik Tenaga Kerja Kesehatan</option>
