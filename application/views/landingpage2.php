@@ -97,7 +97,7 @@
                     </div>
                     <div class="single-sidebar-widget mb-1">
                         <a target="" href="https://mallsipandu.bangka.go.id/">
-                            <img class="w-100" src="<?= base_url('assets/images/info-covid2.png') ?>">
+                            <img class="w-100" src="<?= base_url('assets/images/mall.jpg') ?>">
                         </a>
                     </div>
                     <div class="single-sidebar-widget mb-1">
