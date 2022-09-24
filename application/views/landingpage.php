@@ -71,7 +71,7 @@
                                             $url = base_url('assets/images/pengumuman.jpg');
                                         }
                                     ?>
-                                        <li class="cat-item"><a href="<?= base_url($b['tipe'] . '/' . $b['berita_slug']) ?>"><?= $b['berita_judul'] ?><i class="fas fa-angle-right"></i></a></li>
+                                        <li class="cat-item"><a style="line-height: 1.6;" href="<?= base_url($b['tipe'] . '/' . $b['berita_slug']) ?>"><?= $b['berita_judul'] ?><i class="fas fa-angle-right"></i></a></li>
                                         <!-- <li class="cat-item"><a href="https://dinkes.bangka.go.id/pengumuman/pengumuman-hasil-kelulusan-tes-administrasi-tahap-vi-dinas-kesehatan-kabupaten-bangka">Pengumuman Hasil Kelulusan Tes Administrasi Tahap VI DInas Kesehatan Kabupaten Bangka<i class="fas fa-angle-right"></i></a></li>
                                     <li class="cat-item"><a href="https://dinkes.bangka.go.id/pengumuman/perpanjangan-penerimaan-calon-tenaga-kontrak-tahap-vi-dinas-kesehatan-kabupaten-bangka">Perpanjangan Penerimaan Calon Tenaga Kontrak Tahap VI Dinas Kesehatan Kabupaten Bangka<i class="fas fa-angle-right"></i></a></li> -->
                                     <?php
@@ -119,7 +119,7 @@
                     </div>
                     <div class="col-lg-12">
 
-                        <div class="blog-page-nav blog-pages-link text-center">
+                        <div class="blog-page-nav blog-pages-link text-center mb-5">
                             <a href="<?= base_url('berita') ?>" class="btn_theme_one color_one text-center">Lebih banyak ..</a>
                         </div>
                     </div>
