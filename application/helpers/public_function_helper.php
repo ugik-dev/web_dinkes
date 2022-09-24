@@ -31,8 +31,17 @@ if (!function_exists('Pelayanan')) {
         return $res;
     }
 }
+if (!function_exists('tanggal_indo_sort')) {
 
-
+    function tanggal_indo_sort($tanggal)
+    {
+        if (empty($tanggal)) return '';
+        $BULAN = [0, 'Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des'];
+        $t = explode('-', $tanggal);
+        $th = substr($t[0], 2);
+        return "{$t[2]} {$BULAN[intval($t[1])]} {$th}";
+    }
+}
 if (!function_exists('Pengumuman')) {
 
     function Pengumuman()

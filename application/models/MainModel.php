@@ -10,6 +10,8 @@ class MainModel extends CI_Model
             $this->db->where('berita_id', $filter['berita_id']);
         if (!empty($filter['tipe']))
             $this->db->where('tipe', $filter['tipe']);
+        if (!empty($filter['x_tipe']))
+            $this->db->where_not_in('tipe', $filter['x_tipe']);
         if (!empty($filter['berita_slug']))
             $this->db->where('berita_slug', $filter['berita_slug']);
         if (!empty($filter['limit']))

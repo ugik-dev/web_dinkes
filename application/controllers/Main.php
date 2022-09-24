@@ -123,7 +123,7 @@ class main extends CI_Controller
     {
         // echo PHP_VERSION;
         $dataContent = array(
-            'page' => 'landingpage2',
+            'page' => 'landingpage',
             'berita' => $this->MainModel->getBerita(array('x_tipe' => 'pengumuman', 'limit' => 6)),
             'pengumuman' => $this->MainModel->getBerita(array('tipe' => 'pengumuman', 'limit' => 3)),
             // 'artikel' => $this->MainModel->getBerita(array('tipe' => 'artikel', 'limit' => 3)),

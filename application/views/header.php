@@ -26,7 +26,7 @@
 </head>
 
 <body class="theme_two">
-    <img src="<?= base_url() ?>assets/images/header4.jpg" style="width : 100%">
+    <img src="<?= base_url() ?>assets/images/header5.jpg" style="width : 100%">
     <div class="pre-loader">
         <div class="spinner">
             <div class="lds-ripple">
