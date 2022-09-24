@@ -1,10 +1,10 @@
 <section class="blog-page-wrap blog-one left-sidebar-blog pt-3">
     <div class="container">
         <div class="row">
-            <div class="col-xl-9 col-lg-9 col-md-9 col-9 col-sm-9 ">
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 ">
                 <h4 class="sidebar_title">Berita</h4>
                 <div class="row">
-                    <div class="col-xl-8 col-lg-8 col-md-8 col-8 col-sm-8 ">
+                    <div class="col-xl-8 col-lg-8 col-md-8  col-sm-12 ">
                         <div class="blog-post-list">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                 <!-- <ol class="carousel-indicators">
@@ -84,7 +84,7 @@
                         </div>
 
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-4 col-sm-4 ">
+                    <div class="col-xl-4 col-lg-4 col-md-4  col-sm-12 ">
                         <!-- <div class="col-xl-3"> -->
                         <div class="single-sidebar-widget">
                             <h4 class="sidebar_title">recent post</h4>
@@ -128,7 +128,7 @@
             <?php
             // $this->load->view('sidemenu');
             ?>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-3 col-sm-3 ">
+            <div class="col-xl-3 col-lg-3 col-md-3  col-sm-12 ">
                 <div class="blog-sidebar dynamic-right-sidebar">
                     <!-- single sidebar item start -->
                     <div class="single-sidebar-widget">
