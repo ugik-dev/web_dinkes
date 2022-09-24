@@ -87,7 +87,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4  col-sm-12 ">
                         <!-- <div class="col-xl-3"> -->
                         <div class="single-sidebar-widget">
-                            <h5 class="sidebar_title">terbaru</h5>
+                            <!-- <h5 class="sidebar_title">terbaru</h5> -->
                             <ul>
                                 <?php
                                 $i = 1;
@@ -154,14 +154,14 @@
                             <img class="w-100" src="<?= base_url('assets/images/portal-puskes.png') ?>">
                         </a>
                     </div>
-                    <!-- <div class="single-sidebar-widget mb-0 mt-0">
-                        <a target="_blank" href="http://latih-ekinerja.bangka.go.id/">
-                            <img class="w-100" src="<?= base_url('assets/images/e-kinerja.png') ?>">
-                        </a>
-                    </div> -->
                     <div class="single-sidebar-widget mb-1 mt-0">
                         <a target="_blank" href="http://sidikjari.bangka.go.id/">
                             <img class="w-100" src="<?= base_url('assets/images/fingerprint2.png') ?>">
+                        </a>
+                    </div>
+                    <div class="single-sidebar-widget mb-0 mt-0">
+                        <a target="_blank" href="https://www.lapor.go.id/">
+                            <img class="w-100" style='width : 100%' src="<?= base_url('assets/images/span_lapor.jpg') ?>">
                         </a>
                     </div>
                     <div style="width: 100%;" class="single-sidebar-widget mb-5">
