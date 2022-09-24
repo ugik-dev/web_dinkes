@@ -326,85 +326,15 @@
         </div>
 
         <div class="row">
-            <div class="why-we-best-tabs-nav col-12 col-xl-6 col-md-6 col-sm-12">
+            <!-- <div class="why-we-best-tabs-nav col-12 col-xl-6 col-md-6 col-sm-12">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/YtfuGwTOxxE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <!-- <ul class="nav nav-pills " id="pills-tab" role="tablist">
-                    <?php
-                    $pengumuman = array();
-                    $pengumuman = Pengumuman();
-                    $i = 1;
-                    foreach ($pengumuman as $p) {
-                        if ($i == 1) {
-                    ?>
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="pill" href="<?= base_url('pengumuman/' . $p['berita_slug']) ?>" role="tab">
-                                    <div style="width : 500px" class="why-nav d-flex align-self-baseline align-items-center">
-                                        <div class="why-icon">
-                                            <img src="assets/images/home-two/idea_icon.png" alt="shipo">
-                                            <img src="assets/images/home-two/idea_active.png" alt="shipo">
-                                        </div>
-                                        <div class="why-nav-text">
-                                            <h4><?= $p['berita_judul'] ?></h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        <?php
-                        } else if ($i == 2) { ?>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="<?= base_url('pengumuman/' . $p['berita_slug']) ?>" role="tab">
-                                    <div style="width : 500px" class="why-nav d-flex align-self-baseline align-items-center">
-                                        <div class="why-icon">
-                                            <img src="assets/images/home-two/mobile_icon.png" alt="shipo">
-                                            <img src="assets/images/home-two/mobile_icon_active.png" alt="shipo">
-                                        </div>
-                                        <div class="why-nav-text">
-                                            <h4><?= $p['berita_judul'] ?></h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li> <?php
-
-                                } else { ?>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="<?= base_url('pengumuman/' . $p['berita_slug']) ?>" role="tab">
-                                    <div style="width : 500px" class="why-nav d-flex align-self-baseline align-items-center">
-                                        <div class="why-icon">
-                                            <img src="assets/images/home-two/idea_icon.png" alt="shipo">
-                                            <img src="assets/images/home-two/idea_active.png" alt="shipo">
-                                        </div>
-                                        <div class="why-nav-text">
-                                            <h4><?= $p['berita_judul'] ?></h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li><?php
-
-                                }
-                                $i++;
-                            }
-                                    ?>
-
-
-
-
-                </ul> -->
-            </div>
+            </div> -->
 
             <div class="why-we-best-tabs-nav col-12 col-xl-6 col-md-6 col-sm-12">
-                <!-- <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=https://www.youtube.com/watch?v=yr4XvTX8Ns4" frameborder="0"></iframe> -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fNBK8eTHYi4?autoplay=1&mute=0&enablejsapi=1&controls=0&amp;start=4" title="PSC 119 Bangka Let's go" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="why-we-best-tabs-nav col-12 col-xl-6 col-md-6 col-sm-12">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ll_y_wUqmsg?autoplay=1&mute=0&enablejsapi=1&controls=0&amp;start=4" title="PSC 119 Bangka Let's go" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <!-- <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="why-tab-one" role="tabpanel">
-                        <img src="assets/images/home-two/why_img_one.png" alt="shipo">
-                    </div>
-                    <div class="tab-pane fade show" id="why-tab-two" role="tabpanel">
-                        <img src="assets/images/home-two/why_img_one.png" alt="shipo">
-                    </div>
-                    <div class="tab-pane fade show" id="why-tab-three" role="tabpanel">
-                        <img src="assets/images/home-two/why_img_one.png" alt="shipo">
-                    </div>
-                </div> -->
             </div>
 
         </div>
