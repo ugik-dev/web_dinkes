@@ -2,9 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 ">
-                <h4 class="sidebar_title">Berita</h4>
+                <h3 class="sidebar_title">Berita</h3>
                 <div class="row">
-                    <div class="col-xl-8 col-lg-8 col-md-8  col-sm-12 ">
+                    <div class="col-xl-8 col-lg-8 col-md-8  col-sm-12 mb-2">
                         <div class="blog-post-list">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                 <!-- <ol class="carousel-indicators">
@@ -60,8 +60,8 @@
                                 </a> -->
                             </div>
                             <!-- <div class="row"> -->
-                            <h4 class="sidebar_title mt-5">Pengumuman</h4>
-                            <div class="single-sidebar-widget">
+                            <h5 class="sidebar_title mt-5 mb-1">Pengumuman</h5>
+                            <div class="single-sidebar-widget mb-2">
                                 <ul>
                                     <?php
                                     foreach ($pengumuman as $b) {
@@ -87,7 +87,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4  col-sm-12 ">
                         <!-- <div class="col-xl-3"> -->
                         <div class="single-sidebar-widget">
-                            <h4 class="sidebar_title">recent post</h4>
+                            <h5 class="sidebar_title">terbaru</h5>
                             <ul>
                                 <?php
                                 $i = 1;
