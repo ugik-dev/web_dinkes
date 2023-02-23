@@ -25,6 +25,7 @@
         <li id="pengaduan">
           <a href="<?= base_url('admin/pengaduan') ?>"><i class="fa fa-users-cog"></i> <span class="nav-label">Pengaduan</span></a>
         </li>
+
         <li id="setting_parm">
           <a href="#"><i class="fa fa-tasks"></i> <span class="nav-label">Galeri</span> <span class="fa arrow"></span></a>
           <ul class="nav nav-second-level" aria-expanded="true">

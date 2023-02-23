@@ -464,8 +464,13 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="send-message text-center">
+                            <div class="form-inline">
+                                <label class="mr-2" for="pengaduan1">
+                                    Masukkan Captha
+                                </label>
+                                <?= $captcha ?><br> <input class="form-control ml-2 mr-2" style="width: 300px !important" type="text" name="captcha" id="captcha" value="">
+                            </div>
                             <button id="sub_btn" type="submit" class="btn-send">kirim</button>
                         </div>
                         <span class="form-message"></span>
@@ -548,8 +553,9 @@
                 if (res['error']) {
                     Swal.close();
                     Swal.fire({
-                        icon: 'danger',
-                        html: '<h5>Error ...</h5>',
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: res['message'],
                     });
                 } else {
                     let timerInterval
@@ -559,7 +565,7 @@
                         timer: 9200,
                         timerProgressBar: true,
                     }).then((result) => {
-                        location.href = "<?= base_url() ?>#review";
+                        // location.href = "<?= base_url() ?>#review";
                         // location.reload();
                     })
                 }

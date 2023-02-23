@@ -1,16 +1,64 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="ibox ssection-container">
         <div class="ibox-content">
-            <form class="form-inline" id="toolbar_form" onsubmit="return false;">
+            <form class="form-inline col-lg-12" id="toolbar_form" onsubmit="return false;">
                 <!-- <input type="hidden" id="is_not_self" name="is_not_self" value="1">
                 <select class="form-control mr-sm-2" name="id_ref" id="id_ref"></select> -->
-                <select class="form-control mr-sm-2" name="tahun" id="tahun">
-                    <option value="">Semua Tahun</option>
-                    <option value="2022">2022</option>
-                    <option value="2021">2021</option>
-                    <option value="2020">2020</option>
+                <div class="form-group row mb-2">
+                    <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
+                    <div class="col-sm-10">
+                        <select class="form-control mr-sm-2" name="tahun" id="tahun">
+                            <option value="">Semua Tahun</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                </div>
 
-                </select>
+                <div class="form-group row mb-2">
+                    <label for="layanan" class="col-sm-2 col-form-label">Layanan</label>
+                    <div class="col-sm-10">
+                        <select class='form-control select2' name="layanan" id="layanan">
+                            <option value=""></option>
+                            <optgroup label="Rumah Sakit">
+                                <option>RSUD Eko Maulana Ali</option>
+                                <option>RSUD Depati Bahrin</option>
+                                <option>RSUD Sjafrie Rachman</option>
+                            </optgroup>
+                            <optgroup label="Puskesmas dan jaringan (Pustu & Poskesdes)">
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Bakam">Bakam</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Baturusa">Baturusa</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Belinyu">Belinyu</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Gunung Muda">Gunung Muda</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Kenanga">Kenanga</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Pemali">Pemali</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Penagan">Penagan</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Petaling">Petaling</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Puding Besar">Puding Besar</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Riau Silip">Riau Silip</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Sinar Baru">Sinar Baru</option>
+                                <option value="Puskesmas dan jaringan (Pustu & Poskesdes) Sungailiat">Sungailiat</option>
+                            </optgroup>
+                            <optgroup label="Mall Sipandu">
+                                <option>Rekomandasi Perizinan Praktik Tenaga Kerja Kesehatan</option>
+                                <option>Sertifikat Laik Hygiene Sanitasi TPM dan TFU</option>
+                                <option>Rekomendasi Surat Tanda Daftar Pengobatan Tradisional</option>
+                                <option>Sertifikat Pangan Industri Rumah Tangga</option>
+                                <option>Pemeriksaan Sampel Air Minum</option>
+                                <option>Persetujuan Pelayanan Jaminan Kesehatan Masyarakat</option>
+                                <option>Persetujuan Pelayanan Jaminan Persalinan</option>
+                                <option>Rekomendasi SKTM</option>
+                            </optgroup>
+                            <optgroup label="Lainnya">
+                                <option>Pelayanan Vaksin</option>
+                                <option>Dinas Kesehatan Kabupaten Bangka</option>
+                                <option>Lainnya</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
                 <!-- <button type="button" class="btn btn-success my-1 mr-sm-2" id="new_btn" disabled="disabled"><i class="fal fa-plus"></i> Tambah User Baru</button> -->
             </form>
         </div>
@@ -51,7 +99,8 @@
         var toolbar = {
             'form': $('#toolbar_form'),
             'id_ref': $('#toolbar_form').find('#id_ref'),
-            'id_opd': $('#toolbar_form').find('#id_opd'),
+            'tahun': $('#toolbar_form').find('#tahun'),
+            'layanan': $('#toolbar_form').find('#layanan'),
             'newBtn': $('#new_btn'),
         }
 
@@ -93,7 +142,12 @@
         });
 
 
-
+        toolbar.tahun.on('change', function() {
+            getAllUser();
+        })
+        toolbar.layanan.on('change', function() {
+            getAllUser();
+        })
 
         function getAllUser() {
             swal({

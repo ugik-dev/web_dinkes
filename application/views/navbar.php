@@ -52,8 +52,6 @@ $menu = Menu();
                                             <a class="dropdown-item" href="<?= base_url('#aplikasi') ?>">Aplikasi Kami</a>
                                             <a class="dropdown-item" href="<?= base_url('#pengumuman') ?>">Pengumuman</a>
                                             <a class="dropdown-item" href="<?= base_url('#review') ?>">Pendapat Publik</a>
-                                            <!-- <a class="dropdown-item" href="<?= base_url('bank-data') ?>">Bank Data</a> -->
-
                                         </div>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>galeri">Galeri</a></li>

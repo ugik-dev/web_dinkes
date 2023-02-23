@@ -8,6 +8,7 @@ assets/ckfinder/config.php
 
 
 assets/kcfinder/upload/files/*
+assets/captcha/*
 !assets/kcfinder/upload/files/.gitignore
 upload/berita_image/*
 upload/berita_pdf/*

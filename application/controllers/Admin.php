@@ -66,7 +66,6 @@ class Admin extends CI_Controller
         $this->load->view('Page', $pageData);
     }
 
-
     public function bank_data()
     {
         $this->SecurityModel->rolesOnlyGuard(array('admin'));

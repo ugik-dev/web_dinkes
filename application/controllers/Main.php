@@ -203,23 +203,95 @@ class main extends CI_Controller
 
     public function survey()
     {
+
+        // $capt = $this->create_capt();
         $dataContent = array(
             'page' => 'e_survey',
-            'navbar' => ['title' => "e-Survey", 'kategori' => "e-Survey"]
+            'navbar' => ['title' => "e-Survey", 'kategori' => "e-Survey",],
+            'captcha' => $this->create_capt()
         );
 
         $this->load->view('template', $dataContent);
     }
 
+    function create_capt()
+    {
+        $expiration = time() - 7200; // Two hour limit
+        $this->db->where('captcha_time < ', $expiration)
+            ->delete('captcha');
+
+        $this->load->helper('captcha');
+        $this->load->helper('string');
+        $vals = array(
+            'word'          => strtoupper(random_string('alphanum', 5)),
+            'img_path'      => APPPATH . '../assets/captcha/',
+            'img_url'       => base_url('assets/captcha/'),
+            'font_path'     => './path/to/fonts/texb.ttf',
+            'img_width'     => '150',
+            'img_height'    => 40,
+            'expiration'    => 1200,
+            'word_length'   => 5,
+            'font_size'     => 26,
+            'img_id'        => 'Imageid',
+            'pool'          => '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+
+            'colors'        => array(
+                'background' => array(255, 255, 255),
+                'border' => array(255, 255, 255),
+                'text' => array(0, 0, 0),
+                'grid' => array(255, 40, 40)
+            )
+        );
+
+        $cap = create_captcha($vals);
+        // var_dump($cap);
+        // die();
+        $data_captca = array(
+            'captcha_time'  => $cap['time'],
+            'word'          => $cap['word']
+        );
+
+        $query = $this->db->insert_string('captcha', $data_captca);
+        $this->db->query($query);
+
+        $this->session->set_userdata('mycaptcha', $cap['word']);
+        return $cap['image'];
+    }
+
+    function cek_captha($cap)
+    {
+        $expiration = time() - 600;
+        $this->db->where('captcha_time < ', $expiration)
+            ->delete('captcha');
+        $sql = 'SELECT COUNT(*) AS count FROM captcha WHERE word = ? AND captcha_time > ?';
+        $binds = array($cap,  $expiration);
+        $query = $this->db->query($sql, $binds);
+        $row = $query->row();
+
+        if ($row->count == 0) {
+            throw new UserException('Captcha salah / sudah kadarluasa, silahkan refres halaman!', UNAUTHORIZED_CODE);
+        } else {
+            $this->db->where('word', $cap)
+                ->delete('captcha');
+        }
+    }
     function submit_survey()
     {
-        $data = $this->input->post();
-        // $data['ip_address'] = $this->input->ip_address();
-        $data['ip_address'] = file_get_contents('https://api.ipify.org');
-        $data['tanggal'] = date("Y-m-d");
-        // $this->load->model('Parameter');
-        $this->ParameterModel->submit_survey($data);
-        echo json_encode(array('error' => false, 'data' => $data));
+        try {
+            $data = $this->input->post();
+            foreach ($data as $key => $d)
+                $data[$key] = preg_replace('/[^A-Za-z0-9 @]/', '', $data[$key]);
+            $this->cek_captha($data['captcha']);
+
+            // echo json_encode($data);
+            // die();
+            $data['tanggal'] = date("Y-m-d");
+            // $this->load->model('Parameter');
+            $this->ParameterModel->submit_survey($data);
+            echo json_encode(array('error' => false, 'data' => $data));
+        } catch (Exception $e) {
+            ExceptionHandler::handle($e);
+        }
     }
 
     public function pengaduan()

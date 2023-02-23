@@ -14,7 +14,16 @@ class ParameterModel extends CI_Model
 
   function submit_survey($data)
   {
-    $this->db->insert('survey', $data);
+    // $this->db->insert('survey', $data);
+
+    $this->db->insert('survey', DataStructure::slice($data, [
+      'tanggal', 'respon', 'alasan', 'nama', 'alamat',
+      'no_hp', 'email', 'alamat', 'umur', 'jk', 'pendidikan', 'pekerjaan', 'kesesuaian', 'kemudahan', 'kecepatan',
+      'tarif', 'sop', 'kompetensi', 'prilaku', 'sarpras', 'kecepatan', 'pengaduan'
+    ], true));
+    ExceptionHandler::handleDBError($this->db->error(), "Tambah Jenis Dokumen gagal", "jenis_dokumen");
+
+    return $this->db->insert_id();
   }
 
   function getSurvey($filter)
@@ -102,7 +111,8 @@ class ParameterModel extends CI_Model
     $this->db->select('*');
     $this->db->from('survey as pi');
     // $this->db->join("jenis_perusahaan as jp", 'jp.id_jenis_perusahaan = pi.id_jenis_perusahaan', 'LEFT');
-    // if (!empty($filter['id_jenis_perusahaan'])) $this->db->where('pi.id_jenis_perusahaan', $filter['id_jenis_perusahaan']);
+    if (!empty($filter['layanan'])) $this->db->where('pi.layanan', $filter['layanan']);
+    if (!empty($filter['tahun'])) $this->db->where('YEAR(pi.tanggal)', $filter['tahun']);
     // if (!empty($filter['id_jenis_dokumen_perusahaan']))  $this->db->where('pi.id_jenis_dokumen_perusahaan', $filter['id_jenis_dokumen_perusahaan']);
 
     $res = $this->db->get();
