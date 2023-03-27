@@ -8,7 +8,7 @@
           <a href="<?= base_url('') ?>"><i class="fa fa-home"></i> <span class="nav-label">HOME</span></a>
         </li>
         <li id="news_post">
-          <a href="<?= base_url('admin/berita') ?>"><i class="fa fa-newspaper"></i> <span class="nav-label">News Post</span></a>
+          <a href="<?= base_url('admin/berita') ?>"><i class="fa fa-newspaper"></i> <span class="nav-label">Postingan</span></a>
         </li>
         <li id="kelolah_menu">
           <a href="<?= base_url('admin/menu') ?>"><i class="fa fa-users-cog"></i> <span class="nav-label">Menu / Halaman</span></a>
