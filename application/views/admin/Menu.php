@@ -20,8 +20,8 @@
                                 <tr>
                                     <th style="width: 7%; text-align:center!important">ID</th>
                                     <th style="width: 24%; text-align:center!important">Jenis</th>
+                                    <th style="width: 16%; text-align:center!important">Rank</th>
                                     <th style="width: 24%; text-align:center!important">Judul</th>
-                                    <!-- <th style="width: 16%; text-align:center!important">Role</th> -->
                                     <th style="width: 5%; text-align:center!important">Action</th>
                                 </tr>
                             </thead>
@@ -186,7 +186,7 @@
           </div>
         </div>
       `;
-                renderData.push([user['id_menu'], user['label_menu'], user['menu_judul'], button]);
+                renderData.push([user['id_menu'], user['label_menu'], user['urut'], user['menu_judul'], button]);
             });
             FDataTable.clear().rows.add(renderData).draw('full-hold');
         }

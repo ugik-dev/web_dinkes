@@ -82,7 +82,7 @@ $menu = Menu();
     </div>
 </header>
 <?php if (!empty($navbar)) { ?>
-    <section class="page-banner-wrap breadcrumb-wrap align-items-center d-flex" style="height: 400px; background-image: url('<?= base_url() ?>assets/images/hero_bg.jpg');">
+    <section class="page-banner-wrap breadcrumb-wrap align-items-center d-flex" style="height: 350px; background-image: url('<?= base_url() ?>assets/images/hero_bg.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-xl-12 col-md-12 col-sm-12 text-center">
