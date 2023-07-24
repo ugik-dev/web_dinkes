@@ -31,6 +31,19 @@ $menu = Menu();
                                             <!-- <a class="dropdown-item" href="<?= base_url('#review') ?>">Tanggapan Publik</a> -->
                                         </div>
                                     </li>
+                                    <?php if (!empty($menu['Standar Pelayanan'])) {
+                                    ?>
+                                        <!-- <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Standar Pelayanan
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <?php foreach ($menu['Standar Pelayanan'] as $layanan) {
+                                                    echo '  <a class="dropdown-item" href="' . base_url('layanan/') . $layanan['menu_slug'] . '">' . $layanan['menu_judul'] . '</a>';
+                                                } ?>
+                                            </div>
+                                        </li> -->
+                                    <?php } ?>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Layanan
@@ -59,7 +72,7 @@ $menu = Menu();
                                     <!-- <li class="nav-item"><a style="width : 150px" class="nav-link" href="<?= base_url() ?>daftar-tamu">Daftar Tamu</a></li> -->
                                     <li class="nav-item"><a style="width : 150px" class="nav-link" href="<?= base_url() ?>bank-data">Bank Data</a></li>
                                 </ul>
-                                <a href="<?= base_url('login') ?>" class="btn_subscribe">Login</a>
+                                <!-- <a href="<?= base_url('login') ?>" class="btn_subscribe">Login</a> -->
                             </div>
                         </div>
                     </div>
@@ -69,7 +82,7 @@ $menu = Menu();
     </div>
 </header>
 <?php if (!empty($navbar)) { ?>
-    <section class="page-banner-wrap breadcrumb-wrap align-items-center d-flex" style="height: 300px; background-image: url('<?= base_url() ?>assets/images/hero_bg.jpg');">
+    <section class="page-banner-wrap breadcrumb-wrap align-items-center d-flex" style="height: 400px; background-image: url('<?= base_url() ?>assets/images/hero_bg.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-xl-12 col-md-12 col-sm-12 text-center">

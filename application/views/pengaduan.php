@@ -11,37 +11,36 @@
         <div class="row">
             <div class="col-xl-6 col-12 col-md-12 col-sm-12">
                 <div class="contact-form-two wow animated fadeInUp" data-wow-duration="2s">
-                    <form class="contact-form" id="form_survey" method="POST" novalidate="novalidate">
+                    <form class="contact-form" id="form_survey">
                         <!-- <form action="mail.php" id="contact-form" method="POST"> -->
-                        <input type="hidden" id="respon" name="respon" id="respon">
                         <div class="row">
                             <div class="form-group col-12 col-md-6 col-sm-6 col-xl-6">
-                                <!-- <input type="text" value="" data-msg-required="Masukkan nama anda." maxlength="100" class="form-control text-3 h-auto py-2" name="nama" id="name_survey" required=""> -->
-                                <input type="text" class="form-control" name="nama" id="name_survey" required="" placeholder="Nama">
+                                <!-- <input type="text" value="" data-msg-required="required"="Masukkan nama anda." maxlength="100" class="form-control text-3 h-auto py-2" name="nama" id="name_survey" required="required"=""> -->
+                                <input type="text" class="form-control" name="nama" id="name_survey" required="required" placeholder="Nama">
                                 <span class="form-icon"><i class="fas fa-user"></i></span>
                             </div>
                             <div class="form-group col-12 col-md-6 col-sm-6 col-xl-6">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="E Mail">
+                                <input type="email" class="form-control" id="email" name="email" required="required" placeholder="E Mail">
                                 <span class="form-icon"><i class="fas fa-envelope"></i></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-12 col-md-6 col-sm-6 col-xl-6">
-                                <input type="text" class="form-control" name="no_hp" id="no_hp" placeholder="Nomor Telepon">
+                                <input type="text" class="form-control" name="no_hp" id="no_hp" required="required" placeholder="Nomor Telepon">
                                 <span class="form-icon"><i class="fas fa-phone"></i></span>
                             </div>
                             <div class="form-group col-12 col-md-6 col-sm-6 col-xl-6">
                                 <!-- <input type="text" value="" maxlength="200" class="form-control text-3 h-auto py-2" name="alamat" id="alamat"> -->
-                                <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat">
+                                <input type="text" class="form-control" name="alamat" id="alamat" required="required" placeholder="Alamat">
                                 <span class="form-icon"><i class="fas fa-map"></i></span>
                             </div>
                             <div class="form-group col-12 col-md-12 col-sm-12 col-xl-12 message-box">
-                                <textarea id="message" rows="6" name="alasan" placeholder="Detail Pengaduan"></textarea>
+                                <textarea id="message" rows="6" name="alasan" placeholder="Detail Pengaduan" required="required"></textarea>
                                 <span class="form-icon"><i class="fas fa-edit"></i></span>
                             </div>
                         </div>
                         <div class="send-message text-center">
-                            <button id="sub_btn" type="button" class="btn-send">kirim</button>
+                            <button id="sub_btn" type="submit" class="btn-send">kirim</button>
                         </div>
                         <span class="form-message"></span>
                     </form>
@@ -64,14 +63,6 @@
                         <li><a href="https://www.facebook.com/profile.php?id=100085086978044"><b>Facebook:</b> Mall Sipandu Bangka</a></li>
                         <li><a href="https://dinkes.bangka.go.id/pengaduan"><b>e-Pengaduan</b></a></li>
                     </ul>
-                    <!-- <div class="social-link-two">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
             <!-- Sarana pengaduan :
@@ -116,7 +107,8 @@
         respon.val(3)
 
     })
-    sub_btn.on('click', () => {
+    form_survey.on('submit', function(ev) {
+        ev.preventDefault();
 
         Swal.fire({
             html: '<h5>Loading ...</h5>',
@@ -138,14 +130,14 @@
                     });
                 } else {
                     let timerInterval
-                    Swal.fire({
-                        icon: 'success',
-                        html: 'Pengaduan berhasil dikirim',
-                        timer: 3200,
-                        timerProgressBar: true,
-                    }).then((result) => {
-                        location.reload();
-                    })
+                    // Swal.fire({
+                    //     icon: 'success',
+                    //     html: 'Pengaduan berhasil dikirim',
+                    //     timer: 3200,
+                    //     timerProgressBar: true,
+                    // }).then((result) => {
+                    //     location.reload();
+                    // })
 
                 }
             }

@@ -515,57 +515,6 @@
     </div>
 </section>
 
-<?php $this->load->view('e_survey') ?>
-<!-- <section class="contact-form-wrap-two section-padding bg-light" id="contact">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-xl-8 col-12 offset-xl-2 offset-md-1 col-md-10">
-                <div class="section-title-two">
-                    <h2>Berikan Pendapat Anda</h2>
-                    <span>Mari berikan pendapat anda, agar Dinas Kesehatan Kabupaten Bangka menjadi lebih baik.</span>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-6 col-12 col-md-12 col-sm-12">
-                <div class="contact-form-two wow animated fadeInUp" data-wow-duration="2s">
-                    <form action="mail.php" id="contact-form" method="POST">
-                        <div class="row">
-                            <div class="form-group col-12 col-md-6 col-sm-6 col-xl-6">
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                                <span class="form-icon"><i class="fas fa-user"></i></span>
-                            </div>
-                            <div class="form-group col-12 col-md-6 col-sm-6 col-xl-6">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="E Mail">
-                                <span class="form-icon"><i class="fas fa-envelope"></i></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-12 col-md-6 col-sm-6 col-xl-6">
-                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Nomor Telepon">
-                                <span class="form-icon"><i class="fas fa-phone"></i></span>
-                            </div>
-                            <div class="form-group col-12 col-md-6 col-sm-6 col-xl-6">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Alamat">
-                                <span class="form-icon"><i class="fas fa-map"></i></span>
-                            </div>
-                            <div class="form-group col-12 col-md-12 col-sm-12 col-xl-12 message-box">
-                                <textarea name="message" id="message" rows="6" name="message" placeholder="Pendapat Anda"></textarea>
-                                <span class="form-icon"><i class="fas fa-edit"></i></span>
-                            </div>
-                        </div>
-                        <div class="send-message text-center">
-                            <button type="submit" class="btn-send">kirim</button>
-                        </div>
-                        <span class="form-message"></span>
-                    </form>
-                </div>
-            </div>
-            <div class="col-xl-6 col-12 col-md-12 col-sm-12 d-flex align-items-end justify-content-end">
-                <div class="contact-form-image text-right">
-                    <img src="assets/images/home-two/contact_us.png" alt="shipo">
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
+<?php
+//$this->load->view('e_survey') 
+?>
