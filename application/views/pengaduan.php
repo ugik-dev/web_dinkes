@@ -4,7 +4,17 @@
             <div class="col-xl-8 col-12 offset-xl-2 offset-md-1 col-md-10">
                 <div class="section-title-two">
                     <h2>Layanan Pengaduan</h2>
-                    <span>Data diri atau identitas anda dijamin akan dirahasiakan.</span>
+                    <span>Data diri atau identitas anda dijamin akan dirahasiakan. anda dapat mengisi form bagian bawah ini atau dapat menggunakan sarana lainnya seperti :</span>
+                    <ul>
+                        <li><a href="tel:+62717-92102"><b>Telp:</b> 0717-92102</a></li>
+                        <li><a target="_blank" href="https://wa.me/6282311448289?text=Nama%20%3A%0AAlamat%20%3A%0APengaduan%20%3A"><b>WA:</b> 082311448289</a></li>
+                        <li><a href="mailto:dinkesbangka@gmail.com"><b>Email:</b> dinkesbangka@gmail.com</a></li>
+                        <li><a href="https://lapor.go.id"><b>Sp4n Lapor!:</b> lapor.go.id</a></li>
+                        <li><a href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620"><b>Facebook:</b> Dinas Kesehatan Kabupaten Bangka</a></li>
+                        <!-- <li><a href="https://www.facebook.com/profile.php?id=100085086978044"><b>Facebook:</b> Mall Sipandu Bangka</a></li> -->
+                        <li><a href="https://dinkes.bangka.go.id/pengaduan"><b>e-Pengaduan</b></a></li>
+                    </ul>
+
                 </div>
             </div>
         </div>
@@ -51,20 +61,20 @@
                     <img src="assets/images/home-two/contact_us.png" alt="shipo">
                 </div>
             </div>
-            <div class="col-xl-12 col-md-12 col-12 col-sm-12">
+            <!-- <div class="col-xl-12 col-md-12 col-12 col-sm-12">
                 <div class="single-widgets-two wow animated fadeInUp">
                     <h4 class="widgets-title">Sarana pengaduan</h4>
                     <ul>
                         <li><a href="#"><b>Telp:</b> 0717-92102</a></li>
-                        <li><a href="https://wa.me/6282311448289?text=Hallo!!"><b>WA:</b> 082311448289</a></li>
-                        <li><a href="#"><b>Email:</b> dinkesbangka@gmail.com / layanan@dinkes.bangka.go.id</a></li>
+                        <li><a target="_blank" href="https://wa.me/6282311448289?text=Nama%20%3A%0AAlamat%20%3A%0APengaduan%20%3A"><b>WA:</b> 082311448289</a></li>
+                        <li><a href="#"><b>Email:</b> dinkesbangka@gmail.com</a></li>
                         <li><a href="https://lapor.go.id"><b>Sp4n Lapor!:</b> lapor.go.id</a></li>
                         <li><a href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620"><b>Facebook:</b> Dinas Kesehatan Kabupaten Bangka</a></li>
                         <li><a href="https://www.facebook.com/profile.php?id=100085086978044"><b>Facebook:</b> Mall Sipandu Bangka</a></li>
                         <li><a href="https://dinkes.bangka.go.id/pengaduan"><b>e-Pengaduan</b></a></li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <!-- Sarana pengaduan :
             1. Telp 0717-92102/ wa 082311448289
             2. Email dinkes: dinkesbangka@gmail.com
