@@ -33,7 +33,7 @@ $menu = Menu();
                                     </li>
                                     <?php if (!empty($menu['Standar Pelayanan'])) {
                                     ?>
-                                        <!-- <li class="nav-item dropdown">
+                                        <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Standar Pelayanan
                                             </a>
@@ -42,7 +42,7 @@ $menu = Menu();
                                                     echo '  <a class="dropdown-item" href="' . base_url('layanan/') . $layanan['menu_slug'] . '">' . $layanan['menu_judul'] . '</a>';
                                                 } ?>
                                             </div>
-                                        </li> -->
+                                        </li>
                                     <?php } ?>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
