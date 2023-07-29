@@ -42,6 +42,7 @@ class MainModel extends CI_Model
         // $this->db->select('berita_judul,berita_id');
         $this->db->from('galeri as g');
         $this->db->join('album as a', 'g.album_id = a.album_id');
+        $this->db->order_by('galeri_id', 'DESC');
         if (!empty($filter['galeri_id']))
             $this->db->where('galeri_id', $filter['galeri_id']);
         if (!empty($filter['s']))
