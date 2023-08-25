@@ -145,6 +145,11 @@
                         </a>
                     </div> -->
                     <div class="single-sidebar-widget mb-1">
+                        <a target="_blank" href="<?= base_url('e-survey') ?>">
+                            <img class="w-100" src="<?= base_url('assets/images/e-survey.jpg') ?>">
+                        </a>
+                    </div>
+                    <div class="single-sidebar-widget mb-1">
                         <a target="_blank" href="https://covid19.bangka.go.id/">
                             <img class="w-100" src="<?= base_url('assets/images/info-covid2.png') ?>">
                         </a>
@@ -165,10 +170,14 @@
                         </a>
                     </div>
                     <div style="width: 100%;" class="single-sidebar-widget mb-5">
+                        <!-- <div id="fb-root"></div>
+                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v17.0" nonce="2VN56fWv"></script>
+                        <div class="fb-page" style="width: 100%;" data-href="https://www.facebook.com/profile.php?id=100086802934306" data-tabs="timeline" data-width="500" data-height="50" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100086802934306&tabs=timeline&width=180&height=50&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="180" height="50" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
                         <div id="fb-root"></div>
                         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v14.0" nonce="BLkDOsin"></script>
-                        <div class="fb-page" style="width: 100%;" data-href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                            <blockquote cite="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Dinas-Kesehatan-Kabupaten-Bangka-102114102652620">Dinas Kesehatan Kabupaten Bangka</a></blockquote>
+                        <div class="fb-page" style="width: 100%;" data-href="https://www.facebook.com/profile.php?id=100086802934306" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/profile.php?id=100086802934306" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100086802934306">Dinas Kesehatan Kabupaten Bangka</a></blockquote>
                         </div>
                     </div>
 
