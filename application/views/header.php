@@ -26,7 +26,8 @@
 </head>
 
 <body class="theme_two">
-    <img src="<?= base_url() ?>assets/images/header6.jpg" style="width : 100%">
+    <!-- <img src="<?= base_url() ?>assets/images/header6.jpg" style="width : 100%"> -->
+    <img src="<?= base_url() ?>assets/images/header-HUTRI78.jpg" style="width : 100%">
     <!-- <div class="pre-loader">
         <div class="spinner">
             <div class="lds-ripple">
