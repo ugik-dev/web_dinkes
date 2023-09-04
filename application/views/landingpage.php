@@ -161,7 +161,7 @@
                     </div>
                     <div class="single-sidebar-widget mb-1 mt-0">
                         <a target="_blank" href="https://spgdt.bangka.go.id/">
-                            <img class="w-100" src="<?= base_url('assets/images/PSC-119.png') ?>">
+                            <img class="w-100" src="<?= base_url('assets/images/PSC-119-SS.png') ?>">
                         </a>
                     </div>
                     <div class="single-sidebar-widget mb-1 mt-0">
