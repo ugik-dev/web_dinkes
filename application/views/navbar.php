@@ -65,6 +65,9 @@ $menu = Menu();
                                             <a class="dropdown-item" href="<?= base_url('#aplikasi') ?>">Aplikasi Kami</a>
                                             <a class="dropdown-item" href="<?= base_url('#pengumuman') ?>">Pengumuman</a>
                                             <a class="dropdown-item" href="<?= base_url('#review') ?>">Pendapat Publik</a>
+                                            <?php foreach ($menu['Informasi'] as $inf) {
+                                                echo '  <a class="dropdown-item" href="' . base_url('informasi/') . $inf['menu_slug'] . '">' . $inf['menu_judul'] . '</a>';
+                                            } ?>
                                         </div>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>galeri">Galeri</a></li>

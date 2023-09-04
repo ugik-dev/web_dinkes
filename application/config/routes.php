@@ -58,6 +58,7 @@ $route['artikel/(:any)'] = 'main/artikel/$1';
 // sampai sini postingan
 $route['layanan/(:any)'] = 'main/cari_menu/layanan/$1';
 $route['profil/(:any)'] = 'main/cari_menu/profil/$1';
+$route['informasi/(:any)'] = 'main/cari_menu/informasi/$1';
 $route['bank-data/download/(:num)'] = 'BankDataController/download/$1';
 $route['bank-data'] = 'BankDataController';
 $route['daftar-tamu'] = 'main/daftar_tamu';
